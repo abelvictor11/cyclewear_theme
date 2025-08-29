@@ -1,0 +1,292 @@
+<!-- bike-size-calculator.liquid -->
+{% if product.tags contains 'Bicicletas' %}
+  <!-- Link to open the modal -->
+  <a id="openModal" href="javascript:void(0)" class="link-tallas">Determina tu talla adecuada</a>
+
+  <!-- The Modal -->
+  <div id="bikeSizeModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="bike-size-calculator">
+        <h3>Guía de Tallas para Bicicletas</h3>
+        <div>
+          <label for="gender">Género:</label>
+          <select id="gender" class="form-input">
+            <option value="male">Masculino</option>
+            <option value="female">Femenino</option>
+          </select>
+        </div>
+        <div>
+          <label for="height">Estatura (cm):</label>
+          <input type="number" class="form-input" id="height" placeholder="Ejemplo: 169" >
+        </div><br>
+        <button onclick="calculateLegArmLength()" class="button button-1">Encontraremos el tamaño adecuado para usted</button>
+        
+        <div id="leg-arm-calculation" style="display:none;">
+          <div class="slider-container">
+            <p>La longitud promedio de piernas para su altura es:</p>
+            <label for="legLength">Longitud de piernas (cm): <span id="legLengthValue">80 cm</span></label>
+            <input type="range" id="legLength" min="50" max="120" value="80" class="custom-slider" oninput="updateLegLength(this.value)">
+          </div>
+          <div class="slider-container">
+            <p>La longitud promedio de brazos para su altura es:</p>
+            <label for="armLength">Longitud de brazos (cm): <span id="armLengthValue">70 cm</span></label>
+            <input type="range" id="armLength" min="50" max="90" value="70" class="custom-slider" oninput="updateArmLength(this.value)">
+          </div>
+          <br>
+          <button onclick="selectRidingStyle()" class="button button-1">Siguiente</button>
+        </div>
+        
+        <div id="riding-style-selection" style="display:none;">
+          <p>¿Cómo es tu estilo de conducción?</p>
+          <select id="ridingStyle" class="form-input">
+            <option value="sporty">Deportivo</option>
+            <option value="neutral">Neutral</option>
+            <option value="comfort">Cómodo</option>
+          </select><br>
+          <button onclick="calculateBikeSize()" class="button button-1">Calcular Talla</button>
+        </div>
+        
+        <div id="bike-size-result" style="display:none;">
+          <p>La talla de bicicleta adecuada para ti es:</p><h3><span id="bikeSize"></span></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Get the modal
+    var modal = document.getElementById("bikeSizeModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("openModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    function calculateLegArmLength() {
+      const height = document.getElementById('height').value;
+      const gender = document.getElementById('gender').value;
+
+      if (!height) {
+        alert('Por favor, ingrese su estatura.');
+        return;
+      }
+
+      let legLength, armLength;
+      if (gender === 'male') {
+        legLength = Math.round(height * 0.45);
+        armLength = Math.round(height * 0.45);
+      } else {
+        legLength = Math.round(height * 0.43);
+        armLength = Math.round(height * 0.43);
+      }
+
+      document.getElementById('legLength').value = legLength;
+      document.getElementById('armLength').value = armLength;
+
+      document.getElementById('legLengthValue').innerText = legLength + ' cm';
+      document.getElementById('armLengthValue').innerText = armLength + ' cm';
+
+      document.getElementById('leg-arm-calculation').style.display = 'block';
+    }
+
+    function updateLegLength(value) {
+      document.getElementById('legLengthValue').innerText = value + ' cm';
+    }
+
+    function updateArmLength(value) {
+      document.getElementById('armLengthValue').innerText = value + ' cm';
+    }
+
+    function selectRidingStyle() {
+      document.getElementById('riding-style-selection').style.display = 'block';
+    }
+
+    function calculateBikeSize() {
+      const height = parseFloat(document.getElementById('height').value);
+      const legLength = parseFloat(document.getElementById('legLength').value);
+      const armLength = parseFloat(document.getElementById('armLength').value);
+      const ridingStyle = document.getElementById('ridingStyle').value;
+
+      let bikeSize, sizeInCm, sizeInInches;
+      
+      if (height >= 150 && height <= 160) {
+        bikeSize = "XS";
+        sizeInCm = "47-51 cm";
+        sizeInInches = "14'-15'";
+      } else if (height > 160 && height <= 170) {
+        bikeSize = "S";
+        sizeInCm = "52-54 cm";
+        sizeInInches = "16'-17'";
+      } else if (height > 170 && height <= 180) {
+        bikeSize = "M";
+        sizeInCm = "55-57 cm";
+        sizeInInches = "18'-19'";
+      } else if (height > 180 && height <= 190) {
+        bikeSize = "L";
+        sizeInCm = "58-60 cm";
+        sizeInInches = "20'-21'";
+      } else {
+        bikeSize = "XL";
+        sizeInCm = "61-63 cm";
+        sizeInInches = "22'-23'";
+      }
+      
+      document.getElementById('bikeSize').innerText = `${bikeSize} | ${sizeInCm} | ${sizeInInches}`;
+      document.getElementById('bike-size-result').style.display = 'block';
+    }
+  </script>
+
+  <!-- CSS -->
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+          border-radius: 8px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    a.link-tallas {
+      text-decoration: underline;
+      text-align: right;
+      float: right;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    
+    /* Estilos para los sliders */
+    .slider-container {
+      margin: 20px 0;
+    }
+    
+    .custom-slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 10px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      margin: 10px 0;
+    }
+    
+    .custom-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .custom-slider::-webkit-slider-thumb:hover {
+      background: #45a049;
+      transform: scale(1.1);
+    }
+    
+    .custom-slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .custom-slider::-moz-range-thumb:hover {
+      background: #45a049;
+      transform: scale(1.1);
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+/*    
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+    .button:hover {
+      background-color: #45a049;
+    }
+    
+    .button-1 {
+      width: 100%;
+      margin-top: 10px;
+    } */
+div#bike-size-result {
+    padding: 10px;
+    border: 1px solid #c7c7c7;
+    border-radius: 4px;
+    margin-top: 10px;
+    background: #F9FAFB;
+    text-align: center;
+    line-height: 1;
+}
+  </style>
+{% endif %}

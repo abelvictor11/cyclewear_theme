@@ -1,0 +1,229 @@
+{{ 'component-guided-finder.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+    assign padding_top = section.settings.mg_top_desktop | append: 'px'
+    assign padding_bottom = section.settings.mg_bottom_desktop | append: 'px'
+    assign padding_top_tablet = section.settings.mg_top_tablet | append: 'px'
+    assign padding_bottom_tablet = section.settings.mg_bottom_tablet | append: 'px'
+    assign padding_top_mobile = section.settings.mg_top_mobile | append: 'px'
+    assign padding_bottom_mobile = section.settings.mg_bottom_mobile | append: 'px'
+    assign container = section.settings.container
+    assign side_padding_full_width = section.settings.side_padding_full_width | append: 'px'
+    assign show_breadcrumb = section.settings.show_breadcrumb
+    assign breadcrumb_alignment = section.settings.breadcrumb_alignment
+    assign show_page_title = section.settings.show_page_title
+    assign page_title_alignment = section.settings.page_title_alignment
+    assign base_type = section.settings.base_type
+    assign default_sort_by = section.settings.default_sort_by
+    assign redirect_to = section.settings.redirect_to
+    assign dest_collection = section.settings.dest_collection
+
+    assign steps = section.blocks | where: 'type', 'guided_step'
+    assign options = section.blocks | where: 'type', 'guided_option'
+    assign first_step_handle = ''
+    if steps.size > 0
+      assign first_step_handle = steps.first.settings.step_handle | handle
+    endif
+-%}
+
+<style>
+  #GuidedFinderSection-{{ section.id }}{
+    padding-top: {{ padding_top }};
+    padding-bottom: {{ padding_bottom }};
+  }
+  @media (max-width: 1024px) {
+    #GuidedFinderSection-{{ section.id }}{ padding-top: {{ padding_top_tablet }}; padding-bottom: {{ padding_bottom_tablet }}; }
+  }
+  @media (max-width: 550px) {
+    #GuidedFinderSection-{{ section.id }}{ padding-top: {{ padding_top_mobile }}; padding-bottom: {{ padding_bottom_mobile }}; }
+  }
+  {% if container == 'fullwidth' and section.settings.side_padding_full_width > 0 %}
+  #GuidedFinderSection-{{ section.id }} .container-full {
+    padding-left: {{ side_padding_full_width }};
+    padding-right: {{ side_padding_full_width }};
+  }
+  {% endif %}
+</style>
+
+<div id="GuidedFinderSection-{{ section.id }}"
+     class="guided-finder"
+     data-section-id="{{ section.id }}"
+     data-search-base-url="{% if redirect_to == 'collection' and dest_collection != blank %}{{ dest_collection.url }}{% else %}{{ routes.search_url }}{% endif %}"
+     data-base-type="{{ base_type }}"
+     data-default-sort="{{ default_sort_by }}"
+     data-initial-step="{{ first_step_handle }}">
+  <div class="{% if container == '1170' %}container-1170{% elsif container == '1770' %}container-1770{% elsif container == 'fullwidth'%}container-full{% else %}container{% endif %}">
+    {%- if show_breadcrumb -%}
+      {% render 'breadcrumb', alignment: breadcrumb_alignment %}
+    {%- endif -%}
+
+    {%- if show_page_title -%}
+      <h1 class="page-header text-{{ page_title_alignment }}">{{ section.settings.heading | default: 'Encuentra tu producto ideal' }}</h1>
+    {%- endif -%}
+
+    <div class="guided-finder__steps" role="list">
+      {%- if steps.size == 0 -%}
+        <div class="guided-finder__empty">
+          <p>Configura al menos un bloque de Paso (guided_step) y opciones (guided_option) desde el editor de temas.</p>
+        </div>
+      {%- endif -%}
+
+      {%- for step in steps -%}
+        {%- assign step_handle = step.settings.step_handle | handle -%}
+        <section class="gf-step" data-step="{{ step_handle }}" {% unless forloop.first %}hidden{% endunless %}>
+          <header class="gf-step__header">
+            <h2 class="gf-step__title">{{ step.settings.title | escape }}</h2>
+            {%- if step.settings.description != blank -%}
+              <p class="gf-step__desc">{{ step.settings.description }}</p>
+            {%- endif -%}
+          </header>
+          <ul class="gf-options" role="list">
+            {%- for opt in options -%}
+              {%- if opt.settings.step_handle | handle == step_handle -%}
+                <li class="gf-option">
+                  {%- liquid
+                    assign final_param_name = opt.settings.param_name
+                    if opt.settings.param_name_select and opt.settings.param_name_select != ''
+                      case opt.settings.param_name_select
+                        when 'filter.p.tag'
+                          assign final_param_name = 'filter.p.tag'
+                        when 'filter.p.vendor'
+                          assign final_param_name = 'filter.p.vendor'
+                        when 'filter.p.product_type'
+                          assign final_param_name = 'filter.p.product_type'
+                        when 'variant_option'
+                          assign opt_handle = opt.settings.option_handle | default: '' | handle
+                          if opt_handle != ''
+                            assign final_param_name = 'filter.v.option.' | append: opt_handle
+                          endif
+                      endcase
+                    endif
+                  -%}
+                  <button class="gf-option__btn"
+                          type="button"
+                          data-param-name="{{ final_param_name | escape }}"
+                          data-param-value="{{ opt.settings.param_value | escape }}"
+                          data-q-fragment="{{ opt.settings.q_fragment | escape }}"
+                          data-next-step="{{ opt.settings.next_step_handle | handle }}">
+                    {%- if opt.settings.image != blank -%}
+                      <img class="gf-option__img" src="{{ opt.settings.image | img_url: '360x' }}" alt="{{ opt.settings.label | escape }}">
+                    {%- endif -%}
+                    <span class="gf-option__label">{{ opt.settings.label | escape }}</span>
+                    {%- if opt.settings.subtext != blank -%}
+                      <span class="gf-option__subtext">{{ opt.settings.subtext | escape }}</span>
+                    {%- endif -%}
+                  </button>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+          <div class="gf-step__actions">
+            <button class="button button--secondary gf-back" type="button">{{ 'general.common.back' | t | default: 'Atrás' }}</button>
+            <button class="button button--link gf-reset" type="button">{{ 'general.common.reset' | t | default: 'Reiniciar' }}</button>
+          </div>
+        </section>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{{ 'guided-finder.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "Guided Finder (Page)",
+  "settings": [
+    {"type":"select","id":"container","label":"Container width","default":"container","options":[
+      {"value":"container","label":"Container"},
+      {"value":"1170","label":"1170"},
+      {"value":"1770","label":"1770"},
+      {"value":"fullwidth","label":"Full width"}
+    ]},
+    {"type":"range","id":"side_padding_full_width","label":"Side padding (fullwidth)","min":0,"max":100,"step":1,"default":0},
+    {"type":"checkbox","id":"show_breadcrumb","label":"Mostrar breadcrumb","default":false},
+    {"type":"select","id":"breadcrumb_alignment","label":"Alineación breadcrumb","default":"left","options":[
+      {"value":"left","label":"Left"},
+      {"value":"center","label":"Center"},
+      {"value":"right","label":"Right"}
+    ]},
+    {"type":"checkbox","id":"show_page_title","label":"Mostrar título","default":true},
+    {"type":"select","id":"page_title_alignment","label":"Alineación título","default":"center","options":[
+      {"value":"left","label":"Left"},
+      {"value":"center","label":"Center"},
+      {"value":"right","label":"Right"}
+    ]},
+    {"type":"text","id":"heading","label":"Encabezado","default":"Encuentra tu producto ideal"},
+    {"type":"select","id":"redirect_to","label":"Destino de resultados","default":"search","options":[
+      {"value":"search","label":"Search"},
+      {"value":"collection","label":"Collection"}
+    ]},
+    {"type":"collection","id":"dest_collection","label":"Colección destino (si aplica)"},
+    {"type":"select","id":"base_type","label":"Tipo base de búsqueda","default":"product","options":[
+      {"value":"product","label":"Product"},
+      {"value":"article,page","label":"Article & Page"}
+    ]},
+    {"type":"select","id":"default_sort_by","label":"Orden por defecto","default":"","options":[
+      {"value":"","label":"(por defecto)"},
+      {"value":"title-ascending","label":"A-Z"},
+      {"value":"title-descending","label":"Z-A"},
+      {"value":"price-ascending","label":"Precio asc"},
+      {"value":"price-descending","label":"Precio desc"},
+      {"value":"created-descending","label":"Nuevos"},
+      {"value":"best-selling","label":"Más vendidos"}
+    ]},
+    {"type":"header","content":"Espaciados"},
+    {"type":"range","id":"mg_top_desktop","label":"Margen superior (desktop)","min":0,"max":100,"step":1,"default":20},
+    {"type":"range","id":"mg_top_tablet","label":"Margen superior (tablet)","min":0,"max":100,"step":1,"default":20},
+    {"type":"range","id":"mg_top_mobile","label":"Margen superior (mobile)","min":0,"max":100,"step":1,"default":15},
+    {"type":"range","id":"mg_bottom_desktop","label":"Margen inferior (desktop)","min":0,"max":200,"step":1,"default":45},
+    {"type":"range","id":"mg_bottom_tablet","label":"Margen inferior (tablet)","min":0,"max":200,"step":1,"default":45},
+    {"type":"range","id":"mg_bottom_mobile","label":"Margen inferior (mobile)","min":0,"max":200,"step":1,"default":40}
+  ],
+  "blocks": [
+    {
+      "type": "guided_step",
+      "name": "Paso",
+      "limit": 10,
+      "settings": [
+        {"type":"text","id":"step_handle","label":"Identificador del paso (único)","default":"paso-1"},
+        {"type":"text","id":"title","label":"Título","default":"¿Qué necesitas?"},
+        {"type":"textarea","id":"description","label":"Descripción"}
+      ]
+    },
+    {
+      "type": "guided_option",
+      "name": "Opción",
+      "limit": 50,
+      "settings": [
+        {"type":"text","id":"step_handle","label":"Identificador del paso (para agrupar)","default":"paso-1"},
+        {"type":"text","id":"label","label":"Etiqueta","default":"Opción"},
+        {"type":"text","id":"subtext","label":"Subtexto"},
+        {"type":"image_picker","id":"image","label":"Imagen"},
+        {"type":"text","id":"param_name","label":"Nombre de parámetro (ej: filter.v.option.color)"},
+        {"type":"select","id":"param_name_select","label":"Tipo de parámetro (recomendado)","options":[
+          {"value":"","label":"Personalizado (usa campo anterior)"},
+          {"value":"filter.p.tag","label":"Tag de producto (filter.p.tag)"},
+          {"value":"filter.p.vendor","label":"Marca/Vendor (filter.p.vendor)"},
+          {"value":"filter.p.product_type","label":"Tipo de producto (filter.p.product_type)"},
+          {"value":"variant_option","label":"Opción de variante (filter.v.option.{handle})"}
+        ]},
+        {"type":"text","id":"option_handle","label":"Nombre de la opción de variante (ej: Color, Talla). Solo si elegiste 'Opción de variante'","default":""},
+        {"type":"text","id":"param_value","label":"Valor de parámetro (ej: Black)"},
+        {"type":"text","id":"q_fragment","label":"Fragmento de búsqueda (añade a q)"},
+        {"type":"text","id":"next_step_handle","label":"Siguiente paso (handle). En blanco = finalizar"}
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Guided Finder",
+      "blocks": [
+        {"type":"guided_step","settings":{"step_handle":"paso-1","title":"¿Qué disciplina practicas?"}},
+        {"type":"guided_option","settings":{"step_handle":"paso-1","label":"Carretera","q_fragment":"carretera"}},
+        {"type":"guided_option","settings":{"step_handle":"paso-1","label":"Montaña","q_fragment":"mtb"}},
+        {"type":"guided_option","settings":{"step_handle":"paso-1","label":"Gravel","q_fragment":"gravel"}}
+      ]
+    }
+  ]
+}
+{% endschema %}

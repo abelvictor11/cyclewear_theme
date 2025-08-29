@@ -1,0 +1,220 @@
+{%- if section.blocks.size > 0 -%}
+    <div class="custom-banner-carousel-section section-block-{{section.id}}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+        <div class="row">
+          <!-- Banner lateral con video opcional y contenido -->
+            <div class="col-md-4">
+                <div class="custom-banner">
+                    {%- if section.settings.banner_video != blank -%}
+                        <video autoplay loop muted playsinline class="img-fluid">
+                            <source src="{{ section.settings.banner_video }}" type="video/mp4">
+                        </video>
+                    {%- elsif section.settings.banner_image != blank -%}
+                        <img src="{{ section.settings.banner_image | img_url: 'master' }}" alt="{{ section.settings.banner_image.alt }}" class="img-fluid">
+                    {%- endif -%}
+                    <div class="custom-banner-content">
+                        {%- if section.settings.banner_title != blank -%}
+                            <h3 class="title custom-text-style">{{ section.settings.banner_title }}</h3>
+                        {%- endif -%}
+                        {%- if section.settings.banner_subtitle != blank -%}
+                            <p class="des custom-text-style">{{ section.settings.banner_subtitle }}</p>
+                        {%- endif -%}
+                        {%- if section.settings.banner_cta_text != blank and section.settings.banner_cta_link != blank -%}
+                            <a href="{{ section.settings.banner_cta_link }}" class="spotlight-button button custom-button-style">{{ section.settings.banner_cta_text }}</a>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+            <!-- Productos en un carrusel -->
+            <div class="col-md-8">
+                <div class="cust-prod-widget__wrapper">
+                    <div class="cust-prod-widget__product" data-product-block data-limit="9" data-layout="slider" sectionId="{{ section.id }}" data-collection="{{ section.settings.collection }}" data-image-ratio="{{ settings.product_block_image_ratio }}" data-swipe="false" hasCountdown=true>
+                        <div class="cust-prod-widget__products--slider products-carousel{% if block.settings.product_block_progress_bar %} enable_progress_bar{% endif %}{% if block.settings.product_block_counter_number %} enable_counter_number{% endif %}" 
+                            data-item-to-show="3" 
+                            data-item-dots="{{ settings.bullets }}" 
+                            data-item-arrows="{{ settings.arrows }}" 
+                            data-autoplay="{{ settings.autoplay }}" 
+                            data-speed="{{ settings.speed }}"
+                            data-infinite="{{ settings.infinite }}">
+                            {%- for product in collections[section.settings.collection].products limit: 9 -%}
+                                <div class="product slider__slide grid__item">
+                                    {% render 'product-card-loading', product_card_product: product, media_size: settings.product_block_image_ratio, portrait_aspect_ratio: '133' %}
+                                </div>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Custom Banner Products",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_video",
+      "label": "Banner Video URL"
+    },
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banner Title"
+    },
+    {
+      "type": "text",
+      "id": "banner_subtitle",
+      "label": "Banner Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "banner_cta_text",
+      "label": "CTA Button Text"
+    },
+    {
+      "type": "url",
+      "id": "banner_cta_link",
+      "label": "CTA Button Link"
+    },
+    {
+      "type": "url",
+      "id": "banner_link",
+      "label": "Banner Link"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "sec",
+      "label": "Autoplay Speed",
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "infinite",
+      "label": "Infinite Scroll",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "arrows",
+      "label": "Show Arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "bullets",
+      "label": "Show Bullets",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner & Grid Products",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  /* Estilos para las columnas */
+.custom-banner-carousel-section .row {
+    display: flex;
+    gap: 20px; /* Espacio entre las columnas */
+    width: 100%; /* Asegura que la fila ocupe el 100% del ancho disponible */
+  max-width: 1770px;
+    margin: 0 auto;
+}
+
+.custom-banner-carousel-section .col-md-8 {
+    width: 70%; /* Ancho del 70% para la columna del carrusel */
+      align-content: center;
+}
+
+.custom-banner-carousel-section .col-md-4 {
+    width: 30%; /* Ancho del 30% para la columna del banner */
+}
+.custom-banner-carousel-section .custom-banner {
+    max-height: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+}
+.custom-banner-content {
+    position: absolute;
+    bottom: 30px;
+    color: #fff;
+  left: 30px;
+}
+.custom-banner-content h3{
+    font-size: 24px;
+    color: #fff;
+        margin-bottom: 10px;
+}
+  .custom-banner-content p{
+    font-size: 16px;
+    color: #fff;
+        margin-top: 0;
+        margin-bottom: 20px;
+}
+.custom-banner-carousel-section  .slick-track {
+    display: inline-flex;
+    gap: 20px;
+}
+.custom-banner-carousel-section  .custom-banner-content a {
+    font-size: 10px;
+    background: #fff;
+    color: #232323;
+    border: none;
+    display: inline;
+}
+  .custom-banner-carousel-section  .custom-banner-content a:hover {
+    background: #232323;
+    color: #fff;
+}
+/* Ajustes responsivos */
+@media (max-width: 767px) {
+    .custom-banner-carousel-section .row {
+        flex-direction: column; /* Cambia a disposición vertical en móviles */
+        gap: 10px; /* Reduce el espacio en móviles */
+    }
+
+    .custom-banner-carousel-section .col-md-8,
+    .custom-banner-carousel-section .col-md-4 {
+        width: 100%; /* Ocupa el 100% del ancho en móviles */
+    }
+}
+</style>

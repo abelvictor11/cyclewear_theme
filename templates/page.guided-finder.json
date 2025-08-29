@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-guided-finder",
+      "settings": {
+        "container": "1770",
+        "side_padding_full_width": 0,
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "show_page_title": true,
+        "page_title_alignment": "center",
+        "heading": "Encuentra tu producto ideal",
+        "redirect_to": "search",
+        "base_type": "product",
+        "default_sort_by": "",
+        "mg_top_desktop": 20,
+        "mg_top_tablet": 20,
+        "mg_top_mobile": 15,
+        "mg_bottom_desktop": 45,
+        "mg_bottom_tablet": 45,
+        "mg_bottom_mobile": 40
+      },
+      "blocks": {
+        "step_audiencia": {"type": "guided_step", "settings": {"step_handle": "audiencia", "title": "Audiencia", "description": "Selecciona para quién es el producto"}},
+
+        "opt_audiencia_hombre": {"type": "guided_option", "settings": {"step_handle": "audiencia", "label": "Hombre", "param_name_select": "filter.p.tag", "param_value": "Hombre", "q_fragment": "", "next_step_handle": "disciplina"}},
+        "opt_audiencia_mujer": {"type": "guided_option", "settings": {"step_handle": "audiencia", "label": "Mujer", "param_name_select": "filter.p.tag", "param_value": "Mujer", "q_fragment": "", "next_step_handle": "disciplina"}},
+
+        "step_disciplina": {"type": "guided_step", "settings": {"step_handle": "disciplina", "title": "Disciplina", "description": "Elige tu disciplina"}},
+        "opt_disciplina_carretera": {"type": "guided_option", "settings": {"step_handle": "disciplina", "label": "Carretera", "param_name_select": "", "param_value": "", "q_fragment": "road", "next_step_handle": "prenda"}},
+        "opt_disciplina_montana": {"type": "guided_option", "settings": {"step_handle": "disciplina", "label": "Montaña", "param_name_select": "", "param_value": "", "q_fragment": "mtb", "next_step_handle": "prenda"}},
+        "opt_disciplina_gravel": {"type": "guided_option", "settings": {"step_handle": "disciplina", "label": "Gravel", "param_name_select": "", "param_value": "", "q_fragment": "gravel", "next_step_handle": "prenda"}},
+
+        "step_prenda": {"type": "guided_step", "settings": {"step_handle": "prenda", "title": "Tipo de prenda", "description": "Elige la prenda"}},
+        "opt_prenda_jersey": {"type": "guided_option", "settings": {"step_handle": "prenda", "label": "Jersey", "param_name_select": "filter.p.product_type", "param_value": "Jersey", "q_fragment": "", "next_step_handle": "marca"}},
+        "opt_prenda_culotte": {"type": "guided_option", "settings": {"step_handle": "prenda", "label": "Culotte", "param_name_select": "filter.p.product_type", "param_value": "Culotte", "q_fragment": "", "next_step_handle": "marca"}},
+        "opt_prenda_chaqueta": {"type": "guided_option", "settings": {"step_handle": "prenda", "label": "Chaqueta", "param_name_select": "filter.p.product_type", "param_value": "Chaqueta", "q_fragment": "", "next_step_handle": "marca"}},
+
+        "step_marca": {"type": "guided_step", "settings": {"step_handle": "marca", "title": "Marca", "description": "Selecciona una marca"}},
+        "opt_marca_castelli": {"type": "guided_option", "settings": {"step_handle": "marca", "label": "Castelli", "param_name_select": "filter.p.vendor", "param_value": "Castelli", "q_fragment": "", "next_step_handle": "color"}},
+        "opt_marca_santini": {"type": "guided_option", "settings": {"step_handle": "marca", "label": "Santini", "param_name_select": "filter.p.vendor", "param_value": "Santini", "q_fragment": "", "next_step_handle": "color"}},
+        "opt_marca_specialized": {"type": "guided_option", "settings": {"step_handle": "marca", "label": "Specialized", "param_name_select": "filter.p.vendor", "param_value": "Specialized", "q_fragment": "", "next_step_handle": "color"}},
+
+        "step_color": {"type": "guided_step", "settings": {"step_handle": "color", "title": "Color", "description": "Elige un color"}},
+        "opt_color_black": {"type": "guided_option", "settings": {"step_handle": "color", "label": "Black", "param_name_select": "variant_option", "option_handle": "Color", "param_value": "Black", "q_fragment": "", "next_step_handle": "talla"}},
+        "opt_color_blue": {"type": "guided_option", "settings": {"step_handle": "color", "label": "Blue", "param_name_select": "variant_option", "option_handle": "Color", "param_value": "Blue", "q_fragment": "", "next_step_handle": "talla"}},
+        "opt_color_red": {"type": "guided_option", "settings": {"step_handle": "color", "label": "Red", "param_name_select": "variant_option", "option_handle": "Color", "param_value": "Red", "q_fragment": "", "next_step_handle": "talla"}},
+
+        "step_talla": {"type": "guided_step", "settings": {"step_handle": "talla", "title": "Talla", "description": "Selecciona tu talla"}},
+        "opt_talla_s": {"type": "guided_option", "settings": {"step_handle": "talla", "label": "S", "param_name_select": "variant_option", "option_handle": "Talla", "param_value": "S", "q_fragment": "", "next_step_handle": ""}},
+        "opt_talla_m": {"type": "guided_option", "settings": {"step_handle": "talla", "label": "M", "param_name_select": "variant_option", "option_handle": "Talla", "param_value": "M", "q_fragment": "", "next_step_handle": ""}},
+        "opt_talla_l": {"type": "guided_option", "settings": {"step_handle": "talla", "label": "L", "param_name_select": "variant_option", "option_handle": "Talla", "param_value": "L", "q_fragment": "", "next_step_handle": ""}}
+      },
+      "block_order": [
+        "step_audiencia",
+        "opt_audiencia_hombre", "opt_audiencia_mujer",
+        "step_disciplina",
+        "opt_disciplina_carretera", "opt_disciplina_montana", "opt_disciplina_gravel",
+        "step_prenda",
+        "opt_prenda_jersey", "opt_prenda_culotte", "opt_prenda_chaqueta",
+        "step_marca",
+        "opt_marca_castelli", "opt_marca_santini", "opt_marca_specialized",
+        "step_color",
+        "opt_color_black", "opt_color_blue", "opt_color_red",
+        "step_talla",
+        "opt_talla_s", "opt_talla_m", "opt_talla_l"
+      ]
+    }
+  },
+  "order": ["main"]
+}

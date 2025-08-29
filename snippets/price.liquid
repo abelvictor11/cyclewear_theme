@@ -1,0 +1,165 @@
+{%- liquid
+  # 1. Configuración inicial
+  assign current_variant = product.selected_or_first_available_variant
+  assign price = current_variant.price
+  assign compare_at_price = current_variant.compare_at_price
+  assign available = current_variant.available
+  assign on_sale = false
+  if compare_at_price > price
+    assign on_sale = true
+  endif
+
+  # 2. Encontrar mejor descuento entre variantes (para cards)
+  assign max_discount = 0
+  assign min_price = price
+  for variant in product.variants
+    if variant.available
+      # Calcular descuento máximo
+      if variant.compare_at_price > variant.price
+        assign discount = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round
+        if discount > max_discount
+          assign max_discount = discount
+        endif
+      endif
+      # Encontrar precio mínimo
+      if variant.price < min_price
+        assign min_price = variant.price
+      endif
+    endif
+  endfor
+
+  # 3. Formatear precios
+  if settings.currency_format_enable
+    assign money_price = price | money_with_currency
+    assign money_compare_at_price = compare_at_price | money_with_currency
+    assign money_min_price = min_price | money_with_currency
+  else
+    assign money_price = price | money
+    assign money_compare_at_price = compare_at_price | money
+    assign money_min_price = min_price | money
+  endif
+
+  # 4. Lógica de visualización
+  assign show_from = false
+  if template.name == 'collection' and product.price_varies and product.variants.size > 1 and max_discount == 0
+    assign show_from = true
+  endif
+-%}
+
+{% if template.name == 'product' %}
+
+  <div class="price {% if on_sale %}price--on-sale{% endif %}" data-product-price>
+    {% if on_sale %}
+      <s class="price__compare">{{ money_compare_at_price }}</s>
+      <span class="price__current">{{ money_price }}</span>
+      <span class="price__discount">(-{{ compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | round }}%)</span>
+    {% else %}
+      <span class="price__current">{{ money_price }}</span>
+    {% endif %}
+  </div>
+{% else %}
+
+  <div class="product-price {% if on_sale %}on-sale{% endif %}">
+    {% if on_sale %}
+      <s class="compare-price">{{ money_compare_at_price }}</s>
+      <span class="current-price">
+        {% if show_from %}Desde {% endif %}{{ money_price }}
+      </span>
+      <span class="discount-badge">(-{{ max_discount }}%)</span>
+    {% else %}
+      {% if show_from %}
+        <span class="from-text">Desde</span>
+      {% endif %}
+      <span class="current-price">{{ money_min_price }}</span>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% if template.name == 'product' %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const variantSelector = document.querySelector('[name="id"]');
+  if (!variantSelector) return;
+
+  variantSelector.addEventListener('change', function(e) {
+    const variantId = e.target.value;
+    fetch(`/variants/${variantId}.js`)
+      .then(response => response.json())
+      .then(variant => {
+        const priceContainer = document.querySelector('[data-product-price]');
+        const isOnSale = variant.compare_at_price > variant.price;
+        
+        const formattedPrice = Shopify.formatMoney(variant.price);
+        const formattedComparePrice = variant.compare_at_price ? Shopify.formatMoney(variant.compare_at_price) : '';
+        const discountPercent = isOnSale ? Math.round((variant.compare_at_price - variant.price) / variant.compare_at_price * 100) : 0;
+
+        priceContainer.innerHTML = isOnSale
+          ? `<s class="price__compare">${formattedComparePrice}</s>
+             <span class="price__current">${formattedPrice}</span>
+             <span class="price__discount">(-${discountPercent}%)</span>`
+          : `<span class="price__current">${formattedPrice}</span>`;
+
+        priceContainer.classList.toggle('price--on-sale', isOnSale);
+      })
+      .catch(error => console.error('Error:', error));
+  });
+});
+</script>
+{% endif %}
+
+<style>
+  /* Estilos para Cards */
+  .product-price {
+    font-size: 16px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .on-sale .compare-price {
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 100;
+    font-size: 14px;
+  }
+  .current-price {
+    color: var(--color-price);
+    font-weight: bold;
+  }
+  .on-sale .current-price {
+    color: var(--color-sale-price);
+  }
+.discount-badge {
+    background: transparent !important;
+    color: #e95144 !important;
+    padding: 2px 6px;
+    border-radius: 0px;
+    font-size: 12px;
+}
+  .from-text {
+    color: #666;
+  }
+
+  /* Estilos para Página de Producto */
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .price--on-sale .price__compare {
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 500;
+    
+  }
+  .price__current {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .price__discount {
+    color: #d82c2c;
+    font-size: 0.9em;
+  }
+</style>

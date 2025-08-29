@@ -1,0 +1,125 @@
+{% comment %} <link rel="stylesheet" href="{{ 'component-quick-cart.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-quick-cart.css' | asset_url | stylesheet_tag }}</noscript>
+<div class="halo-sidebar halo-sidebar-right halo-cart-sidebar" id="halo-cart-sidebar">
+    <button type="button" class="halo-sidebar-close button-effect" data-close-cart-sidebar aria-label="{{ 'general.common.close' | t }}">{% render 'icon-close' %} {{ 'general.common.close' | t }}</button>
+    <div class="halo-sidebar-header text-left">
+		<span class="title">{{ 'sections.cart.my_cart' | t }}</span>
+		<div class="wrapper-cartCount"><span class="cartCount" data-cart-count>{{ cart.item_count }}</span> <span data-cart-text>{% if cart.item_count == 1 %}{{ 'sections.cart.item' | t }}{% else %}{{ 'sections.cart.items' | t }}{% endif %}</span></div>
+	</div>
+    <div class="halo-sidebar-wrapper custom-scrollbar {{cart.items}}">
+      	{%- if settings.show_calculator_free_shipping_message -%}
+          <div class="previewCartMessage">{% render 'free-shipping-component' %}</div>
+        {%- endif -%}
+		<cart-coupon-discount data-is-sidebar="true">
+			<template data-discount-icon>{% render 'icon-discount' %}</template>
+			<template data-discounted-price-template>
+				<span class="previewCartItem-saving-price"><s class="before-discount-price" data-original-price-display>{{ item.original_price | money }}</s><span class="discounted-price" data-current-price-display>{{ item.final_price | money }}</span></span> 
+			</template>
+			<div class="previewCart-wrapper"></div>
+		</cart-coupon-discount>
+  	</div>
+</div>
+<script src="{{ 'halo-toolcart.js' | asset_url }}" defer="defer"></script>
+{% endcomment %}
+
+
+<link rel="stylesheet" href="{{ 'component-quick-cart.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-quick-cart.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="halo-sidebar halo-sidebar-right halo-cart-sidebar" id="halo-cart-sidebar">
+    <button type="button" class="halo-sidebar-close button-effect" data-close-cart-sidebar aria-label="{{ 'general.common.close' | t }}">
+        {% render 'icon-close' %} {{ 'general.common.close' | t }}
+    </button>
+    <div class="halo-sidebar-header text-left">
+        <span class="title">{{ 'sections.cart.my_cart' | t }}</span>
+        <div class="wrapper-cartCount">
+            <span class="cartCount" data-cart-count="{{ cart.item_count }}">{{ cart.item_count }}</span>
+            <span data-cart-text>
+                {% if cart.item_count == 1 %}
+                    {{ 'sections.cart.item' | t }}
+                {% else %}
+                    {{ 'sections.cart.items' | t }}
+                {% endif %}
+            </span>
+        </div>
+    </div>
+  
+    <div class="halo-sidebar-wrapper custom-scrollbar {{cart.items}}">
+        {%- if settings.show_calculator_free_shipping_message -%}
+            <div class="previewCartMessage">{% render 'free-shipping-component' %}</div>
+        {%- endif -%}
+
+        <!-- Mensaje de tiempos de envío con animación -->
+        <div class="tiempos-envios" {% if cart.item_count == 0 %}style="opacity: 0; height: 0; overflow: hidden;"{% endif %}>
+            <p id="tiempos-envios-text">
+                {% if cart.item_count == 1 %}
+                    Normalmente listo en 2 a 4 días
+                {% else %}
+                    Tu pedido estará listo en 2 a 4 días
+                {% endif %}
+            </p>
+        </div>
+
+        <cart-coupon-discount data-is-sidebar="true">
+            <template data-discount-icon>{% render 'icon-discount' %}</template>
+            <template data-discounted-price-template>
+                <span class="previewCartItem-saving-price">
+                    <s class="before-discount-price" data-original-price-display="{{ item.original_price | money }}"></s>
+                    <span class="discounted-price" data-current-price-display="{{ item.final_price | money }}"></span>
+                </span> 
+            </template>
+            <div class="previewCart-wrapper"></div>
+        </cart-coupon-discount>
+    </div>
+</div>
+
+<script src="{{ 'halo-toolcart.js' | asset_url }}" defer="defer"></script>
+
+<!-- Estilos CSS para la animación -->
+<style>
+.tiempos-envios {
+    transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+    opacity: 1;
+    height: auto;
+}
+.tiempos-envios.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+</style>
+
+<!-- Script para actualizar la visibilidad del mensaje dinámicamente -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    function updateTiemposEnvios() {
+        let cartCount = parseInt(document.querySelector(".cartCount").textContent.trim(), 10);
+        let tiemposEnvios = document.querySelector(".tiempos-envios");
+        let tiemposEnviosText = document.getElementById("tiempos-envios-text");
+
+        if (cartCount > 0) {
+            tiemposEnvios.classList.remove("hidden");
+            tiemposEnviosText.textContent = cartCount === 1 
+                ? "Normalmente listo en 2 a 4 días" 
+                : "Tu pedido estará listo en 2 a 4 días";
+        } else {
+            tiemposEnvios.classList.add("hidden");
+        }
+    }
+
+    // Escuchar cambios en el carrito
+    let observer = new MutationObserver(updateTiemposEnvios);
+    let cartCountElement = document.querySelector(".cartCount");
+
+    if (cartCountElement) {
+        observer.observe(cartCountElement, { childList: true, subtree: true });
+    }
+
+    // También actualizar cuando se elimine un producto manualmente
+    document.addEventListener("click", function(event) {
+        if (event.target.matches("[data-close-cart-sidebar], .cart-item-remove")) {
+            setTimeout(updateTiemposEnvios, 500); // Esperar que Shopify actualice el carrito
+        }
+    });
+});
+</script>
