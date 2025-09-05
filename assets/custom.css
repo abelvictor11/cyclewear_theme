@@ -94,6 +94,7 @@ div#especificaciones .col-md-6 {
 }
 span.count {
     float: right;
+    font-size: 10px;
 }
 .jdgm-widget .jdgm-prev-badge[data-average-rating='0.00'] {
     display: block !important;
