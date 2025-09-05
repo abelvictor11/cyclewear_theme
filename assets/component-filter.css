@@ -546,6 +546,7 @@ body:not(.firefox) .facets__price--slide::before {
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 10px;
+    background: #f6f6f6;
 }
 
 .page-sidebar.page-sidebar--vertical+.page-content .toolbar-wrapper .results-count{
