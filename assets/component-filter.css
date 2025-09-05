@@ -209,10 +209,10 @@
 .facets__list--refined .close:after {
     position: absolute;
     left: 0;
-    top: 8px;
+    top: 10px;
     content: " ";
-    height: 12px;
-    width: 2px;
+    height: 8px;
+    width: 1px;
     background-color: #707070;
 }
 
@@ -242,8 +242,8 @@
     letter-spacing: .02em;
     color: #707070;
     padding: 3px 25px 3px 12px;
-    border-radius: 3px;
-    background-color: #fafafa;
+    border-radius: 6px;
+    background-color: #fff;
     cursor: pointer;
     transition: var(--anchor-transition);
     position: relative;
@@ -543,7 +543,9 @@ body:not(.firefox) .facets__price--slide::before {
 }
 
 #CollectionFiltersForm .sidebarBlock {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .page-sidebar.page-sidebar--vertical+.page-content .toolbar-wrapper .results-count{
