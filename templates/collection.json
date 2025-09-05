@@ -93,7 +93,7 @@
         "lookbook_LhmxYi": {
           "type": "lookbook",
           "settings": {
-            "show_image": true,
+            "show_image": false,
             "link": "",
             "show_title": true,
             "page_title_alignment": "left",
