@@ -143,7 +143,7 @@
         "colors_bg": "rgba(0,0,0,0)",
         "colors_bg_gradient": "",
         "sidebar_collapse": "collapse",
-        "enable_sticky": false,
+        "enable_sticky": true,
         "sidebar_layout": "layout_2",
         "sidebar_collapse_default": "expand",
         "sidebar_type": "vertical",
