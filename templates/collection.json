@@ -1,1 +1,253 @@
-{"sections":{"banner":{"type":"main-collection-banner","blocks":{"description_cyH4UH":{"type":"description","settings":{"show_collection_description":true,"show_read_more_read_less":false,"collection_description_position":"relative","collection_description_align_tb":"top","collection_description_align":"left","maxwidth_collection_description":70,"collection_description_color":"#232323","collection_description_bg":"#ffffff","collection_description_bg_gradient":"","show_sub_collection":true,"sub_collection_layout":"slider","maxheight_sub_collection":90,"sub_collection_description_position":"relative","sub_collection_type":"all","colors_bg":"#ffffff","colors_bg_gradient":"","all_sub_collection_padding_top":10,"all_sub_collection_padding_bottom":10,"sub_collection_title":"Ir a","sub_collection_title_color":"#000000","fontsize_sub_collection":12,"fontweight_sub_collection":"500","sub_collection_text_transform":"uppercase","show_sub_collection_image":false,"sub_collection_padding_top":10,"sub_collection_padding_bottom":10,"sub_collection_grid_gap":15,"color_sub_collection":"#ffffff","sub_collection_background":"#232323","sub_collection_background_gradient":"","sub_collection_border":"#232323","sub_collection_color_hover":"#232323","sub_collection_background_hover":"#ffffff","sub_collection_background_gradient_hover":"","sub_collection_border_hover":"#232323","sub_collection_mg_top":0}}},"block_order":["description_cyH4UH"],"settings":{"container":"1770","padding_full_width":20,"layout":"3","show_breadcrumb":true,"breadcrumb_alignment":"left","breadcrumb_color":"#999999","breadcrumb_bg":"rgba(0,0,0,0)","breadcrumb_gradient":"","breadcrumb_color_mb":"","breadcrumb_bg_mb":"#f6f6f6","breadcrumb_gradient_mb":"","show_page_title":true,"page_title_alignment":"left","mg_top_desktop":0,"mg_top_tablet":0,"mg_top_mobile":0,"mg_bottom_desktop":0,"mg_bottom_tablet":0,"mg_bottom_mobile":0}},"product-grid":{"type":"main-collection-product-grid","blocks":{"80b0a11c-fb01-4b89-8a29-1dbb2a1db16a":{"type":"category","disabled":true,"settings":{"heading":"Categorías","type":"1_level","link_list":"productos"}},"3978fd59-b580-49e1-9893-38d762f48f10":{"type":"product_block","settings":{"heading":"Novedades","product_block_collection":"bicicletas","product_block_layout":"slider","product_block_limit":3,"product_block_dots":false,"product_block_arrows":true}}},"block_order":["80b0a11c-fb01-4b89-8a29-1dbb2a1db16a","3978fd59-b580-49e1-9893-38d762f48f10"],"settings":{"container":"1770","padding_full_width":0,"colors_bg":"rgba(0,0,0,0)","colors_bg_gradient":"","sidebar_collapse":"collapse","enable_sticky":false,"sidebar_layout":"layout_2","sidebar_collapse_default":"expand","sidebar_type":"vertical","sidebar_position":"left","sidebar_heading_font":"font_1","sidebar_heading_font_size":14,"sidebar_heading_font_weight":"700","sidebar_heading_text_transform":"uppercase","show_filter":true,"filter_swatch":"Color principal","filter_swatch_type":"png","filter_swatch_layout":"color","filter_rectangle":"Talla","filter_display_type":"show-more","max_item_per_filter":10,"filter_label_all":"Más filtros","filter_hidden_tag_list":"","show_toolbar":true,"show_sorting":true,"show_item_per_page":true,"show_view_as":true,"products_per_page":"50","layout":"4","show_infinite_scrolling":"pagination","show_banner":false,"show_banner_1":false,"banner_position_1":"4","link_banner_1":"","show_banner_2":false,"banner_position_2":"5","link_banner_2":"","show_banner_3":false,"banner_position_3":"12","link_banner_3":"","product_space_between_vert_desk":30,"product_space_between_vert_mb":16,"product_space_between_horiz_desk":60,"product_space_between_horiz_mb":30,"mg_top_desktop":0,"mg_top_tablet":0,"mg_top_mobile":0,"mg_bottom_desktop":0,"mg_bottom_tablet":0,"mg_bottom_mobile":0}},"product-recently-viewed":{"type":"product-recently-viewed","settings":{"display_product_recently_viewed":true,"product_recently_viewed_container":"1770","padding_full_width":0,"enable_border_top":true,"enable_border_bottom":false,"color_border_bottom":"#e8e8e8","border_style":"container","mg_top_desktop":0,"mg_top_tablet":0,"mg_top_mobile":0,"mg_bottom_desktop":0,"mg_bottom_tablet":0,"mg_bottom_mobile":0,"product_recently_viewed_layout":"slider","product_bg":"#ffffff","product_bg_gradient":"","style_block_header":"style1","product_recently_viewed_title":"Productos vistos recientemente","enable_border_title":false,"mg_top_title":26,"mg_bottom_title":3,"fontsize_title":24,"fontsize_title_mb":18,"border_color_title":"#232323","color_title":"#232323","product_recently_viewed_title_align":"center","product_recently_viewed_limit":10,"product_recently_viewed_image_ratio":"adapt","grid_gap":30,"product_recently_viewed_per_row":"5","product_recently_viewed_swipe_on_mobile":true,"product_recently_viewed_dots":false,"product_recently_viewed_dots_mb":true,"product_recently_viewed_arrows":true,"product_recently_viewed_arrows_mb":false,"product_recently_viewed_show":"5","product_block_per_view":"4","show_half":true,"scroll_height":4,"scroll_track_bg":"#f1f1f1","scroll_thumb_color":"#000000","scroll_thumb_hover_color":"#444444","enable_layout_special":false,"bg_card":"#ffffff","padding_card":15,"border_radius_card":5,"border_layout_card":"full","border_width_card":5,"border_color_card":"#f0f1f4"}}},"order":["banner","product-grid","product-recently-viewed"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "description_cyH4UH": {
+          "type": "description",
+          "settings": {
+            "show_collection_description": true,
+            "show_read_more_read_less": false,
+            "collection_description_position": "relative",
+            "collection_description_align_tb": "top",
+            "collection_description_align": "left",
+            "maxwidth_collection_description": 70,
+            "collection_description_color": "#232323",
+            "collection_description_bg": "#ffffff",
+            "collection_description_bg_gradient": "",
+            "show_sub_collection": true,
+            "sub_collection_layout": "slider",
+            "maxheight_sub_collection": 90,
+            "sub_collection_description_position": "relative",
+            "sub_collection_type": "all",
+            "colors_bg": "#ffffff",
+            "colors_bg_gradient": "",
+            "all_sub_collection_padding_top": 10,
+            "all_sub_collection_padding_bottom": 10,
+            "sub_collection_title": "Ir a",
+            "sub_collection_title_color": "#000000",
+            "fontsize_sub_collection": 12,
+            "fontweight_sub_collection": "500",
+            "sub_collection_text_transform": "uppercase",
+            "show_sub_collection_image": false,
+            "sub_collection_padding_top": 10,
+            "sub_collection_padding_bottom": 10,
+            "sub_collection_grid_gap": 15,
+            "color_sub_collection": "#ffffff",
+            "sub_collection_background": "#232323",
+            "sub_collection_background_gradient": "",
+            "sub_collection_border": "#232323",
+            "sub_collection_color_hover": "#232323",
+            "sub_collection_background_hover": "#ffffff",
+            "sub_collection_background_gradient_hover": "",
+            "sub_collection_border_hover": "#232323",
+            "sub_collection_mg_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "description_cyH4UH"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 20,
+        "layout": "3",
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_color": "#999999",
+        "breadcrumb_bg": "rgba(0,0,0,0)",
+        "breadcrumb_gradient": "",
+        "breadcrumb_color_mb": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "image_dAQqxC": {
+          "type": "image",
+          "settings": {
+            "heading": "Image",
+            "link": ""
+          }
+        },
+        "lookbook_LhmxYi": {
+          "type": "lookbook",
+          "settings": {
+            "show_image": true,
+            "link": "",
+            "show_title": true,
+            "page_title_alignment": "left",
+            "page_title_text_transform": "none",
+            "fontsize_title": 20,
+            "margin_top_title": 30,
+            "title_color": "#232323",
+            "show_collection_description": true,
+            "desc_alignment": "left",
+            "desc_pos": "top",
+            "fontsize_des": 12,
+            "margin_top_des": 12,
+            "margin_bottom": 25,
+            "des_color": "#3c3c3c"
+          }
+        },
+        "80b0a11c-fb01-4b89-8a29-1dbb2a1db16a": {
+          "type": "category",
+          "disabled": true,
+          "settings": {
+            "heading": "Categorías",
+            "type": "1_level",
+            "link_list": "productos"
+          }
+        },
+        "3978fd59-b580-49e1-9893-38d762f48f10": {
+          "type": "product_block",
+          "settings": {
+            "heading": "Novedades",
+            "product_block_collection": "bicicletas",
+            "product_block_layout": "slider",
+            "product_block_limit": 3,
+            "product_block_dots": false,
+            "product_block_arrows": true
+          }
+        }
+      },
+      "block_order": [
+        "image_dAQqxC",
+        "lookbook_LhmxYi",
+        "80b0a11c-fb01-4b89-8a29-1dbb2a1db16a",
+        "3978fd59-b580-49e1-9893-38d762f48f10"
+      ],
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 0,
+        "colors_bg": "rgba(0,0,0,0)",
+        "colors_bg_gradient": "",
+        "sidebar_collapse": "collapse",
+        "enable_sticky": false,
+        "sidebar_layout": "layout_2",
+        "sidebar_collapse_default": "expand",
+        "sidebar_type": "vertical",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 14,
+        "sidebar_heading_font_weight": "700",
+        "sidebar_heading_text_transform": "uppercase",
+        "show_filter": true,
+        "filter_swatch": "Color principal",
+        "filter_swatch_type": "png",
+        "filter_swatch_layout": "color",
+        "filter_rectangle": "Talla",
+        "filter_display_type": "show-more",
+        "max_item_per_filter": 10,
+        "filter_label_all": "Más filtros",
+        "filter_hidden_tag_list": "",
+        "show_toolbar": true,
+        "show_sorting": true,
+        "show_item_per_page": true,
+        "show_view_as": true,
+        "products_per_page": "50",
+        "layout": "4",
+        "show_infinite_scrolling": "pagination",
+        "show_banner": false,
+        "show_banner_1": false,
+        "banner_position_1": "4",
+        "link_banner_1": "",
+        "show_banner_2": false,
+        "banner_position_2": "5",
+        "link_banner_2": "",
+        "show_banner_3": false,
+        "banner_position_3": "12",
+        "link_banner_3": "",
+        "product_space_between_vert_desk": 30,
+        "product_space_between_vert_mb": 16,
+        "product_space_between_horiz_desk": 60,
+        "product_space_between_horiz_mb": 30,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 30,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "product-recently-viewed": {
+      "type": "product-recently-viewed",
+      "settings": {
+        "display_product_recently_viewed": true,
+        "product_recently_viewed_container": "1770",
+        "padding_full_width": 0,
+        "enable_border_top": true,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "border_style": "container",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "product_recently_viewed_layout": "slider",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "style_block_header": "style1",
+        "product_recently_viewed_title": "Productos vistos recientemente",
+        "enable_border_title": false,
+        "mg_top_title": 26,
+        "mg_bottom_title": 3,
+        "fontsize_title": 24,
+        "fontsize_title_mb": 18,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "product_recently_viewed_title_align": "center",
+        "product_recently_viewed_limit": 10,
+        "product_recently_viewed_image_ratio": "adapt",
+        "grid_gap": 30,
+        "product_recently_viewed_per_row": "5",
+        "product_recently_viewed_swipe_on_mobile": true,
+        "product_recently_viewed_dots": false,
+        "product_recently_viewed_dots_mb": true,
+        "product_recently_viewed_arrows": true,
+        "product_recently_viewed_arrows_mb": false,
+        "product_recently_viewed_show": "5",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "product-recently-viewed"
+  ]
+}
