@@ -85,6 +85,7 @@
       "blocks": {
         "image_dAQqxC": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "heading": "Image",
             "link": ""
