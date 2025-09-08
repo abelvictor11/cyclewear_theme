@@ -119,7 +119,7 @@
             "image_slide_mb": "shopify://shop_images/40_-LLANTAS-SPECIALIZED-POST.jpg",
             "alignment": "left",
             "enable_custom_position": true,
-            "custom_horizontal": "50",
+            "custom_horizontal": "60",
             "custom_vertical": "90",
             "enable_position_outside_image": true,
             "enable_border_line": false,
