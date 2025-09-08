@@ -115,8 +115,8 @@
         "image_WJkWFQ": {
           "type": "image",
           "settings": {
-            "image_slide": "shopify://shop_images/specialized-banner_1.jpg",
-            "image_slide_mb": "shopify://shop_images/pauta-specialized-historia_1.jpg",
+            "image_slide": "shopify://shop_images/40_-LLANTAS-SPECIALIZED-BANNER.jpg",
+            "image_slide_mb": "shopify://shop_images/40_-LLANTAS-SPECIALIZED-POST.jpg",
             "alignment": "left",
             "enable_custom_position": true,
             "custom_horizontal": "59",
@@ -184,7 +184,7 @@
             "enable_underline": true,
             "font_size_link": 36,
             "button_slide": "Comprar ahora",
-            "link": "shopify://collections/specialized",
+            "link": "https://www.cyclewear.com.co/collections/llantas-neumaticos?filter.v.availability=1&filter.v.price.gte=7000&filter.v.price.lte=489600&filter.p.vendor=Specialized&sort_by=created-descending",
             "button_style": "button",
             "button_slide_2": "",
             "link_2": "",
