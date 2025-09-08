@@ -125,7 +125,7 @@
             "enable_border_line": false,
             "padding_vertical": 30,
             "content_width": 750,
-            "text_alignment": "right",
+            "text_alignment": "center",
             "text_alignment_mb": "center",
             "enable_content_fullwidth": false,
             "border_color_content": "",
