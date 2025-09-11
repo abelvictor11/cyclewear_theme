@@ -239,6 +239,35 @@ body.open-mobile-sidebar .halo-grid-content {
 		padding-right: 0;
 		width: 100%;
 	}
+
+	/* Independent scroll for collection pages (desktop, vertical sidebar only) */
+	.collection-default .halo-collection-content.sidebar--layout_vertical,
+	.collection-right-sidebar .halo-collection-content.sidebar--layout_vertical{
+		position: sticky;
+		top: var(--collection-top-offset, 70px);
+		height: calc(100vh - var(--collection-top-offset, 70px));
+		overflow: hidden;
+	}
+
+	/* Adjust top offset based on global scroll state if available */
+	.scroll-down .collection-default .halo-collection-content.sidebar--layout_vertical{ --collection-top-offset: 20px; }
+	.scroll-up   .collection-default .halo-collection-content.sidebar--layout_vertical{ --collection-top-offset: 70px; }
+	.scroll-down .collection-right-sidebar .halo-collection-content.sidebar--layout_vertical{ --collection-top-offset: 20px; }
+	.scroll-up   .collection-right-sidebar .halo-collection-content.sidebar--layout_vertical{ --collection-top-offset: 70px; }
+
+	/* Give both columns their own scroll containers */
+	.collection-default .halo-collection-content.sidebar--layout_vertical .page-content,
+	.collection-right-sidebar .halo-collection-content.sidebar--layout_vertical .page-content{
+		height: 100%;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.collection-default .halo-collection-content.sidebar--layout_vertical .page-sidebar.has-sticky,
+	.collection-right-sidebar .halo-collection-content.sidebar--layout_vertical .page-sidebar.has-sticky{ /* neutralize inner sticky when wrapper is sticky */
+		position: static;
+		top: auto;
+	}
 }
 
 @media (min-width: 1400px){
