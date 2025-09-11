@@ -153,7 +153,7 @@
         "custom_liquid_fr9cUB": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'product-financing',\n  enabled: true,\n  title: 'Llévalo hoy con 0% de interés',\n  months: '3,6,12,24',\n  methods: 'Addi|https://www.cyclewear.com.co/cdn/shop/t/67/assets/addi.svg|https://tudominio.com/financia,BBVA|https://www.cyclewear.com.co/cdn/shop/t/67/assets/sistecredito.svg|https://wa.me/XXXXXXXXXXX',\n  notes: 'Hasta 24 meses con Sistecrédito y Addi.||Con Bancolombia: hasta 24 meses en Bicicletas de ruta, gravel, MTB y hasta 12 meses en los demás productos desde $800.000.'\n%}"
+            "custom_liquid": "{% render 'product-financing',\n  enabled: true,\n  title: 'Llévalo hoy con 0% de interés',\n  months: '3,6,12,24',\n  methods: 'Addi|https://www.cyclewear.com.co/cdn/shop/t/67/assets/addi.svg|https://tudominio.com/financia,BBVA|https://www.cyclewear.com.co/cdn/shop/t/67/assets/sistecredito.svg|https://wa.me/XXXXXXXXXXX',\n  notes: 'Hasta 24 meses con Sistecrédito y Addi.||Con Bancolombia: hasta 24 meses en Bicicletas de ruta, gravel, MTB y hasta 12 meses en los demás productos desde $800.000.'\n%}\n<style>.financing__content li {\n    list-style-type: none;\n}</style>"
           }
         },
         "custom_liquid_W6ykW3": {
