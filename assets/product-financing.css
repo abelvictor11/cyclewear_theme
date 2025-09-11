@@ -1,0 +1,123 @@
+/* product-financing.css */
+.product-financing { 
+  margin: 16px 0 24px; 
+}
+
+.product-financing .financing__box {
+  border: 1px solid var(--color-border, rgba(120,129,136,.2));
+  border-radius: 12px;
+  background: var(--bg-white, #fff);
+  overflow: hidden;
+}
+
+.product-financing .financing__summary {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: 1.2rem 1.6rem;
+  font-weight: 700;
+  color: var(--color-text, #222);
+  cursor: pointer;
+  list-style: none;
+}
+
+.product-financing .financing__summary::-webkit-details-marker { display: none; }
+
+.product-financing .financing__content {
+  padding: 1.2rem 1.6rem 1.6rem;
+}
+
+/* Installment row */
+.financing__installment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem;
+  border: 1px solid var(--color-border, rgba(120,129,136,.2));
+  border-radius: 12px;
+  background: var(--color-background, #f8f8f8);
+}
+
+.financing__amount {
+  font-size: clamp(2.2rem, 2vw + 1rem, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-base-accent-1, #1a73e8);
+}
+
+.financing__per {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.financing__per-text { font-weight: 600; }
+
+.financing__months {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: .8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-border, rgba(120,129,136,.3));
+  background: var(--bg-white, #fff);
+  font-weight: 700;
+  min-width: 140px;
+}
+
+/* Methods */
+.financing__methods { margin-top: 1.4rem; }
+.financing__methods-title { font-weight: 700; margin-bottom: .8rem; }
+
+.financing__logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .8rem;
+}
+
+@media (max-width: 1024px) {
+  .financing__logos { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .financing__logos { grid-template-columns: repeat(2, 1fr); }
+}
+
+.financing__logo-link, .financing__logo {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border, rgba(120,129,136,.2));
+  background: var(--bg-white, #fff);
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.financing__logo-link:hover .financing__logo, .financing__logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+}
+
+.financing__logo img { 
+  max-height: 28px; 
+  width: auto; 
+  display: block; 
+  margin: 0 auto; 
+}
+
+.financing__logo-fallback {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+/* Notes */
+.financing__notes { 
+  margin-top: 1.2rem; 
+  font-size: 1.3rem; 
+  color: var(--color-text, #222); 
+}
+.financing__notes ul { padding-left: 1.2rem; margin: 0; }
+.financing__notes li { margin: .4rem 0; }
