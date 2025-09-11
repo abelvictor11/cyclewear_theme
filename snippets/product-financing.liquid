@@ -1,0 +1,219 @@
+{% comment %}
+  Snippet: product-financing
+  Uso sugerido desde un bloque "Liquid personalizado" en la PDP:
+
+  {% render 'product-financing',
+    enabled: true,
+    title: 'Llévalo hoy con 0% de interés',
+    months: '3,6,12,24',
+    methods: 'Davivienda|davivienda.svg|https://tudominio.com/financia,BBVA|bbva.svg|https://wa.me/XXXXXXXXXXX',
+    notes: 'Hasta 24 meses con Davivienda, Banco de Occidente, Banco Popular, BBVA y RappiPay.||Con Bancolombia: hasta 24 meses en iPhone y Mac, y hasta 12 meses en los demás productos desde $800.000.'
+  %}
+
+  Parámetros:
+  - enabled: true/false para mostrar u ocultar el módulo.
+  - title: título del acordeón.
+  - months: string separado por comas con los plazos (por ej. '3,6,12,24').
+  - methods: lista separada por comas, cada método como "Nombre|archivo_logo.svg|URL". El logo debe existir en assets/.
+  - notes: lista de notas separadas por "||" para mostrar viñetas.
+
+  Notas:
+  - El módulo sólo es visual. No afecta el checkout.
+  - Calcula la cuota dividiendo el precio de la variante por el número de meses (0% interés).
+  - Se actualiza al cambiar de variante.
+{% endcomment %}
+
+{% liquid
+  assign enabled_str = enabled | default: 'true' | downcase
+%}
+
+{% if enabled_str == 'false' or enabled_str == '0' %}
+  <!-- Oculto por configuración -->
+{% else %}
+  {{ 'product-financing.css' | asset_url | stylesheet_tag }}
+
+  {% liquid
+    assign months_str = months | default: '3,6,12,24'
+    assign months_arr = months_str | split: ','
+
+    assign methods_str = methods | default: ''
+    assign methods_arr = methods_str | split: ','
+
+    assign notes_str = notes | default: ''
+    assign notes_arr = notes_str | split: '||'
+
+    assign heading = title | default: 'Llévalo hoy con 0% de interés'
+
+    assign dom_id = 'financing-' | append: product.id | default: 'financing-generic'
+
+    assign selected_variant = product.selected_or_first_available_variant
+    if selected_variant == nil and product.variants.size > 0
+      assign selected_variant = product.variants.first
+    endif
+
+    assign fallback_price_cents = 0
+    if selected_variant
+      assign fallback_price_cents = selected_variant.price
+    elsif product
+      assign fallback_price_cents = product.price
+    endif
+  %}
+
+  <div id="{{ dom_id }}" class="product-financing" data-money-format="{{ shop.money_format | escape }}" data-currency="{{ shop.currency }}" data-locale="{{ request.locale.iso_code }}" data-fallback-price="{{ fallback_price_cents }}">
+    <details class="financing__box" open>
+      <summary class="financing__summary">
+        <span class="financing__summary-title">{{ heading }}</span>
+      </summary>
+      <div class="financing__content">
+        <div class="financing__installment">
+          <div class="financing__amount" data-financing-amount>—</div>
+          <div class="financing__per">
+            <span class="financing__per-text">al mes por</span>
+            <select class="financing__months" data-financing-months aria-label="Selecciona meses">
+              {% for m in months_arr %}
+                {% assign m_trim = m | strip %}
+                <option value="{{ m_trim }}" {% if forloop.last %}selected{% endif %}>{{ m_trim }} meses</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        {% if methods_str != '' %}
+          <div class="financing__methods">
+            <div class="financing__methods-title">Aprovecha con tu tarjeta favorita:</div>
+            <ul class="financing__logos" role="list">
+              {% for method in methods_arr %}
+                {% assign item = method | strip %}
+                {% assign parts = item | split: '|' %}
+                {% assign method_name = parts[0] | strip %}
+                {% assign method_logo = parts[1] | default: '' | strip %}
+                {% assign method_url  = parts[2] | default: '' | strip %}
+                <li class="financing__logo-item">
+                  {% if method_url != '' %}<a href="{{ method_url }}" class="financing__logo-link" target="_blank" rel="noopener noreferrer">{% endif %}
+                    <div class="financing__logo">
+                      {% if method_logo != '' %}
+                        {% if method_logo contains 'http' or method_logo contains '//' %}
+                          <img src="{{ method_logo }}" alt="{{ method_name }}" loading="lazy" />
+                        {% else %}
+                          <img src="{{ method_logo | asset_url }}" alt="{{ method_name }}" loading="lazy" onerror="this.onerror=null;this.src='{{ method_logo | file_url }}';" />
+                        {% endif %}
+                      {% else %}
+                        <span class="financing__logo-fallback">{{ method_name }}</span>
+                      {% endif %}
+                    </div>
+                  {% if method_url != '' %}</a>{% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+
+        {% if notes_str != '' %}
+          <div class="financing__notes">
+            <ul>
+              {% for note in notes_arr %}
+                {% assign note_text = note | strip %}
+                {% if note_text != '' %}<li>{{ note_text }}</li>{% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    </details>
+
+    <script type="application/json" data-financing-variants>
+      [
+      {% if product and product.variants.size > 0 %}
+        {% for v in product.variants %}
+          {"id": {{ v.id }}, "price": {{ v.price }} }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      {% endif %}
+      ]
+    </script>
+
+    <script>
+    (function(){
+      var root = document.getElementById('{{ dom_id }}');
+      if(!root) return;
+      var moneyFormat = root.getAttribute('data-money-format') || "${{amount}}";
+      var currency = root.getAttribute('data-currency') || 'USD';
+      var locale = root.getAttribute('data-locale') || 'es';
+      var fallbackPrice = parseInt(root.getAttribute('data-fallback-price') || '0', 10) || 0;
+
+      var amountEl = root.querySelector('[data-financing-amount]');
+      var monthsSelect = root.querySelector('[data-financing-months]');
+
+      var variantsJSON = [];
+      try {
+        var jsonEl = root.querySelector('[data-financing-variants]');
+        if (jsonEl) variantsJSON = JSON.parse(jsonEl.textContent || '[]');
+      } catch(e) { variantsJSON = []; }
+
+      var priceById = {};
+      variantsJSON.forEach(function(v){ priceById[v.id] = v.price; });
+
+      function formatMoney(cents){
+        if (window.Shopify && typeof Shopify.formatMoney === 'function') {
+          return Shopify.formatMoney(cents, moneyFormat);
+        }
+        try {
+          return new Intl.NumberFormat(locale, { style: 'currency', currency: currency, maximumFractionDigits: 0 }).format(cents/100);
+        } catch(e) {
+          return (cents/100).toFixed(0);
+        }
+      }
+
+      function getCurrentVariantId(){
+        var input = document.querySelector('form[action="/cart/add"] [name="id"]');
+        if (!input) input = document.querySelector('[name="id"][form]');
+        if (!input) input = document.querySelector('select[name="id"], input[name="id"][type="hidden"], input[name="id"][type="radio"]:checked');
+        var val = input ? parseInt(input.value, 10) : NaN;
+        if (!isNaN(val)) return val;
+        // fallback to any key in map
+        var keys = Object.keys(priceById);
+        if (keys.length) return parseInt(keys[0], 10);
+        return null;
+      }
+
+      function currentPriceCents(){
+        var vid = getCurrentVariantId();
+        if (vid && priceById[vid] != null) return parseInt(priceById[vid], 10) || 0;
+        return fallbackPrice;
+      }
+
+      function updateAmount(){
+        var m = parseInt(monthsSelect && monthsSelect.value || '1', 10) || 1;
+        var price = currentPriceCents();
+        if (!price || price <= 0) { amountEl.textContent = '—'; return; }
+        var perMonth = Math.round(price / m);
+        amountEl.textContent = formatMoney(perMonth);
+      }
+
+      // React to month selection changes
+      if (monthsSelect) monthsSelect.addEventListener('change', updateAmount);
+
+      // React to theme-specific variant change events
+      document.addEventListener('variant:change', function(e){
+        if (e && e.detail && e.detail.variant) {
+          var v = e.detail.variant;
+          if (v && v.id && typeof v.price === 'number') priceById[v.id] = v.price;
+          updateAmount();
+        }
+      });
+      document.addEventListener('product:variant-change', function(){ updateAmount(); });
+
+      // React to native changes on variant selector inputs
+      document.addEventListener('change', function(ev){
+        var t = ev.target;
+        if (!t) return;
+        if (t.name === 'id' || t.closest('variant-radios') || t.closest('variant-selects')) {
+          updateAmount();
+        }
+      });
+
+      // Initial calculation
+      updateAmount();
+    })();
+    </script>
+  </div>
+{% endif %}
