@@ -882,12 +882,14 @@
         overflow: visible;
     }
 
-    /* Independent scroll on collection pages: sidebar area should fill wrapper and scroll separately */
-    .collection-default .page-sidebar {
+    /* Independent scroll on collection pages (vertical sidebar only): sidebar area should fill wrapper and scroll separately */
+    .collection-default .halo-collection-content.sidebar--layout_vertical .page-sidebar,
+    .collection-right-sidebar .halo-collection-content.sidebar--layout_vertical .page-sidebar {
         height: 100%;
         overflow: hidden; /* contain inner scroller */
     }
-    .collection-default .page-sidebar .halo-sidebar-wrapper {
+    .collection-default .halo-collection-content.sidebar--layout_vertical .page-sidebar .halo-sidebar-wrapper,
+    .collection-right-sidebar .halo-collection-content.sidebar--layout_vertical .page-sidebar .halo-sidebar-wrapper {
         height: 100%;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
