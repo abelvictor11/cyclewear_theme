@@ -1,1 +1,506 @@
-{"sections":{"main":{"type":"main-product","blocks":{"2e8c7c14-a0ad-4930-a1d8-3def05310426":{"type":"breadcrumb","settings":{"breadcrumb_layout":"full","breadcrumb_alignment":"left","breadcrumb_bg":"rgba(0,0,0,0)","breadcrumb_gradient":"","breadcrumb_bg_mb":"#f6f6f6","breadcrumb_gradient_mb":"","breadcrumb_mg_top_desktop":10,"breadcrumb_mg_top_mobile":0,"breadcrumb_mg_bottom_desktop":20,"breadcrumb_mg_bottom_mobile":10}},"custom_liquid_rPXjA3":{"type":"custom_liquid","settings":{"custom_liquid":"{% if product.metafields.global.anoshopi != blank -%}\n<span class=\"label-model\">\n<span>{{ product.metafields.global.anoshopi | metafield_text }}\n<\/span>\n<\/span>\n{%- else -%}\n{%- endif %}"}},"custom_liquid_NA8QQ9":{"type":"custom_liquid","settings":{"custom_liquid":"<div class=\"vendor-image\" style=\"max-width: 200px;margin-bottom:20px;margin-top: 20px;\">\n  <a href=\"{{ shop.url }}\/collections\/{{ product.vendor | handle }}\">\n    {% assign vendor_logo = product.vendor | handle | append: '.svg' %}\n    {% assign vendor_logo_url = vendor_logo | asset_url %}\n    {% if vendor_logo_url %}\n      <img src=\"{{ vendor_logo_url }}\" alt=\"{{ product.vendor }}\">\n    {% else %}\n      <span>No logo available<\/span>\n    {% endif %}\n  <\/a>\n<\/div>"}},"judge_me_reviews_preview_badge_8FNj7N":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}},"b0ea69b7-8a54-4a3c-9abd-0fcceeabaaa0":{"type":"title","settings":{"fontsize_text":20,"fontsize_text_mb":18,"color_title":"#232323","spacing_top":0,"spacing_bottom":5}},"0e4ea696-4820-4c98-aaa6-806d41782a3d":{"type":"meta","settings":{"show_sold_in":false,"sold_in_number":"3,5,6,7,8,10,12,15","sold_in_hours":"10,15,16,17,18,20,25,35","color_text_sold_in":"#e95144","spacing_top":0,"spacing_bottom":14}},"4f95b592-8369-4ab0-b30d-24e463fb6890":{"type":"price","settings":{"fontsize_text":18,"spacing_top":5,"spacing_bottom":17}},"4e59f24a-8859-4579-a80a-d70e6f1bf66b":{"type":"info","settings":{"show_vendor":false,"show_sku":true,"show_barcode":false,"show_availability":false,"show_product_type":false,"stock_level_display":"none","enable_border_top":false,"enable_border_bottom":false,"color_border":"#e6e6e6","spacing_top":0,"spacing_bottom":18}},"d98e243b-3682-495a-965a-1c7f7d460880":{"type":"variant_picker","settings":{"picker_type":"button","show_variant_image_group":true,"enable_border_top":false,"enable_border_bottom":true,"color_border":"#e6e6e6","spacing_top":0,"spacing_bottom":0}},"custom_liquid_ny8KRF":{"type":"custom_liquid","settings":{"custom_liquid":"{% render 'bike-size-calculator' %}"}},"faa2b3e6-c0a1-4269-baa6-d2605efe4c05":{"type":"quantity_selector","settings":{"qty_style":"1","qty_layout":"2","spacing_top":0,"spacing_bottom":15}},"f1b31d90-1e43-4948-9fe3-97ba43f6fb34":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true,"atc_animation":"none","atc_color":"#ffffff","atc_border_color":"#232323","atc_bg_color":"#232323","atc_bg_color_gradient":"","atc_color_hover":"#232323","atc_border_color_hover":"#232323","atc_bg_color_hover":"#ffffff","atc_bg_color_gradient_hover":"","bin_color":"#232323","bin_border_color":"#acacac","bin_bg_color":"#ffffff","bin_bg_color_gradient":"","bin_color_hover":"#ffffff","bin_border_color_hover":"#232323","bin_bg_color_hover":"#232323","bin_bg_color_hover_gradient":"","spacing_top":0,"spacing_bottom":15}},"683f2b15-db3b-4f63-8d0f-e688cc678581":{"type":"customer_viewing","settings":{"customer_viewing_number":"283, 100, 59, 11, 14, 185, 193, 165, 50, 38, 99, 112, 46, 10, 125, 200, 250, 18","customer_viewing_time":5,"spacing_top":0,"spacing_bottom":22}},"custom_liquid_W6ykW3":{"type":"custom_liquid","settings":{"custom_liquid":"<h3>Pago\nseguro<\/h3>\n<ul class=\"payment-logos-list\" style=\"list-style-type: none; padding-left: 0; margin-bottom: 25px;\">\n   <li style=\"display: inline-block; margin-right: 5px;\">\n      <noscript><img src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/visa.svg\" alt=\"visa\" style=\"max-width: 50px;\"><\/noscript>\n      <img class=\" lazyloaded\" src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/visa.svg\" data-src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/visa.svg\" alt=\"visa\" style=\"max-width: 50px;\">\n   <\/li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/mastercard.svg\" alt=\"Mastercard\" style=\"max-width: 50px;\"><\/noscript>\n      <img class=\" lazyloaded\" src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/mastercard.svg\" data-src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/mastercard.svg\" alt=\"Mastercard\" style=\"max-width: 50px;\">\n   <\/li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/americanexpress.svg\" alt=\"american express\" style=\"max-width: 50px;\"><\/noscript>\n      <img class=\" lazyloaded\" src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/americanexpress.svg\" data-src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/americanexpress.svg\" alt=\"american express\" style=\"max-width: 50px;\">\n   <\/li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/pse.svg\" alt=\"american express\" style=\"max-width: 50px;\"><\/noscript>\n      <img class=\" lazyloaded\" src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/pse.svg\" data-src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/pse.svg\" alt=\"pse\" style=\"max-width: 50px;\">\n   <\/li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/cencosud.svg\" alt=\"Cencosud\" style=\"max-width: 50px;\"><\/noscript>\n      <img class=\" lazyloaded\" src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/cencosud.svg\" data-src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/encosud.svg\" alt=\"Cencosud\" style=\"max-width: 50px;\">\n   <\/li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/cmrfalabella.svg\" alt=\"CMR falabella\" style=\"max-width: 50px;\"><\/noscript>\n      <img class=\" lazyloaded\" src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/cmrfalabella.svg\" data-src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/cmrfalabella.svg\" alt=\"CMR falabella\" style=\"max-width: 50px;\">\n   <\/li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/efecty.svg\" alt=\"CMR falabella\" style=\"max-width: 50px;\"><\/noscript>\n      <img class=\" lazyloaded\" src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/efecty.svg\" data-src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/efecty.svg\" alt=\"efecty\" style=\"max-width: 50px;\">\n   <\/li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/addi.svg\" alt=\"addi\" style=\"max-width: 50px;\"><\/noscript>\n      <img class=\" lazyloaded\" src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/addi.svg\" data-src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/addi.svg\" alt=\"Addi\" style=\"max-width: 50px;\">\n   <\/li>\n<li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/addi.svg\" alt=\"addi\" style=\"max-width: 50px;\"><\/noscript>\n      <img class=\" lazyloaded\" src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/sistecredito.svg\" data-src=\"\/\/www.cyclewear.com.co\/cdn\/shop\/t\/67\/assets\/sistecredito.svg\" alt=\"Sistecredito\" style=\"max-width: 50px;\">\n   <\/li>\n<\/ul>"}},"19de9abb-17c8-4d67-941d-b32706ed06fd":{"type":"pickup_availability","settings":{"show_pickup_availability":true,"spacing_top":0,"spacing_bottom":11}},"10093fcf-2053-47e9-bedb-841bb0d046fa":{"type":"trust_image","settings":{"show_trust_image":true,"spacing_top":0,"spacing_bottom":0}},"bd3a641e-98d0-4da1-ab57-d5e4b0391995":{"type":"countdown","disabled":true,"settings":{"spacing_top":0,"spacing_bottom":20}},"d97e417a-941b-4a5d-bef3-a651adb918d8":{"type":"variant_description","settings":{"spacing_top":0,"spacing_bottom":12}},"bd066b80-c8e3-4f3e-8280-b27fbf6e9423":{"type":"description","settings":{"open_tab_mobile":true,"title":"Description","enable_btn_show_more":false,"maximum_des_to_show":300}},"3d9ea84d-5527-4bce-abe6-5debef3ec955":{"type":"custom","settings":{"open_tab_mobile":false,"title":"Envíos & devoluciones","type":"all","content":"<h3>Tiempos de Envío y Plazos de Entrega<\/h3>\n<p>Tiempos de Envío: a. Cálculo de Tiempo de Despacho: En CycleWear, nuestro compromiso es proporcionarte una experiencia de compra eficiente y conveniente. Al realizar una compra en nuestro sitio web, nuestro sistema calculará automáticamente un tiempo estimado de despacho de acuerdo con la transportadora que elijas y te informará sobre el tiempo de entrega previsto.\n\nb. Opciones de Transportadoras: Ofrecemos varias opciones de transportadoras para que puedas seleccionar la que mejor se adapte a tus necesidades y preferencias. Cada transportadora puede tener plazos de entrega diferentes y costos variables. Te proporcionaremos información detallada sobre las opciones disponibles durante el proceso de compra.\n\nPlazos de Entrega: a. Variación en los Plazos de Entrega: Los plazos de entrega pueden variar según la ubicación de entrega y la disponibilidad de los productos. Estimamos que, en condiciones normales, los productos serán entregados dentro de [1 a 5] días hábiles desde la fecha de confirmación del pedido en ciudades principales.\n\nc. Retrasos Inesperados: En ocasiones, pueden surgir circunstancias imprevistas, como condiciones climáticas adversas o problemas logísticos, que podrían causar retrasos en la entrega. En caso de retrasos, haremos todos los esfuerzos razonables para informarte y resolver la situación de la manera más satisfactoria posible.<\/p>\n\n<p>Ten en cuenta que los plazos de entrega son estimados y pueden variar. Te recomendamos revisar los detalles de envío y entrega específicos proporcionados durante el proceso de compra y en la confirmación del pedido. Si tienes alguna pregunta o inquietud relacionada con los tiempos de envío y entrega, no dudes en contactarnos a través de los medios de contacto proporcionados en este sitio.<\/p>\n<h3>Política de Cambios y Devoluciones<\/h3>\n<p>Cambios de Talla o Producto: Aceptamos cambios de talla o producto dentro de 10 días a partir de la fecha de recepción del Articulo, siempre y cuando el articulo esté en su estado original.<\/p>\n\n<h4>Condiciones de Devolución del Artículo:<\/h4>\n\n<p><strong>Estado Original:<\/strong> El producto debe ser devuelto en el mismo estado en el que fue entregado, conservando todas sus etiquetas, empaques y sellos originales, y en condiciones de limpieza adecuadas. No se aceptarán devoluciones de productos que presenten signos de uso o daño por parte del cliente.<\/p>\n<p><strong>Costos de Transporte:<\/strong> Los costos de transporte y cualquier otro gasto relacionado con la devolución del producto serán cubiertos por el cliente.\n<\/p>","product_custom_source":"dynamic","product_tab_key_metafield":"","enable_btn_show_more":true,"maximum_des_to_show":300}},"b9d6eb19-10f4-41f8-bfdc-ea10e8b3182a":{"type":"custom","settings":{"open_tab_mobile":false,"title":"Información de la tienda","type":"all","content":"<p><strong>Tienda de Ciclismo: CycleWear<\/strong>, entendemos que el ciclismo es más que una actividad; es una pasión, un estilo de vida. Por eso, nos asociamos con las marcas más reconocidas en la industria para ofrecerte una amplia variedad de modelos que satisfarán tus retos y aventuras. Desde bicicletas de alto rendimiento hasta accesorios de vanguardia, estamos comprometidos a proporcionarte productos de calidad que mejoren tu experiencia sobre dos ruedas.<\/p>\n<p>En nuestra tienda, encontrarás bicicletas de alta calidad de las marcas Giant, Scott y Specialized, así como una amplia gama de accesorios, componentes y ropa de marcas líderes en la industria del ciclismo. Nuestro equipo de expertos estará encantado de asesorarte y ayudarte a elegir la bicicleta y los productos más adecuados para tus necesidades.<\/p>\n<p>Puedes contactarlos al +573146512753 o por correo electrónico a info@cyclewear.com.co. Su dirección física es Cra 43c 68 Sur 12, Sabaneta, Antioquia.<\/p>","product_custom_source":"dynamic","product_tab_key_metafield":"","enable_btn_show_more":true,"maximum_des_to_show":300}},"19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3":{"type":"share","settings":{"show_share":true,"share_layout":"2","spacing_top":0,"spacing_bottom":0}},"9630b233-8164-4dad-ab64-8830bedf328a":{"type":"complementary_products","settings":{"complementary_product_title":"Pairs well with","complementary_product_layout":"2","complementary_product_limit_1":2,"complementary_product_limit_2":3,"complementary_product_arrows":false,"complementary_product_dots":true,"complementary_product_object":"cover","complementary_product_button_atc":false,"spacing_top":30,"spacing_bottom":0}}},"block_order":["2e8c7c14-a0ad-4930-a1d8-3def05310426","custom_liquid_rPXjA3","custom_liquid_NA8QQ9","judge_me_reviews_preview_badge_8FNj7N","b0ea69b7-8a54-4a3c-9abd-0fcceeabaaa0","0e4ea696-4820-4c98-aaa6-806d41782a3d","4f95b592-8369-4ab0-b30d-24e463fb6890","4e59f24a-8859-4579-a80a-d70e6f1bf66b","d98e243b-3682-495a-965a-1c7f7d460880","custom_liquid_ny8KRF","faa2b3e6-c0a1-4269-baa6-d2605efe4c05","f1b31d90-1e43-4948-9fe3-97ba43f6fb34","683f2b15-db3b-4f63-8d0f-e688cc678581","custom_liquid_W6ykW3","19de9abb-17c8-4d67-941d-b32706ed06fd","10093fcf-2053-47e9-bedb-841bb0d046fa","bd3a641e-98d0-4da1-ab57-d5e4b0391995","d97e417a-941b-4a5d-bef3-a651adb918d8","bd066b80-c8e3-4f3e-8280-b27fbf6e9423","3d9ea84d-5527-4bce-abe6-5debef3ec955","b9d6eb19-10f4-41f8-bfdc-ea10e8b3182a","19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3","9630b233-8164-4dad-ab64-8830bedf328a"],"settings":{"container":"1770","padding_full_width":30,"show_sticky_info":false,"media_fit":"contain","product_image_ratio":"square","portrait_aspect_ratio":101,"video_layout":"popup","zoomed_image":false,"product_image_popup":"fancybox","main_image_show_custom_cursor":true,"icon_color":"#000000","main_image_position":"left","main_image_layout":"1","main_image_arrows_desktop":true,"main_image_arrows_mobile":true,"main_image_counter_mobile":true,"main_image_enable_parallax_mb":false,"main_image_show_zoom_icon_mb":true,"show_thumbnail_mobile":true,"thumnail_layout":"3","thumbnail_to_show":6,"enable_sticky":false,"sidebar_layout":"layout_2","sidebar_collapse":"collapse","sidebar_collapse_default":"expand","sidebar_position":"left","sidebar_heading_font":"font_1","sidebar_heading_font_size":14,"sidebar_heading_font_weight":"700","sidebar_heading_text_transform":"uppercase","show_badge":true,"show_subtotal":true,"subtotal_style":"2","show_sticky_add_to_cart":true,"sticky_atc_layout":"1","enable_sticky_add_to_cart_always_mobile":true,"show_sticky_vendor":true,"show_quick_order_list":false,"show_image":false,"show_sku":false,"show_tab":true,"tab_layout":"vertical_sidebar","tab_layout_mobile":"popup","icon_style_layout":"style_2","title_font_size":18,"title_font_size_mb":16,"font_weight_title":"600","title_text_transform":"none","title_padding_top_bottom":15,"tab_border_color":"#000000","tab_border_color_rgb":"","show_product_bundle":true,"background_color":"#f8f8f8","block_title":"Comprados juntos frecuentemente","block_title_align":"left","product_style":"2","block_image_ratio":"adapt","bundle_discount":true,"bundle_discount_text":"Obtén un [discount]% de descuento comprando estos productos juntos","bundle_discount_text_color":"#232323","total_btn_color":"#ffffff","total_btn_border":"#232323","total_btn_bg":"#232323","total_btn_bg_gradient":"","total_btn_color_hover":"#232323","total_btn_border_hover":"#232323","total_btn_bg_hover":"#ffffff","total_btn_bg_gradient_hover":"","block_dots":true,"block_arrows":true,"padding_top":30,"padding_top_tablet":30,"padding_top_mobile":30,"padding_bottom":70,"padding_bottom_tablet":40,"padding_bottom_mobile":30,"mg_top_desktop":0,"mg_top_tablet":0,"mg_top_mobile":0,"mg_bottom_desktop":0,"mg_bottom_tablet":0,"mg_bottom_mobile":0}},"custom_liquid_33M9U7":{"type":"custom-liquid","settings":{"custom_liquid":"<div class=\"container\" id=\"especificaciones\">\n  <div class=\"row\">\n  <div class=\"col-md-6 col-12\" style=\"padding-right: 7%;\">\n  {% if product.description != blank %}\n    <h3>Descripción<\/h3>\n    <div id=\"product-description-container\">\n      <div id=\"product-description\" class=\"short-description\">\n        {{ product.description }}\n      <\/div>\n    <\/div>\n    {% if product.description.size > 500 %}\n      <button id=\"toggle-description\" class=\"btn btn-link\">Ver más<\/button>\n    {% endif %}\n  {% endif %}\n<\/div>\n\n\n\n        <div class=\"col-md-6 col-12 atributos\">\n  <ul>\n<h3 style=\"padding-top: 10px;\">Acerca del producto<\/h3>\n\n\n{% if product.metafields.global.materialshopi != blank -%}\n<li><h4><span class=\"generoicon\"><\/span>Material<\/h4>\n<p>{{ product.metafields.global.materialshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.tipodeplato != blank -%}\n<li><h4><span class=\"generoicon\"><\/span>Tipo de plato<\/h4>\n<p>{{ product.metafields.global.tipodeplato| metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.tubelessshopi != blank -%}\n<li><h4><span class=\"generoicon\"><\/span>Tubeless<\/h4>\n<p>{{ product.metafields.global.tubelessshopi| metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n\n{% if product.metafields.global.anchodelproductoshopi != blank -%}\n<li><h4><span class=\"generoicon\"><\/span>Ancho del producto<\/h4>\n<p>{{ product.metafields.global.anchodelproductoshopi| metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n\n{% if product.metafields.global.cantidad_de_huecos != blank -%}\n<li><h4><span class=\"generoicon\"><\/span>Cantidad de huecos<\/h4>\n<p>{{ product.metafields.global.cantidad_de_huecos| metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.custom.marco != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Marco<\/h4>\n<p>{{ product.metafields.custom.marco | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n\n{% if product.metafields.global.tipo_de_frenoshopi != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Tipo de Freno<\/h4>\n<p>{{ product.metafields.global.tipo_de_frenoshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.velocidades != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Velocidades<\/h4>\n<p>{{ product.metafields.global.velocidades | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.guantesldedo != blank -%}\n<li><h4><span class=\"marcaicon\"><\/span>Longitud Dedo<\/h4>\n<p>{{ product.metafields.global.guantesldedo | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.generoshopi != blank -%}\n<li><h4><span class=\"marcaicon\"><\/span>Genero<\/h4>\n<p>{{ product.metafields.global.generoshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n\n{% if product.metafields.global.espigo != blank -%}\n<li><h4><span class=\"climaicon\"><\/span>Espigo<\/h4>\n{% for espigo in product.global.espigo.value %}\n<p>{{ espigo}}\n{% endfor %}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.desbloqueo != blank -%}\n<li><h4><span class=\"usoicon\"><\/span>Desbloqueo<\/h4>\n{% for desbloqueo in product.metafields.global.desbloqueo.value %}\n<p>{{ desbloqueo }}\n{% endfor %}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.consistenciashopi!= blank -%}\n<li><h4><span class=\"consetracionicon\"><\/span>Consistencia<\/h4>\n<p>{{ product.metafields.global.consistenciashopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.compatible_monitor_de_ritmo_cardiaco!= blank -%}\n<li><h4><span class=\"anoicon\"><\/span>Compatible Monitor Cardiaco<\/h4>\n<p>{{ product.metafields.global.compatible_monitor_de_ritmo_cardiaco | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.color_del_lente != blank -%}\n<li><h4><span class=\"paisicon\"><\/span>Color del Lente<\/h4>\n<p>{{ product.metafields.global.color_del_lente | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.caracteristicas_del_material!= blank -%}\n<li><h4><span class=\"perfumistaicon\"><\/span>Caracteristicas del Material<\/h4>\n<p>{{ product.metafields.global.caracteristicas_del_material | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.capacidadshopi != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Capacidad<\/h4>\n<p>{{ product.metafields.global.capacidadshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.custom.manillar != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Manillar<\/h4>\n<p>{{ product.metafields.custom.manillar | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.custom.tenedor != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Tenedor<\/h4>\n<p>{{ product.metafields.custom.tenedor | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.custom.bater_a != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Batería<\/h4>\n<p>{{ product.metafields.custom.bater_a | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.custom.cassette != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Cassette<\/h4>\n<p>{{ product.metafields.custom.cassette | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.custom.llantas != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Llantas<\/h4>\n<p>{{ product.metafields.custom.llantas | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.custom.suspensi_n != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Suspensión<\/h4>\n<p>{{ product.metafields.custom.suspensi_n | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.tamano_de_rinshopi != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Tamaño de Rin<\/h4>\n<p>{{ product.metafields.global.tamano_de_rinshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.custom.motor != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Motor<\/h4>\n<p>{{ product.metafields.custom.motor | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.custom.sensor != blank -%}\n<li><h4><span class=\"notas-salidaicon\"><\/span>Sensor<\/h4>\n<p>{{ product.metafields.custom.sensor | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n\n {% if product.metafields.global.bluetooth != blank -%}\n<li><h4><span class=\"notas-corazonicon\"><\/span>Bluetooth<\/h4>\n<p>{{ product.metafields.global.bluetooth | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n {% if product.metafields.global.tensor != blank -%}\n<li><h4><span class=\"notas-corazonicon\"><\/span>Tensor<\/h4>\n<p>{{ product.metafields.global.tensor | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.funciones_adicionalesshopi != blank -%}\n<li><h4><span class=\"notas-corazonicon\"><\/span>Funciones adcionales<\/h4>\n<p>{{ product.metafields.global.funciones_adicionalesshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n\n{% if product.metafields.global.cadencia!= blank -%}\n<li><h4><span class=\"notas-baseicon\"><\/span>Cadencia<\/h4>\n<p>{{ product.metafields.global.cadencia | metafield_text }}\n{%- else -%}\n{%- endif %}\n<\/p>\n<\/li>\n<\/ul>\n<\/div>\n  <\/div>\n<\/div>\n\n\n\n\n\n\n\n\n<script>\n  document.addEventListener(\"DOMContentLoaded\", function () {\n    const descriptionContainer = document.getElementById(\"product-description-container\");\n    const descriptionElement = document.getElementById(\"product-description\");\n    const toggleButton = document.getElementById(\"toggle-description\");\n\n    if (descriptionElement && toggleButton) {\n      \/\/ Guardar el contenido original del HTML\n      const fullDescription = descriptionElement.innerHTML;\n      const shortDescription = fullDescription.substring(0, 500) + \"...\";\n\n      \/\/ Establecer estado inicial\n      descriptionElement.innerHTML = shortDescription;\n\n      \/\/ Alternar entre descripción completa y truncada\n      toggleButton.addEventListener(\"click\", function () {\n        const isShort = descriptionElement.classList.contains(\"short-description\");\n        if (isShort) {\n          descriptionElement.innerHTML = fullDescription;\n          toggleButton.textContent = \"Ver menos\";\n        } else {\n          descriptionElement.innerHTML = shortDescription;\n          toggleButton.textContent = \"Ver más\";\n        }\n        descriptionElement.classList.toggle(\"short-description\");\n      });\n    }\n  });\n<\/script>\n\n<style>\n  .short-description {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    display: -webkit-box;\n    -webkit-line-clamp: 6; \/* Cambia el número de líneas visibles *\/\n    -webkit-box-orient: vertical;\n  }\n<\/style>"}},"product-recommendations":{"type":"product-recommendations","settings":{"display_product_block":true,"product_block_container":"1770","padding_full_width":0,"enable_border_top":true,"enable_border_bottom":false,"color_border_bottom":"#e8e8e8","border_style":"container","mg_top_desktop":40,"mg_top_tablet":35,"mg_top_mobile":35,"mg_bottom_desktop":0,"mg_bottom_tablet":0,"mg_bottom_mobile":0,"product_block_layout":"slider","product_bg":"#ffffff","style_block_header":"style1","product_block_title":"Productos relacionados","enable_border_title":false,"mg_top_title":27,"mg_bottom_title":3,"fontsize_title":18,"fontsize_title_mb":18,"color_title":"#232323","border_color_title":"#232323","product_block_title_align":"center","product_block_limit":10,"grid_gap":30,"product_block_per_row":"4","product_block_swipe_on_mobile":true,"product_block_dots":false,"product_block_dots_mb":true,"product_block_arrows":true,"product_block_arrows_mb":false,"product_block_show":"4","product_block_per_view":"4","show_half":true,"scroll_height":4,"scroll_track_bg":"#f1f1f1","scroll_thumb_color":"#000000","scroll_thumb_hover_color":"#444444","enable_layout_special":false,"bg_card":"#ffffff","padding_card":15,"border_radius_card":5,"border_layout_card":"full","border_width_card":5,"border_color_card":"#f0f1f4"}},"product-recently-viewed":{"type":"product-recently-viewed","settings":{"display_product_recently_viewed":true,"product_recently_viewed_container":"1770","padding_full_width":0,"enable_border_top":true,"enable_border_bottom":false,"color_border_bottom":"#e8e8e8","border_style":"container","mg_top_desktop":80,"mg_top_tablet":50,"mg_top_mobile":30,"mg_bottom_desktop":0,"mg_bottom_tablet":0,"mg_bottom_mobile":0,"product_recently_viewed_layout":"slider","product_bg":"#ffffff","product_bg_gradient":"","style_block_header":"style1","product_recently_viewed_title":"Productos vistos recientemente","enable_border_title":false,"mg_top_title":27,"mg_bottom_title":3,"fontsize_title":18,"fontsize_title_mb":18,"border_color_title":"#232323","color_title":"#232323","product_recently_viewed_title_align":"center","product_recently_viewed_limit":10,"product_recently_viewed_image_ratio":"adapt","grid_gap":30,"product_recently_viewed_per_row":"4","product_recently_viewed_swipe_on_mobile":true,"product_recently_viewed_dots":false,"product_recently_viewed_dots_mb":true,"product_recently_viewed_arrows":true,"product_recently_viewed_arrows_mb":false,"product_recently_viewed_show":"4","product_block_per_view":"4","show_half":true,"scroll_height":4,"scroll_track_bg":"#f1f1f1","scroll_thumb_color":"#000000","scroll_thumb_hover_color":"#444444","enable_layout_special":false,"bg_card":"#ffffff","padding_card":15,"border_radius_card":5,"border_layout_card":"full","border_width_card":5,"border_color_card":"#f0f1f4"}},"174330795855798203":{"type":"apps","blocks":{"judge_me_reviews_review_widget_pHdzJf":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}}},"block_order":["judge_me_reviews_review_widget_pHdzJf"],"settings":{"include_margins":false}}},"order":["main","custom_liquid_33M9U7","product-recommendations","product-recently-viewed","174330795855798203"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "2e8c7c14-a0ad-4930-a1d8-3def05310426": {
+          "type": "breadcrumb",
+          "settings": {
+            "breadcrumb_layout": "full",
+            "breadcrumb_alignment": "left",
+            "breadcrumb_bg": "rgba(0,0,0,0)",
+            "breadcrumb_gradient": "",
+            "breadcrumb_bg_mb": "#f6f6f6",
+            "breadcrumb_gradient_mb": "",
+            "breadcrumb_mg_top_desktop": 10,
+            "breadcrumb_mg_top_mobile": 0,
+            "breadcrumb_mg_bottom_desktop": 20,
+            "breadcrumb_mg_bottom_mobile": 10
+          }
+        },
+        "custom_liquid_rPXjA3": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.global.anoshopi != blank -%}\n<span class=\"label-model\">\n<span>{{ product.metafields.global.anoshopi | metafield_text }}\n</span>\n</span>\n{%- else -%}\n{%- endif %}"
+          }
+        },
+        "custom_liquid_NA8QQ9": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"vendor-image\" style=\"max-width: 200px;margin-bottom:20px;margin-top: 20px;\">\n  <a href=\"{{ shop.url }}/collections/{{ product.vendor | handle }}\">\n    {% assign vendor_logo = product.vendor | handle | append: '.svg' %}\n    {% assign vendor_logo_url = vendor_logo | asset_url %}\n    {% if vendor_logo_url %}\n      <img src=\"{{ vendor_logo_url }}\" alt=\"{{ product.vendor }}\">\n    {% else %}\n      <span>No logo available</span>\n    {% endif %}\n  </a>\n</div>"
+          }
+        },
+        "judge_me_reviews_preview_badge_8FNj7N": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "b0ea69b7-8a54-4a3c-9abd-0fcceeabaaa0": {
+          "type": "title",
+          "settings": {
+            "fontsize_text": 20,
+            "fontsize_text_mb": 18,
+            "color_title": "#232323",
+            "spacing_top": 0,
+            "spacing_bottom": 5
+          }
+        },
+        "0e4ea696-4820-4c98-aaa6-806d41782a3d": {
+          "type": "meta",
+          "settings": {
+            "show_sold_in": false,
+            "sold_in_number": "3,5,6,7,8,10,12,15",
+            "sold_in_hours": "10,15,16,17,18,20,25,35",
+            "color_text_sold_in": "#e95144",
+            "spacing_top": 0,
+            "spacing_bottom": 14
+          }
+        },
+        "4f95b592-8369-4ab0-b30d-24e463fb6890": {
+          "type": "price",
+          "settings": {
+            "fontsize_text": 18,
+            "spacing_top": 5,
+            "spacing_bottom": 17
+          }
+        },
+        "4e59f24a-8859-4579-a80a-d70e6f1bf66b": {
+          "type": "info",
+          "settings": {
+            "show_vendor": false,
+            "show_sku": true,
+            "show_barcode": false,
+            "show_availability": false,
+            "show_product_type": false,
+            "stock_level_display": "none",
+            "enable_border_top": false,
+            "enable_border_bottom": false,
+            "color_border": "#e6e6e6",
+            "spacing_top": 0,
+            "spacing_bottom": 18
+          }
+        },
+        "d98e243b-3682-495a-965a-1c7f7d460880": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "show_variant_image_group": true,
+            "enable_border_top": false,
+            "enable_border_bottom": true,
+            "color_border": "#e6e6e6",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "custom_liquid_ny8KRF": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'bike-size-calculator' %}"
+          }
+        },
+        "faa2b3e6-c0a1-4269-baa6-d2605efe4c05": {
+          "type": "quantity_selector",
+          "settings": {
+            "qty_style": "1",
+            "qty_layout": "2",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "f1b31d90-1e43-4948-9fe3-97ba43f6fb34": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "atc_animation": "none",
+            "atc_color": "#ffffff",
+            "atc_border_color": "#232323",
+            "atc_bg_color": "#232323",
+            "atc_bg_color_gradient": "",
+            "atc_color_hover": "#232323",
+            "atc_border_color_hover": "#232323",
+            "atc_bg_color_hover": "#ffffff",
+            "atc_bg_color_gradient_hover": "",
+            "bin_color": "#232323",
+            "bin_border_color": "#acacac",
+            "bin_bg_color": "#ffffff",
+            "bin_bg_color_gradient": "",
+            "bin_color_hover": "#ffffff",
+            "bin_border_color_hover": "#232323",
+            "bin_bg_color_hover": "#232323",
+            "bin_bg_color_hover_gradient": "",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "683f2b15-db3b-4f63-8d0f-e688cc678581": {
+          "type": "customer_viewing",
+          "settings": {
+            "customer_viewing_number": "283, 100, 59, 11, 14, 185, 193, 165, 50, 38, 99, 112, 46, 10, 125, 200, 250, 18",
+            "customer_viewing_time": 5,
+            "spacing_top": 0,
+            "spacing_bottom": 22
+          }
+        },
+        "custom_liquid_fr9cUB": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% render 'product-financing',\n  enabled: true,\n  title: 'Llévalo hoy con 0% de interés',\n  months: '3,6,12,24',\n  methods: 'Davivienda|davivienda.svg|https://tudominio.com/financia,BBVA|https://cdn.tudominio.com/bbva.svg|https://wa.me/XXXXXXXXXXX',\n  notes: 'Hasta 24 meses con Davivienda, Banco de Occidente, Banco Popular, BBVA y RappiPay.||Con Bancolombia: hasta 24 meses en iPhone y Mac, y hasta 12 meses en los demás productos desde $800.000.'\n%}"
+          }
+        },
+        "custom_liquid_W6ykW3": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<h3>Pago\nseguro</h3>\n<ul class=\"payment-logos-list\" style=\"list-style-type: none; padding-left: 0; margin-bottom: 25px;\">\n   <li style=\"display: inline-block; margin-right: 5px;\">\n      <noscript><img src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/visa.svg\" alt=\"visa\" style=\"max-width: 50px;\"></noscript>\n      <img class=\" lazyloaded\" src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/visa.svg\" data-src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/visa.svg\" alt=\"visa\" style=\"max-width: 50px;\">\n   </li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/mastercard.svg\" alt=\"Mastercard\" style=\"max-width: 50px;\"></noscript>\n      <img class=\" lazyloaded\" src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/mastercard.svg\" data-src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/mastercard.svg\" alt=\"Mastercard\" style=\"max-width: 50px;\">\n   </li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/americanexpress.svg\" alt=\"american express\" style=\"max-width: 50px;\"></noscript>\n      <img class=\" lazyloaded\" src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/americanexpress.svg\" data-src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/americanexpress.svg\" alt=\"american express\" style=\"max-width: 50px;\">\n   </li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/pse.svg\" alt=\"american express\" style=\"max-width: 50px;\"></noscript>\n      <img class=\" lazyloaded\" src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/pse.svg\" data-src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/pse.svg\" alt=\"pse\" style=\"max-width: 50px;\">\n   </li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/cencosud.svg\" alt=\"Cencosud\" style=\"max-width: 50px;\"></noscript>\n      <img class=\" lazyloaded\" src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/cencosud.svg\" data-src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/encosud.svg\" alt=\"Cencosud\" style=\"max-width: 50px;\">\n   </li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/cmrfalabella.svg\" alt=\"CMR falabella\" style=\"max-width: 50px;\"></noscript>\n      <img class=\" lazyloaded\" src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/cmrfalabella.svg\" data-src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/cmrfalabella.svg\" alt=\"CMR falabella\" style=\"max-width: 50px;\">\n   </li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/efecty.svg\" alt=\"CMR falabella\" style=\"max-width: 50px;\"></noscript>\n      <img class=\" lazyloaded\" src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/efecty.svg\" data-src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/efecty.svg\" alt=\"efecty\" style=\"max-width: 50px;\">\n   </li>\n   <li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/addi.svg\" alt=\"addi\" style=\"max-width: 50px;\"></noscript>\n      <img class=\" lazyloaded\" src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/addi.svg\" data-src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/addi.svg\" alt=\"Addi\" style=\"max-width: 50px;\">\n   </li>\n<li style=\"display: inline-block; margin-right: 10px;\">\n      <noscript><img src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/addi.svg\" alt=\"addi\" style=\"max-width: 50px;\"></noscript>\n      <img class=\" lazyloaded\" src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/sistecredito.svg\" data-src=\"//www.cyclewear.com.co/cdn/shop/t/67/assets/sistecredito.svg\" alt=\"Sistecredito\" style=\"max-width: 50px;\">\n   </li>\n</ul>"
+          }
+        },
+        "19de9abb-17c8-4d67-941d-b32706ed06fd": {
+          "type": "pickup_availability",
+          "settings": {
+            "show_pickup_availability": true,
+            "spacing_top": 0,
+            "spacing_bottom": 11
+          }
+        },
+        "10093fcf-2053-47e9-bedb-841bb0d046fa": {
+          "type": "trust_image",
+          "settings": {
+            "show_trust_image": true,
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "bd3a641e-98d0-4da1-ab57-d5e4b0391995": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "spacing_top": 0,
+            "spacing_bottom": 20
+          }
+        },
+        "d97e417a-941b-4a5d-bef3-a651adb918d8": {
+          "type": "variant_description",
+          "settings": {
+            "spacing_top": 0,
+            "spacing_bottom": 12
+          }
+        },
+        "bd066b80-c8e3-4f3e-8280-b27fbf6e9423": {
+          "type": "description",
+          "settings": {
+            "open_tab_mobile": true,
+            "title": "Description",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
+        "3d9ea84d-5527-4bce-abe6-5debef3ec955": {
+          "type": "custom",
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Envíos & devoluciones",
+            "type": "all",
+            "content": "<h3>Tiempos de Envío y Plazos de Entrega</h3>\n<p>Tiempos de Envío: a. Cálculo de Tiempo de Despacho: En CycleWear, nuestro compromiso es proporcionarte una experiencia de compra eficiente y conveniente. Al realizar una compra en nuestro sitio web, nuestro sistema calculará automáticamente un tiempo estimado de despacho de acuerdo con la transportadora que elijas y te informará sobre el tiempo de entrega previsto.\n\nb. Opciones de Transportadoras: Ofrecemos varias opciones de transportadoras para que puedas seleccionar la que mejor se adapte a tus necesidades y preferencias. Cada transportadora puede tener plazos de entrega diferentes y costos variables. Te proporcionaremos información detallada sobre las opciones disponibles durante el proceso de compra.\n\nPlazos de Entrega: a. Variación en los Plazos de Entrega: Los plazos de entrega pueden variar según la ubicación de entrega y la disponibilidad de los productos. Estimamos que, en condiciones normales, los productos serán entregados dentro de [1 a 5] días hábiles desde la fecha de confirmación del pedido en ciudades principales.\n\nc. Retrasos Inesperados: En ocasiones, pueden surgir circunstancias imprevistas, como condiciones climáticas adversas o problemas logísticos, que podrían causar retrasos en la entrega. En caso de retrasos, haremos todos los esfuerzos razonables para informarte y resolver la situación de la manera más satisfactoria posible.</p>\n\n<p>Ten en cuenta que los plazos de entrega son estimados y pueden variar. Te recomendamos revisar los detalles de envío y entrega específicos proporcionados durante el proceso de compra y en la confirmación del pedido. Si tienes alguna pregunta o inquietud relacionada con los tiempos de envío y entrega, no dudes en contactarnos a través de los medios de contacto proporcionados en este sitio.</p>\n<h3>Política de Cambios y Devoluciones</h3>\n<p>Cambios de Talla o Producto: Aceptamos cambios de talla o producto dentro de 10 días a partir de la fecha de recepción del Articulo, siempre y cuando el articulo esté en su estado original.</p>\n\n<h4>Condiciones de Devolución del Artículo:</h4>\n\n<p><strong>Estado Original:</strong> El producto debe ser devuelto en el mismo estado en el que fue entregado, conservando todas sus etiquetas, empaques y sellos originales, y en condiciones de limpieza adecuadas. No se aceptarán devoluciones de productos que presenten signos de uso o daño por parte del cliente.</p>\n<p><strong>Costos de Transporte:</strong> Los costos de transporte y cualquier otro gasto relacionado con la devolución del producto serán cubiertos por el cliente.\n</p>",
+            "product_custom_source": "dynamic",
+            "product_tab_key_metafield": "",
+            "enable_btn_show_more": true,
+            "maximum_des_to_show": 300
+          }
+        },
+        "b9d6eb19-10f4-41f8-bfdc-ea10e8b3182a": {
+          "type": "custom",
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Información de la tienda",
+            "type": "all",
+            "content": "<p><strong>Tienda de Ciclismo: CycleWear</strong>, entendemos que el ciclismo es más que una actividad; es una pasión, un estilo de vida. Por eso, nos asociamos con las marcas más reconocidas en la industria para ofrecerte una amplia variedad de modelos que satisfarán tus retos y aventuras. Desde bicicletas de alto rendimiento hasta accesorios de vanguardia, estamos comprometidos a proporcionarte productos de calidad que mejoren tu experiencia sobre dos ruedas.</p>\n<p>En nuestra tienda, encontrarás bicicletas de alta calidad de las marcas Giant, Scott y Specialized, así como una amplia gama de accesorios, componentes y ropa de marcas líderes en la industria del ciclismo. Nuestro equipo de expertos estará encantado de asesorarte y ayudarte a elegir la bicicleta y los productos más adecuados para tus necesidades.</p>\n<p>Puedes contactarlos al +573146512753 o por correo electrónico a info@cyclewear.com.co. Su dirección física es Cra 43c 68 Sur 12, Sabaneta, Antioquia.</p>",
+            "product_custom_source": "dynamic",
+            "product_tab_key_metafield": "",
+            "enable_btn_show_more": true,
+            "maximum_des_to_show": 300
+          }
+        },
+        "19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3": {
+          "type": "share",
+          "settings": {
+            "show_share": true,
+            "share_layout": "2",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "9630b233-8164-4dad-ab64-8830bedf328a": {
+          "type": "complementary_products",
+          "settings": {
+            "complementary_product_title": "Pairs well with",
+            "complementary_product_layout": "2",
+            "complementary_product_limit_1": 2,
+            "complementary_product_limit_2": 3,
+            "complementary_product_arrows": false,
+            "complementary_product_dots": true,
+            "complementary_product_object": "cover",
+            "complementary_product_button_atc": false,
+            "spacing_top": 30,
+            "spacing_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "2e8c7c14-a0ad-4930-a1d8-3def05310426",
+        "custom_liquid_rPXjA3",
+        "custom_liquid_NA8QQ9",
+        "judge_me_reviews_preview_badge_8FNj7N",
+        "b0ea69b7-8a54-4a3c-9abd-0fcceeabaaa0",
+        "0e4ea696-4820-4c98-aaa6-806d41782a3d",
+        "4f95b592-8369-4ab0-b30d-24e463fb6890",
+        "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
+        "d98e243b-3682-495a-965a-1c7f7d460880",
+        "custom_liquid_ny8KRF",
+        "faa2b3e6-c0a1-4269-baa6-d2605efe4c05",
+        "f1b31d90-1e43-4948-9fe3-97ba43f6fb34",
+        "683f2b15-db3b-4f63-8d0f-e688cc678581",
+        "custom_liquid_fr9cUB",
+        "custom_liquid_W6ykW3",
+        "19de9abb-17c8-4d67-941d-b32706ed06fd",
+        "10093fcf-2053-47e9-bedb-841bb0d046fa",
+        "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
+        "d97e417a-941b-4a5d-bef3-a651adb918d8",
+        "bd066b80-c8e3-4f3e-8280-b27fbf6e9423",
+        "3d9ea84d-5527-4bce-abe6-5debef3ec955",
+        "b9d6eb19-10f4-41f8-bfdc-ea10e8b3182a",
+        "19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3",
+        "9630b233-8164-4dad-ab64-8830bedf328a"
+      ],
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 30,
+        "show_sticky_info": false,
+        "media_fit": "contain",
+        "product_image_ratio": "square",
+        "portrait_aspect_ratio": 101,
+        "video_layout": "popup",
+        "zoomed_image": false,
+        "product_image_popup": "fancybox",
+        "main_image_show_custom_cursor": true,
+        "icon_color": "#000000",
+        "main_image_position": "left",
+        "main_image_layout": "1",
+        "main_image_arrows_desktop": true,
+        "main_image_arrows_mobile": true,
+        "main_image_counter_mobile": true,
+        "main_image_enable_parallax_mb": false,
+        "main_image_show_zoom_icon_mb": true,
+        "show_thumbnail_mobile": true,
+        "thumnail_layout": "3",
+        "thumbnail_to_show": 6,
+        "enable_sticky": false,
+        "sidebar_layout": "layout_2",
+        "sidebar_collapse": "collapse",
+        "sidebar_collapse_default": "expand",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 14,
+        "sidebar_heading_font_weight": "700",
+        "sidebar_heading_text_transform": "uppercase",
+        "show_badge": true,
+        "show_subtotal": true,
+        "subtotal_style": "2",
+        "show_sticky_add_to_cart": true,
+        "sticky_atc_layout": "1",
+        "enable_sticky_add_to_cart_always_mobile": true,
+        "show_sticky_vendor": true,
+        "show_quick_order_list": false,
+        "show_image": false,
+        "show_sku": false,
+        "show_tab": true,
+        "tab_layout": "vertical_sidebar",
+        "tab_layout_mobile": "popup",
+        "icon_style_layout": "style_2",
+        "title_font_size": 18,
+        "title_font_size_mb": 16,
+        "font_weight_title": "600",
+        "title_text_transform": "none",
+        "title_padding_top_bottom": 15,
+        "tab_border_color": "#000000",
+        "tab_border_color_rgb": "",
+        "show_product_bundle": true,
+        "background_color": "#f8f8f8",
+        "block_title": "Comprados juntos frecuentemente",
+        "block_title_align": "left",
+        "product_style": "2",
+        "block_image_ratio": "adapt",
+        "bundle_discount": true,
+        "bundle_discount_text": "Obtén un [discount]% de descuento comprando estos productos juntos",
+        "bundle_discount_text_color": "#232323",
+        "total_btn_color": "#ffffff",
+        "total_btn_border": "#232323",
+        "total_btn_bg": "#232323",
+        "total_btn_bg_gradient": "",
+        "total_btn_color_hover": "#232323",
+        "total_btn_border_hover": "#232323",
+        "total_btn_bg_hover": "#ffffff",
+        "total_btn_bg_gradient_hover": "",
+        "block_dots": true,
+        "block_arrows": true,
+        "padding_top": 30,
+        "padding_top_tablet": 30,
+        "padding_top_mobile": 30,
+        "padding_bottom": 70,
+        "padding_bottom_tablet": 40,
+        "padding_bottom_mobile": 30,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "custom_liquid_33M9U7": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"container\" id=\"especificaciones\">\n  <div class=\"row\">\n  <div class=\"col-md-6 col-12\" style=\"padding-right: 7%;\">\n  {% if product.description != blank %}\n    <h3>Descripción</h3>\n    <div id=\"product-description-container\">\n      <div id=\"product-description\" class=\"short-description\">\n        {{ product.description }}\n      </div>\n    </div>\n    {% if product.description.size > 500 %}\n      <button id=\"toggle-description\" class=\"btn btn-link\">Ver más</button>\n    {% endif %}\n  {% endif %}\n</div>\n\n\n\n        <div class=\"col-md-6 col-12 atributos\">\n  <ul>\n<h3 style=\"padding-top: 10px;\">Acerca del producto</h3>\n\n\n{% if product.metafields.global.materialshopi != blank -%}\n<li><h4><span class=\"generoicon\"></span>Material</h4>\n<p>{{ product.metafields.global.materialshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.tipodeplato != blank -%}\n<li><h4><span class=\"generoicon\"></span>Tipo de plato</h4>\n<p>{{ product.metafields.global.tipodeplato| metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.tubelessshopi != blank -%}\n<li><h4><span class=\"generoicon\"></span>Tubeless</h4>\n<p>{{ product.metafields.global.tubelessshopi| metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n\n{% if product.metafields.global.anchodelproductoshopi != blank -%}\n<li><h4><span class=\"generoicon\"></span>Ancho del producto</h4>\n<p>{{ product.metafields.global.anchodelproductoshopi| metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n\n{% if product.metafields.global.cantidad_de_huecos != blank -%}\n<li><h4><span class=\"generoicon\"></span>Cantidad de huecos</h4>\n<p>{{ product.metafields.global.cantidad_de_huecos| metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.custom.marco != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Marco</h4>\n<p>{{ product.metafields.custom.marco | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n\n{% if product.metafields.global.tipo_de_frenoshopi != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Tipo de Freno</h4>\n<p>{{ product.metafields.global.tipo_de_frenoshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.velocidades != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Velocidades</h4>\n<p>{{ product.metafields.global.velocidades | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.guantesldedo != blank -%}\n<li><h4><span class=\"marcaicon\"></span>Longitud Dedo</h4>\n<p>{{ product.metafields.global.guantesldedo | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.generoshopi != blank -%}\n<li><h4><span class=\"marcaicon\"></span>Genero</h4>\n<p>{{ product.metafields.global.generoshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n\n{% if product.metafields.global.espigo != blank -%}\n<li><h4><span class=\"climaicon\"></span>Espigo</h4>\n{% for espigo in product.global.espigo.value %}\n<p>{{ espigo}}\n{% endfor %}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.desbloqueo != blank -%}\n<li><h4><span class=\"usoicon\"></span>Desbloqueo</h4>\n{% for desbloqueo in product.metafields.global.desbloqueo.value %}\n<p>{{ desbloqueo }}\n{% endfor %}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.consistenciashopi!= blank -%}\n<li><h4><span class=\"consetracionicon\"></span>Consistencia</h4>\n<p>{{ product.metafields.global.consistenciashopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.compatible_monitor_de_ritmo_cardiaco!= blank -%}\n<li><h4><span class=\"anoicon\"></span>Compatible Monitor Cardiaco</h4>\n<p>{{ product.metafields.global.compatible_monitor_de_ritmo_cardiaco | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.color_del_lente != blank -%}\n<li><h4><span class=\"paisicon\"></span>Color del Lente</h4>\n<p>{{ product.metafields.global.color_del_lente | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.caracteristicas_del_material!= blank -%}\n<li><h4><span class=\"perfumistaicon\"></span>Caracteristicas del Material</h4>\n<p>{{ product.metafields.global.caracteristicas_del_material | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.capacidadshopi != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Capacidad</h4>\n<p>{{ product.metafields.global.capacidadshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.custom.manillar != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Manillar</h4>\n<p>{{ product.metafields.custom.manillar | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.custom.tenedor != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Tenedor</h4>\n<p>{{ product.metafields.custom.tenedor | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.custom.bater_a != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Batería</h4>\n<p>{{ product.metafields.custom.bater_a | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.custom.cassette != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Cassette</h4>\n<p>{{ product.metafields.custom.cassette | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.custom.llantas != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Llantas</h4>\n<p>{{ product.metafields.custom.llantas | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.custom.suspensi_n != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Suspensión</h4>\n<p>{{ product.metafields.custom.suspensi_n | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.tamano_de_rinshopi != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Tamaño de Rin</h4>\n<p>{{ product.metafields.global.tamano_de_rinshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.custom.motor != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Motor</h4>\n<p>{{ product.metafields.custom.motor | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.custom.sensor != blank -%}\n<li><h4><span class=\"notas-salidaicon\"></span>Sensor</h4>\n<p>{{ product.metafields.custom.sensor | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n\n {% if product.metafields.global.bluetooth != blank -%}\n<li><h4><span class=\"notas-corazonicon\"></span>Bluetooth</h4>\n<p>{{ product.metafields.global.bluetooth | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n {% if product.metafields.global.tensor != blank -%}\n<li><h4><span class=\"notas-corazonicon\"></span>Tensor</h4>\n<p>{{ product.metafields.global.tensor | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.funciones_adicionalesshopi != blank -%}\n<li><h4><span class=\"notas-corazonicon\"></span>Funciones adcionales</h4>\n<p>{{ product.metafields.global.funciones_adicionalesshopi | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n\n{% if product.metafields.global.cadencia!= blank -%}\n<li><h4><span class=\"notas-baseicon\"></span>Cadencia</h4>\n<p>{{ product.metafields.global.cadencia | metafield_text }}\n{%- else -%}\n{%- endif %}\n</p>\n</li>\n</ul>\n</div>\n  </div>\n</div>\n\n\n\n\n\n\n\n\n<script>\n  document.addEventListener(\"DOMContentLoaded\", function () {\n    const descriptionContainer = document.getElementById(\"product-description-container\");\n    const descriptionElement = document.getElementById(\"product-description\");\n    const toggleButton = document.getElementById(\"toggle-description\");\n\n    if (descriptionElement && toggleButton) {\n      // Guardar el contenido original del HTML\n      const fullDescription = descriptionElement.innerHTML;\n      const shortDescription = fullDescription.substring(0, 500) + \"...\";\n\n      // Establecer estado inicial\n      descriptionElement.innerHTML = shortDescription;\n\n      // Alternar entre descripción completa y truncada\n      toggleButton.addEventListener(\"click\", function () {\n        const isShort = descriptionElement.classList.contains(\"short-description\");\n        if (isShort) {\n          descriptionElement.innerHTML = fullDescription;\n          toggleButton.textContent = \"Ver menos\";\n        } else {\n          descriptionElement.innerHTML = shortDescription;\n          toggleButton.textContent = \"Ver más\";\n        }\n        descriptionElement.classList.toggle(\"short-description\");\n      });\n    }\n  });\n</script>\n\n<style>\n  .short-description {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    display: -webkit-box;\n    -webkit-line-clamp: 6; /* Cambia el número de líneas visibles */\n    -webkit-box-orient: vertical;\n  }\n</style>"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "display_product_block": true,
+        "product_block_container": "1770",
+        "padding_full_width": 0,
+        "enable_border_top": true,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "border_style": "container",
+        "mg_top_desktop": 40,
+        "mg_top_tablet": 35,
+        "mg_top_mobile": 35,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "product_block_layout": "slider",
+        "product_bg": "#ffffff",
+        "style_block_header": "style1",
+        "product_block_title": "Productos relacionados",
+        "enable_border_title": false,
+        "mg_top_title": 27,
+        "mg_bottom_title": 3,
+        "fontsize_title": 18,
+        "fontsize_title_mb": 18,
+        "color_title": "#232323",
+        "border_color_title": "#232323",
+        "product_block_title_align": "center",
+        "product_block_limit": 10,
+        "grid_gap": 30,
+        "product_block_per_row": "4",
+        "product_block_swipe_on_mobile": true,
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_show": "4",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    },
+    "product-recently-viewed": {
+      "type": "product-recently-viewed",
+      "settings": {
+        "display_product_recently_viewed": true,
+        "product_recently_viewed_container": "1770",
+        "padding_full_width": 0,
+        "enable_border_top": true,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "border_style": "container",
+        "mg_top_desktop": 80,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 30,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "product_recently_viewed_layout": "slider",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "style_block_header": "style1",
+        "product_recently_viewed_title": "Productos vistos recientemente",
+        "enable_border_title": false,
+        "mg_top_title": 27,
+        "mg_bottom_title": 3,
+        "fontsize_title": 18,
+        "fontsize_title_mb": 18,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "product_recently_viewed_title_align": "center",
+        "product_recently_viewed_limit": 10,
+        "product_recently_viewed_image_ratio": "adapt",
+        "grid_gap": 30,
+        "product_recently_viewed_per_row": "4",
+        "product_recently_viewed_swipe_on_mobile": true,
+        "product_recently_viewed_dots": false,
+        "product_recently_viewed_dots_mb": true,
+        "product_recently_viewed_arrows": true,
+        "product_recently_viewed_arrows_mb": false,
+        "product_recently_viewed_show": "4",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    },
+    "174330795855798203": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_pHdzJf": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_pHdzJf"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_33M9U7",
+    "product-recommendations",
+    "product-recently-viewed",
+    "174330795855798203"
+  ]
+}
