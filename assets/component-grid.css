@@ -268,6 +268,16 @@ body.open-mobile-sidebar .halo-grid-content {
 		position: static;
 		top: auto;
 	}
+
+	/* Sidebar width to 300px on collections (vertical) and adjust content width */
+	.collection-default .halo-collection-content.sidebar--layout_vertical .page-sidebar,
+	.collection-right-sidebar .halo-collection-content.sidebar--layout_vertical .page-sidebar{
+		width: 300px;
+	}
+	.collection-default .halo-collection-content.sidebar--layout_vertical .page-sidebar + .page-content,
+	.collection-right-sidebar .halo-collection-content.sidebar--layout_vertical .page-sidebar + .page-content{
+		width: calc(100% - 300px);
+	}
 }
 
 @media (min-width: 1400px){
