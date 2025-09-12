@@ -249,7 +249,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<style>\ndiv#main-collection-filters {\n    padding-right: 10px;\n}\n.halo-sidebar-wrapper.custom-scrollbar.scroll-trigger.animate--slide-in\nSpecificity: (0,4,0)\n {\noverflow-x: hidden !important;\n}\n</style>"
+        "custom_liquid": "<style>\ndiv#main-collection-filters {\n    padding-right: 10px;\n}\n.halo-sidebar-wrapper.custom-scrollbar\n {\n    overflow-x: hidden !important;\n}\n</style>"
       }
     }
   },
