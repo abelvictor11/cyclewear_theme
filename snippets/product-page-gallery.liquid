@@ -759,6 +759,20 @@
                                     </div>
                                 </div>
                             {%- endif -%}
+                            {%- comment -%} Below gallery custom content blocks {%- endcomment -%}
+                            {%- for block in section.blocks -%}
+                              {%- if block.type == 'media_custom_liquid' -%}
+                                {%- liquid
+                                  assign spacing_top = block.settings.spacing_top
+                                  assign spacing_bottom = block.settings.spacing_bottom
+                                -%}
+                                <div class="productView-moreItem productView-moreItem--media{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}"
+                                  style="--spacing-top: {{ spacing_top | append: 'px' }}; --spacing-bottom: {{ spacing_bottom | append: 'px' }}"
+                                >
+                                  {{ block.settings.custom_liquid }}
+                                </div>
+                              {%- endif -%}
+                            {%- endfor -%}
                         </div>
                     </div>
                     <div class="halo-productView-right productView-details clearfix">

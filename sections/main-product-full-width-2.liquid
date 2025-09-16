@@ -3187,6 +3187,42 @@
             ]
         },
         {
+            "type": "media_custom_liquid",
+            "name": "Custom liquid (below gallery)",
+            "settings": [
+                {
+                    "type": "liquid",
+                    "id": "custom_liquid",
+                    "label": "t:sections.custom-liquid.settings.custom_liquid.label",
+                    "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+                },
+                {
+                    "type": "header",
+                    "content": "t:sections.main-product.settings.general.block_spacing"
+                },
+                {
+                    "type": "range",
+                    "id": "spacing_top",
+                    "label": "t:settings_schema.typography.settings.type_button_font.padding_top",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "t:sections.layout.mg_desktop.unit",
+                    "default": 0
+                },
+                {
+                    "type": "range",
+                    "id": "spacing_bottom",
+                    "label": "t:settings_schema.typography.settings.type_button_font.padding_bottom",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "t:sections.layout.mg_desktop.unit",
+                    "default": 0
+                }
+            ]
+        },
+        {
             "type": "complementary_products",
             "name": "t:sections.main-product.settings.complementary.label",
             "settings": [
