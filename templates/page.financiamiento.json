@@ -24,7 +24,7 @@
             "heading_size": 30,
             "heading_size_mb": 30,
             "heading_line_height": 1,
-            "heading_color": "#000"
+            "heading_color": "#000000"
           }
         },
         "text_KAnFnb": {
@@ -36,7 +36,7 @@
             "text_font_weight": "400",
             "text_line_height": 1,
             "margin_top_text": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_width": "800px"
           }
         }
@@ -54,7 +54,7 @@
         "color_border_bottom": "#e8e8e8",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
@@ -112,11 +112,11 @@
             "btn_text_transform": "uppercase",
             "btn_icon": "",
             "mg_top_btn": 30,
-            "color_button": "#fff",
+            "color_button": "#ffffff",
             "border_color_button": "#232323",
             "bg_color_button": "#232323",
             "bg_color_button_gradient": "",
-            "color_button_hover": "#fff",
+            "color_button_hover": "#ffffff",
             "border_color_button_hover": "#232323",
             "bg_color_button_hover": "#232323",
             "bg_color_button_gradient_hover": ""
@@ -165,11 +165,11 @@
             "btn_text_transform": "uppercase",
             "btn_icon": "",
             "mg_top_btn": 30,
-            "color_button": "#fff",
+            "color_button": "#ffffff",
             "border_color_button": "#232323",
             "bg_color_button": "#232323",
             "bg_color_button_gradient": "",
-            "color_button_hover": "#fff",
+            "color_button_hover": "#ffffff",
             "border_color_button_hover": "#232323",
             "bg_color_button_hover": "#232323",
             "bg_color_button_gradient_hover": ""
@@ -218,11 +218,11 @@
             "btn_text_transform": "uppercase",
             "btn_icon": "",
             "mg_top_btn": 30,
-            "color_button": "#fff",
+            "color_button": "#ffffff",
             "border_color_button": "#232323",
             "bg_color_button": "#232323",
             "bg_color_button_gradient": "",
-            "color_button_hover": "#fff",
+            "color_button_hover": "#ffffff",
             "border_color_button_hover": "#232323",
             "bg_color_button_hover": "#232323",
             "bg_color_button_gradient_hover": ""
@@ -254,7 +254,7 @@
         "enable_dots_mb": true,
         "display_border_bottom": false,
         "border_color": "#e3e3e3",
-        "spotlight_bg": "#fff",
+        "spotlight_bg": "#ffffff",
         "spotlight_bg_gradient": "",
         "enable_custom_position_title": false,
         "spotlight_block_title": "Compra Online",
@@ -282,7 +282,7 @@
         "button_position": "bottom",
         "spotlight_button_text": "",
         "spotlight_button_link": "",
-        "color_button": "#fff",
+        "color_button": "#ffffff",
         "border_color_button": "#232323",
         "bg_color_button": "#232323",
         "bg_color_gradient_button": "",
@@ -294,7 +294,7 @@
         "mg_top_button": 30,
         "mg_bottom_button": 30,
         "enable_plus_icon": false,
-        "color_plus_icon": "#fff",
+        "color_plus_icon": "#ffffff",
         "enable_content_border": false,
         "content_border_color": "#e2e2e2",
         "enable_shadow": false,
@@ -358,11 +358,11 @@
             "btn_text_transform": "uppercase",
             "btn_icon": "",
             "mg_top_btn": 30,
-            "color_button": "#fff",
+            "color_button": "#ffffff",
             "border_color_button": "#232323",
             "bg_color_button": "#232323",
             "bg_color_button_gradient": "",
-            "color_button_hover": "#fff",
+            "color_button_hover": "#ffffff",
             "border_color_button_hover": "#232323",
             "bg_color_button_hover": "#232323",
             "bg_color_button_gradient_hover": ""
@@ -411,11 +411,11 @@
             "btn_text_transform": "uppercase",
             "btn_icon": "",
             "mg_top_btn": 30,
-            "color_button": "#fff",
+            "color_button": "#ffffff",
             "border_color_button": "#232323",
             "bg_color_button": "#232323",
             "bg_color_button_gradient": "",
-            "color_button_hover": "#fff",
+            "color_button_hover": "#ffffff",
             "border_color_button_hover": "#232323",
             "bg_color_button_hover": "#232323",
             "bg_color_button_gradient_hover": ""
@@ -446,7 +446,7 @@
         "enable_dots_mb": true,
         "display_border_bottom": false,
         "border_color": "#e3e3e3",
-        "spotlight_bg": "#fff",
+        "spotlight_bg": "#ffffff",
         "spotlight_bg_gradient": "",
         "enable_custom_position_title": false,
         "spotlight_block_title": "Compra en Tienda",
@@ -474,7 +474,7 @@
         "button_position": "bottom",
         "spotlight_button_text": "",
         "spotlight_button_link": "",
-        "color_button": "#fff",
+        "color_button": "#ffffff",
         "border_color_button": "#232323",
         "bg_color_button": "#232323",
         "bg_color_gradient_button": "",
@@ -486,7 +486,7 @@
         "mg_top_button": 30,
         "mg_bottom_button": 30,
         "enable_plus_icon": false,
-        "color_plus_icon": "#fff",
+        "color_plus_icon": "#ffffff",
         "enable_content_border": false,
         "content_border_color": "#e2e2e2",
         "enable_shadow": false,
@@ -701,12 +701,12 @@
         "policies_block_swipe_on_mobile": "slider",
         "spacing_tablet": 15,
         "spacing_mobile": 10,
-        "policies_bg": "#fff",
+        "policies_bg": "#ffffff",
         "policies_bg_gradient": "",
         "border": "none",
         "border_color": "#000000",
         "border_item": "none",
-        "item_color_border": "#000",
+        "item_color_border": "#000000",
         "align_items": "center",
         "text_align_items": "center",
         "enable_item_distance": true,
@@ -738,7 +738,7 @@
             "text_font_weight": "400",
             "text_line_height": 1,
             "margin_top_text": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_width": "800px"
           }
         },
@@ -750,13 +750,13 @@
             "button_link": "",
             "margin_top_button": 30,
             "enable_underline_button": false,
-            "button_color": "#fff",
-            "button_border_color": "#000",
-            "button_bg_color": "#000",
+            "button_color": "#ffffff",
+            "button_border_color": "#000000",
+            "button_bg_color": "#000000",
             "button_bg_gradient": "",
-            "button_color_hover": "#000",
-            "button_border_color_hover": "#000",
-            "button_bg_color_hover": "#fff",
+            "button_color_hover": "#000000",
+            "button_border_color_hover": "#000000",
+            "button_bg_color_hover": "#ffffff",
             "button_bg_gradient_hover": "",
             "button_width": "270px"
           }
@@ -790,7 +790,7 @@
         "color_border_bottom": "#e8e8e8",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
@@ -831,7 +831,7 @@
         "id_section": "",
         "container": "container",
         "padding_full_width": 0,
-        "collapsible_bg": "#fff",
+        "collapsible_bg": "#ffffff",
         "collapsible_bg_gradient": "",
         "collapsible_title": "",
         "color_title": "#232323",
@@ -856,6 +856,47 @@
         "mg_bottom_tablet": 50,
         "mg_bottom_mobile": 50
       }
+    },
+    "rich_text_6mJnww": {
+      "type": "rich-text",
+      "blocks": {
+        "text_yiGX36": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Addi mostrará la información de tu compra de forma clara y transparente. La aprobación del crédito está sujeta al estudio realizado por Addi. *El 0% de interés aplica para compras hasta $600.000 y en comercios seleccionados hasta $1.300.000, diferidas a 3 (tres) cuotas. Lee aquí los Términos y Condiciones. Para más información, ingresa a co.addicom/preguntas-frecuentes</p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1,
+            "margin_top_text": 20,
+            "text_color": "#000",
+            "text_width": "800px"
+          }
+        }
+      },
+      "block_order": [
+        "text_yiGX36"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#fff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
     }
   },
   "order": [
@@ -866,6 +907,7 @@
     "image_banner_xaxt9C",
     "policies_block_QQK4eM",
     "rich_text_YUkeef",
-    "collapsible_content_q9Pca8"
+    "collapsible_content_q9Pca8",
+    "rich_text_6mJnww"
   ]
 }
