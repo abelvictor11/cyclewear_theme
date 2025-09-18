@@ -514,10 +514,9 @@
         },
         "image_XtkwPt": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image_slide": "shopify://shop_images/10_-banner.jpg",
-            "image_slide_mb": "shopify://shop_images/10_-banner-small.jpg",
+            "image_slide": "shopify://shop_images/5_-addi-banner_1.jpg",
+            "image_slide_mb": "shopify://shop_images/5_-addi-banner-small_1.jpg",
             "alignment": "left",
             "enable_custom_position": true,
             "custom_horizontal": "50",
