@@ -666,6 +666,139 @@
         "mg_bottom_mobile": 50
       }
     },
+    "policies_block_QQK4eM": {
+      "type": "policies-block",
+      "blocks": {
+        "text_MPATgF": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "",
+            "icon_width": 30,
+            "icon_height": 30,
+            "icon_mg_right": 20,
+            "text": "Tasas de interés Créditos de consumo",
+            "font_size_text": 16,
+            "font_size_text_mb": 16,
+            "mg_bottom_text": 0,
+            "font_weight_text": "500",
+            "font_style_text": "normal",
+            "description": "",
+            "link": ""
+          }
+        },
+        "text_MGiLee": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "",
+            "icon_width": 30,
+            "icon_height": 30,
+            "icon_mg_right": 20,
+            "text": "Desde 0% E.A. (0% M.V.)*",
+            "font_size_text": 16,
+            "font_size_text_mb": 16,
+            "mg_bottom_text": 0,
+            "font_weight_text": "500",
+            "font_style_text": "normal",
+            "description": "",
+            "link": ""
+          }
+        },
+        "text_hRwDLW": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "",
+            "icon_width": 30,
+            "icon_height": 30,
+            "icon_mg_right": 20,
+            "text": "Hasta 32,99% E.A. (2,4% M.V.)*",
+            "font_size_text": 16,
+            "font_size_text_mb": 16,
+            "mg_bottom_text": 0,
+            "font_weight_text": "500",
+            "font_style_text": "normal",
+            "description": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_MPATgF",
+        "text_MGiLee",
+        "text_hRwDLW"
+      ],
+      "name": "t:sections.policies_block.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "policies_block_swipe_on_mobile": "slider",
+        "spacing_tablet": 15,
+        "spacing_mobile": 10,
+        "policies_bg": "#fff",
+        "policies_bg_gradient": "",
+        "border": "none",
+        "border_color": "#000000",
+        "border_item": "none",
+        "item_color_border": "#000",
+        "align_items": "center",
+        "text_align_items": "center",
+        "enable_item_distance": true,
+        "item_padding_top": 13,
+        "item_padding_bottom": 13,
+        "item_padding_left_right": 20,
+        "item_radius": 4,
+        "bg_color_block": "#f8f8f8",
+        "border_block": "#f8f8f8",
+        "color_block": "#232323",
+        "color_icon": "#3c3c3c",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "custom_text_block_GhPMPk": {
+      "type": "custom-text-block",
+      "name": "t:sections.custom_text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "brand_bg": "#fff",
+        "brand_bg_gradient": "",
+        "brand_title": "",
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "brand_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "menu": "main-menu",
+        "grid_gap": 5,
+        "padding_vertical": 5,
+        "padding_hozi": 5,
+        "border_radius": 5,
+        "fontsize_tab": 16,
+        "color_tab": "#232323",
+        "border_color": "#f9ede1",
+        "bg_color_tab": "#f9ede1",
+        "bg_color_gradient_tab": "",
+        "color_active": "#232323",
+        "border_color_active": "#f9ede1",
+        "bg_color_active": "#f9ede1",
+        "bg_color_gradient_active": "",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
     "collapsible_content_q9Pca8": {
       "type": "collapsible-content",
       "blocks": {
@@ -728,6 +861,8 @@
     "spotlight_block_gwAYNq",
     "spotlight_block_NxaRBC",
     "image_banner_xaxt9C",
+    "policies_block_QQK4eM",
+    "custom_text_block_GhPMPk",
     "collapsible_content_q9Pca8"
   ]
 }
