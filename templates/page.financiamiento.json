@@ -515,6 +515,7 @@
         "large_img_WDWexB": {
           "type": "largeImg",
           "settings": {
+            "image": "shopify://shop_images/business-owner-working-on-online-store.jpg",
             "enable_max_width_image": false,
             "custom_width_image": 1170,
             "enable_scroll_down": false,
@@ -628,11 +629,11 @@
         "style_bg": "none",
         "bg_color": "",
         "bg_color_gradient": "",
-        "mg_top_desktop": 50,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 50,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
         "mg_bottom_mobile": 50
       }
     },
