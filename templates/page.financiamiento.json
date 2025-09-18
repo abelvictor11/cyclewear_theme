@@ -264,7 +264,7 @@
         "enable_border_title": true,
         "color_title": "#232323",
         "color_title_mb": "",
-        "fontsize_title": 16,
+        "fontsize_title": 25,
         "fontsize_title_mb": 22,
         "margin_bottom_title": 45,
         "spotlight_block_des": "",
@@ -830,12 +830,12 @@
         "title_color": "#232323",
         "icon_color": "#232323",
         "border_color": "#232323",
-        "mg_top_desktop": 50,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
       }
     },
     "rich_text_6mJnww": {
