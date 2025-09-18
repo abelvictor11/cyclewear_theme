@@ -214,6 +214,7 @@
         },
         "image_hXQtJj": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image_slide": "shopify://shop_images/airbreaker-banner-1_2.jpg",
             "image_slide_mb": "shopify://shop_images/airbreaker-banner-1-small_3.jpg",
@@ -414,6 +415,7 @@
         },
         "image_HJdi3R": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image_slide": "shopify://shop_images/gym.jpg",
             "image_slide_mb": "shopify://shop_images/gym-banner-small_1.jpg",
