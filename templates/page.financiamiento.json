@@ -808,23 +808,32 @@
         "content_LwjcMr": {
           "type": "content",
           "settings": {
-            "heading": "Collapsible Row",
-            "content": "<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.</p>",
+            "heading": "¿Cómo funciona la financiación con Addi en cyclewear.com?",
+            "content": "<p>Al momento de pagar tu pedido en nuestro sitio web, selecciona <strong>\"Addi\"</strong> como método de pago. La plataforma te guiará para completar tu solicitud. La aprobación es casi instantánea y, una vez aprobada, podrás pagar tu compra en cuotas.</p>",
             "page": ""
           }
         },
         "content_xDd6fF": {
           "type": "content",
           "settings": {
-            "heading": "Collapsible Row",
-            "content": "<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.</p>",
+            "heading": "¿Qué requisitos necesito para aplicar a un crédito con Addi?",
+            "content": "<p>Para solicitar un crédito con Addi, solo necesitas:</p><ul><li>Ser mayor de edad.</li><li>Tener cédula de ciudadanía colombiana.</li><li>Contar con un número de celular y correo electrónico activos.</li><li>No necesitas tener historial crediticio, pero si lo tienes, Addi lo revisará para su estudio.</li></ul>",
+            "page": ""
+          }
+        },
+        "content_ifAVFK": {
+          "type": "content",
+          "settings": {
+            "heading": "¿Puedo financiar cualquier producto de cyclewear.com con Addi?",
+            "content": "<p>Sí, puedes financiar la mayoría de nuestros productos. Sin embargo, el crédito está sujeto al estudio de Addi y al valor de tu compra, que debe ser de <strong>$50.000 COP</strong> o más.</p>",
             "page": ""
           }
         }
       },
       "block_order": [
         "content_LwjcMr",
-        "content_xDd6fF"
+        "content_xDd6fF",
+        "content_ifAVFK"
       ],
       "name": "t:sections.collapsible_content.settings.collapsible_row",
       "settings": {
@@ -869,7 +878,7 @@
             "text_font_weight": "400",
             "text_line_height": 1,
             "margin_top_text": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_width": "800px"
           }
         }
@@ -886,7 +895,7 @@
         "color_border_bottom": "#e8e8e8",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
