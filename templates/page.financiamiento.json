@@ -634,7 +634,7 @@
         "mg_top_mobile": 0,
         "mg_bottom_desktop": 0,
         "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 50
+        "mg_bottom_mobile": 0
       }
     },
     "policies_block_QQK4eM": {
@@ -809,7 +809,7 @@
       "name": "t:sections.collapsible_content.settings.collapsible_row",
       "settings": {
         "id_section": "",
-        "container": "container",
+        "container": "1170",
         "padding_full_width": 0,
         "collapsible_bg": "#ffffff",
         "collapsible_bg_gradient": "",
@@ -823,7 +823,7 @@
         "fontsize_des_mb": 12,
         "max_width_des": 700,
         "title_align": "center",
-        "enable_image_right": true,
+        "enable_image_right": false,
         "image_right": "shopify://shop_images/6-fqa.png",
         "bg_content_color": "#ffffff",
         "content_color": "#232323",
