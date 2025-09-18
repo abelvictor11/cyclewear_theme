@@ -702,7 +702,7 @@
       ],
       "name": "t:sections.policies_block.name",
       "settings": {
-        "container": "container",
+        "container": "1170",
         "padding_full_width": 0,
         "policies_block_swipe_on_mobile": "slider",
         "spacing_tablet": 15,
