@@ -761,36 +761,74 @@
         "mg_bottom_mobile": 50
       }
     },
-    "custom_text_block_GhPMPk": {
-      "type": "custom-text-block",
-      "name": "t:sections.custom_text.presets.name",
+    "rich_text_YUkeef": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Jm8HfE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>* Asignadas en función del perfil de riesgo del cliente.</p>\n<p>La opción de comprar a cuotas con 0% de interés está sujeta a criterios de elegibilidad de la transacción, de acuerdo con nuestros <a href=\"\">T&Cs. Conócelos aquí.</a></p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1,
+            "margin_top_text": 20,
+            "text_color": "#000",
+            "text_width": "800px"
+          }
+        },
+        "button_PjgXp3": {
+          "type": "button",
+          "settings": {
+            "button_style": "button_1",
+            "button_label": "Button label",
+            "button_link": "",
+            "margin_top_button": 30,
+            "enable_underline_button": false,
+            "button_color": "#fff",
+            "button_border_color": "#000",
+            "button_bg_color": "#000",
+            "button_bg_gradient": "",
+            "button_color_hover": "#000",
+            "button_border_color_hover": "#000",
+            "button_bg_color_hover": "#fff",
+            "button_bg_gradient_hover": "",
+            "button_width": "270px"
+          }
+        },
+        "social_media_nHV4pQ": {
+          "type": "social_media",
+          "settings": {
+            "social_spacing_top": 0,
+            "social_spacing_bottom": 0,
+            "social_icon_color": "",
+            "social_icon_background_color": "",
+            "social_icon_background_gradient": "",
+            "social_icon_hover_color": "",
+            "social_icon_background_hover_color": "",
+            "social_icon_background_hover_gradient": "",
+            "social_icon_ring_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_Jm8HfE",
+        "button_PjgXp3",
+        "social_media_nHV4pQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "container": "container",
         "padding_full_width": 0,
-        "brand_bg": "#fff",
-        "brand_bg_gradient": "",
-        "brand_title": "",
-        "color_title": "#232323",
-        "fontsize_title": 16,
-        "fontsize_title_mb": 16,
-        "brand_des": "",
-        "color_des": "#3c3c3c",
-        "fontsize_des": 16,
-        "title_align": "center",
-        "menu": "main-menu",
-        "grid_gap": 5,
-        "padding_vertical": 5,
-        "padding_hozi": 5,
-        "border_radius": 5,
-        "fontsize_tab": 16,
-        "color_tab": "#232323",
-        "border_color": "#f9ede1",
-        "bg_color_tab": "#f9ede1",
-        "bg_color_gradient_tab": "",
-        "color_active": "#232323",
-        "border_color_active": "#f9ede1",
-        "bg_color_active": "#f9ede1",
-        "bg_color_gradient_active": "",
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#fff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
         "mg_top_desktop": 50,
         "mg_top_tablet": 50,
         "mg_top_mobile": 50,
@@ -862,7 +900,7 @@
     "spotlight_block_NxaRBC",
     "image_banner_xaxt9C",
     "policies_block_QQK4eM",
-    "custom_text_block_GhPMPk",
+    "rich_text_YUkeef",
     "collapsible_content_q9Pca8"
   ]
 }
