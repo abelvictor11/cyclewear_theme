@@ -39,46 +39,11 @@
             "text_color": "#000",
             "text_width": "800px"
           }
-        },
-        "button_yCEBNG": {
-          "type": "button",
-          "settings": {
-            "button_style": "button_1",
-            "button_label": "Button label",
-            "button_link": "",
-            "margin_top_button": 30,
-            "enable_underline_button": false,
-            "button_color": "#fff",
-            "button_border_color": "#000",
-            "button_bg_color": "#000",
-            "button_bg_gradient": "",
-            "button_color_hover": "#000",
-            "button_border_color_hover": "#000",
-            "button_bg_color_hover": "#fff",
-            "button_bg_gradient_hover": "",
-            "button_width": "270px"
-          }
-        },
-        "social_media_WYyhPU": {
-          "type": "social_media",
-          "settings": {
-            "social_spacing_top": 0,
-            "social_spacing_bottom": 0,
-            "social_icon_color": "",
-            "social_icon_background_color": "",
-            "social_icon_background_gradient": "",
-            "social_icon_hover_color": "",
-            "social_icon_background_hover_color": "",
-            "social_icon_background_hover_gradient": "",
-            "social_icon_ring_color": ""
-          }
         }
       },
       "block_order": [
         "heading_PYCaBG",
-        "text_KAnFnb",
-        "button_yCEBNG",
-        "social_media_WYyhPU"
+        "text_KAnFnb"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
