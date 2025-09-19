@@ -18,7 +18,7 @@
     Comma-separated mapping: namespace.key|Label|type
     type: text | list (list will iterate metafield.value)
   endcomment
-  assign specs_map = specs_override | default: "
+  capture specs_map_default
     global.materialshopi|Material|text,
     global.tipodeplato|Tipo de plato|text,
     global.tubelessshopi|Tubeless|text,
@@ -49,7 +49,9 @@
     global.tensor|Tensor|text,
     global.funciones_adicionalesshopi|Funciones adicionales|text,
     global.cadencia|Cadencia|text
-  " | strip
+  endcapture
+
+  assign specs_map = specs_override | default: specs_map_default | strip
 
   assign specs_array = specs_map | split: ","
   assign any_attr = false
