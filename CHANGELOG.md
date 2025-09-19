@@ -2,6 +2,13 @@
 
 All notable changes to this repository will be documented in this file.
 
+## 2025-09-19 17:16 (-05:00)
+
+- Product Specs snippet (PDP)
+  - Fix: define default metafield mapping via `capture` to avoid Liquid parsing error (Unknown tag 'global').
+  - Style: align visuals with Financing card (bordered white card, rounded corners, padded grid, stronger headings, subtle dividers).
+  - Feature: support optional 4th mapping parameter `icon_class` to render an icon before each label.
+
 ## 2025-08-29 11:12 (-05:00)
 
 Initial Guided Finder integration and configuration scaffolding.
