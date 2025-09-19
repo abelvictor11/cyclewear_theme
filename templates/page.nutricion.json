@@ -1063,6 +1063,53 @@
         "mg_top_desktop": 50,
         "mg_top_tablet": 50,
         "mg_top_mobile": 50,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "rich_text_J3UFTd": {
+      "type": "rich-text",
+      "blocks": {
+        "button_aqATyp": {
+          "type": "button",
+          "settings": {
+            "button_style": "button_1",
+            "button_label": "Ver tabletas",
+            "button_link": "shopify://collections/tabletas",
+            "margin_top_button": 30,
+            "enable_underline_button": false,
+            "button_color": "#fff",
+            "button_border_color": "#000",
+            "button_bg_color": "#000",
+            "button_bg_gradient": "",
+            "button_color_hover": "#000",
+            "button_border_color_hover": "#000",
+            "button_bg_color_hover": "#fff",
+            "button_bg_gradient_hover": "",
+            "button_width": "270px"
+          }
+        }
+      },
+      "block_order": [
+        "button_aqATyp"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#fff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
         "mg_bottom_desktop": 50,
         "mg_bottom_tablet": 50,
         "mg_bottom_mobile": 50
@@ -1151,6 +1198,7 @@
     "product_block_zp3KNa",
     "rich_text_YFgXyp",
     "product_block_dmT4Nt",
+    "rich_text_J3UFTd",
     "rich_text_nrUNhL"
   ]
 }
