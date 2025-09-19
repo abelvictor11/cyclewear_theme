@@ -475,13 +475,13 @@
         "color_title": "#232323",
         "title_align": "center",
         "title_align_mb": "center",
-        "view_all": "",
+        "view_all": "Ver todos",
         "view_all_align": "center",
         "font_weight_view_all": "400",
         "mg_bottom_view": 30,
         "mg_bottom_view_mb": 0,
         "enable_border_view_all": true,
-        "link_view_all": "",
+        "link_view_all": "shopify://collections/mancuernas-y-pesas",
         "color_view_all": "#3c3c3c",
         "icon_view_all": "",
         "color_view_all_icon": "#eb492f",
@@ -562,53 +562,6 @@
         "mg_bottom_desktop": 0,
         "mg_bottom_tablet": 0,
         "mg_bottom_mobile": 0
-      }
-    },
-    "rich_text_fkM7HL": {
-      "type": "rich-text",
-      "blocks": {
-        "button_LM8P4i": {
-          "type": "button",
-          "settings": {
-            "button_style": "button_1",
-            "button_label": "Ver pesas",
-            "button_link": "shopify://collections/mancuernas-y-pesas",
-            "margin_top_button": 30,
-            "enable_underline_button": true,
-            "button_color": "#ffffff",
-            "button_border_color": "#000",
-            "button_bg_color": "#000",
-            "button_bg_gradient": "",
-            "button_color_hover": "#000",
-            "button_border_color_hover": "#000",
-            "button_bg_color_hover": "#fff",
-            "button_bg_gradient_hover": "",
-            "button_width": "270px"
-          }
-        }
-      },
-      "block_order": [
-        "button_LM8P4i"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50
       }
     },
     "product_block_tYbnQU": {
@@ -643,13 +596,13 @@
         "color_title": "#232323",
         "title_align": "center",
         "title_align_mb": "center",
-        "view_all": "",
+        "view_all": "Ver todos",
         "view_all_align": "center",
         "font_weight_view_all": "400",
         "mg_bottom_view": 30,
         "mg_bottom_view_mb": 0,
         "enable_border_view_all": true,
-        "link_view_all": "",
+        "link_view_all": "shopify://collections/mancuernas-y-pesas",
         "color_view_all": "#3c3c3c",
         "icon_view_all": "",
         "color_view_all_icon": "#eb492f",
@@ -730,53 +683,6 @@
         "mg_bottom_desktop": 0,
         "mg_bottom_tablet": 0,
         "mg_bottom_mobile": 0
-      }
-    },
-    "rich_text_qhwcPj": {
-      "type": "rich-text",
-      "blocks": {
-        "button_BF7wBk": {
-          "type": "button",
-          "settings": {
-            "button_style": "button_1",
-            "button_label": "Ver mancuernas",
-            "button_link": "shopify://collections/mancuernas-y-pesas",
-            "margin_top_button": 30,
-            "enable_underline_button": true,
-            "button_color": "#ffffff",
-            "button_border_color": "#000",
-            "button_bg_color": "#000",
-            "button_bg_gradient": "",
-            "button_color_hover": "#000",
-            "button_border_color_hover": "#000",
-            "button_bg_color_hover": "#fff",
-            "button_bg_gradient_hover": "",
-            "button_width": "270px"
-          }
-        }
-      },
-      "block_order": [
-        "button_BF7wBk"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50
       }
     },
     "product_block_zp3KNa": {
@@ -811,13 +717,13 @@
         "color_title": "#232323",
         "title_align": "center",
         "title_align_mb": "center",
-        "view_all": "",
+        "view_all": "Ver todos",
         "view_all_align": "center",
         "font_weight_view_all": "400",
         "mg_bottom_view": 30,
         "mg_bottom_view_mb": 0,
         "enable_border_view_all": true,
-        "link_view_all": "",
+        "link_view_all": "shopify://collections/colchonetas-y-tapetes-para-gimnasia",
         "color_view_all": "#3c3c3c",
         "icon_view_all": "",
         "color_view_all_icon": "#eb492f",
@@ -900,53 +806,6 @@
         "mg_bottom_mobile": 0
       }
     },
-    "rich_text_N6dT4y": {
-      "type": "rich-text",
-      "blocks": {
-        "button_hceP3Y": {
-          "type": "button",
-          "settings": {
-            "button_style": "button_1",
-            "button_label": "Ver colchonetas",
-            "button_link": "shopify://collections/colchonetas-y-tapetes-para-gimnasia",
-            "margin_top_button": 30,
-            "enable_underline_button": true,
-            "button_color": "#ffffff",
-            "button_border_color": "#000",
-            "button_bg_color": "#000",
-            "button_bg_gradient": "",
-            "button_color_hover": "#000",
-            "button_border_color_hover": "#000",
-            "button_bg_color_hover": "#fff",
-            "button_bg_gradient_hover": "",
-            "button_width": "270px"
-          }
-        }
-      },
-      "block_order": [
-        "button_hceP3Y"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50
-      }
-    },
     "product_block_dmT4Nt": {
       "type": "product-block",
       "settings": {
@@ -979,13 +838,13 @@
         "color_title": "#232323",
         "title_align": "center",
         "title_align_mb": "center",
-        "view_all": "",
+        "view_all": "Ver todos",
         "view_all_align": "center",
         "font_weight_view_all": "400",
         "mg_bottom_view": 30,
         "mg_bottom_view_mb": 0,
         "enable_border_view_all": true,
-        "link_view_all": "",
+        "link_view_all": "shopify://collections/maquinas-de-ejercicio",
         "color_view_all": "#3c3c3c",
         "icon_view_all": "",
         "color_view_all_icon": "#eb492f",
@@ -1145,11 +1004,8 @@
     "image_banner_xaxt9C",
     "custom_service_block_aKkGgX",
     "product_block_EeqCRK",
-    "rich_text_fkM7HL",
     "product_block_tYbnQU",
-    "rich_text_qhwcPj",
     "product_block_zp3KNa",
-    "rich_text_N6dT4y",
     "product_block_dmT4Nt",
     "rich_text_nrUNhL"
   ]
