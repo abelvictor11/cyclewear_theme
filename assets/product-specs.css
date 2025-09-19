@@ -1,0 +1,72 @@
+/* product-specs.css
+   Minimal styles for product specs snippet (grid + clamp)
+*/
+
+.product-specs { margin-top: 1rem; }
+
+.product-specs__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .product-specs__grid { grid-template-columns: 1fr; }
+}
+
+.product-specs__heading {
+  font-size: 1.125rem;
+  margin: 0 0 0.75rem;
+}
+
+.product-specs__desc-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--clamp, 6);
+  line-clamp: var(--clamp, 6);
+}
+
+.product-specs__desc-text.is-expanded {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  display: block;
+}
+
+.product-specs__toggle {
+  margin-top: 0.5rem;
+  background: none;
+  border: 0;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.product-specs__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-specs__item + .product-specs__item { margin-top: 0.5rem; }
+
+.product-specs__label {
+  font-size: 0.95rem;
+  margin: 0 0 0.125rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.product-specs__icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+}
+
+.product-specs__value { font-size: 0.95rem; }
+
+.product-specs__chip { display: inline; }
+.product-specs__sep { opacity: 0.6; }
