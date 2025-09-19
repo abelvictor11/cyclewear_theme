@@ -2,12 +2,19 @@
    Minimal styles for product specs snippet (grid + clamp)
 */
 
-.product-specs { margin-top: 1rem; }
+.product-specs {
+  margin: 16px 0 24px;
+  border: 1px solid var(--color-border, rgba(120,129,136,.2));
+  border-radius: 12px;
+  background: var(--bg-white, #fff);
+  overflow: hidden;
+}
 
 .product-specs__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+  padding: 1.2rem 1.6rem;
 }
 
 @media (max-width: 768px) {
@@ -16,6 +23,8 @@
 
 .product-specs__heading {
   font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text, #222);
   margin: 0 0 0.75rem;
 }
 
@@ -49,10 +58,16 @@
   margin: 0;
 }
 
-.product-specs__item + .product-specs__item { margin-top: 0.5rem; }
+.product-specs__item + .product-specs__item {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border, rgba(120,129,136,.15));
+}
 
 .product-specs__label {
   font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text, #222);
   margin: 0 0 0.125rem;
   display: inline-flex;
   align-items: center;
