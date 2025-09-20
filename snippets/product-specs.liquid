@@ -6,6 +6,8 @@
   - Override mapping (optional):
     {% render 'product-specs', specs_override: "global.foo|Foo|text|fooicon, custom.bar|Bar|list|baricon" %}
     Mapping format per item: namespace.key|Label|type|icon_class (icon_class is optional)
+  - Rollup note: 2025-09-19 – deployment sync marker (no functional changes)
+  - Release marker: 2025-09-19 20:30 – force sync
 {%- endcomment -%}
 
 {{ 'product-specs.css' | asset_url | stylesheet_tag }}
