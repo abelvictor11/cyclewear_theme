@@ -2,6 +2,13 @@
 
 All notable changes to this repository will be documented in this file.
 
+## 2025-09-19 20:12 (-05:00)
+
+- PDP Product Specs rollup
+  - Confirm snippet `snippets/product-specs.liquid` uses a single `capture specs_map_default` and assigns outside of `{% liquid %}` to avoid parsing issues.
+  - Confirm styles in `assets/product-specs.css` align with the financing card (bordered white card, rounded corners, padding, headings, dividers).
+  - Deployment guidance: merge to `main`, then in Shopify Theme connected to GitHub run “Update from GitHub”. In the Product template, keep only `{% render 'product-specs' %}` in the Custom liquid block to avoid duplicated legacy HTML.
+
 ## 2025-09-19 17:16 (-05:00)
 
 - Product Specs snippet (PDP)
