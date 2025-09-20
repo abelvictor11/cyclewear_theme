@@ -1,1 +1,5 @@
-Hola
+{% if product.description != blank %}
+  OK: hay descripción
+{% else %}
+  OK: sin descripción
+{% endif %}
