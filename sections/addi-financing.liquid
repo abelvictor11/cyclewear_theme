@@ -1,0 +1,215 @@
+{%- comment -%}
+  Addi Financing Landing Section
+  - Rich UI landing for Addi financing at Cyclewear
+  - Assign this section via templates/page.addi-financing.json
+{%- endcomment -%}
+
+{{ 'addi-landing.css' | asset_url | stylesheet_tag }}
+
+<section class="addi-landing">
+  <div class="container-1770">
+    <!-- Hero -->
+    <div class="addi-hero">
+      <div class="addi-hero__content">
+        <h1 class="addi-title">Financiamiento <span class="txt-brand">ADDI</span> en Cyclewear</h1>
+        <p class="addi-subtitle">Así de <strong>fácil</strong> y <strong>rápido</strong> con Addi</p>
+        <ul class="addi-hero__bullets">
+          <li>Llévalo con <strong>1 año de garantía</strong> y el mejor servicio posventa.</li>
+        </ul>
+        <div class="addi-cta">
+          <a class="button" href="#como-funciona">Compra Online</a>
+          <a class="button button--secondary" href="#en-tienda">Compra en Tienda</a>
+        </div>
+      </div>
+      <div class="addi-hero__media">
+        {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg addi-hero__img' }}
+      </div>
+    </div>
+
+    <!-- Rates -->
+    <div class="addi-rates">
+      <div class="addi-card addi-card--highlight">
+        <div class="addi-card__header">Tasas de interés Créditos de consumo</div>
+        <div class="addi-card__body addi-rate-grid">
+          <div class="addi-rate">
+            <div class="addi-rate__value">0% E.A.</div>
+            <div class="addi-rate__hint">0% M.V.*</div>
+          </div>
+          <div class="addi-rate addi-rate--to">
+            <span>Hasta</span>
+          </div>
+          <div class="addi-rate">
+            <div class="addi-rate__value">32,99% E.A.</div>
+            <div class="addi-rate__hint">2,4% M.V.*</div>
+          </div>
+        </div>
+        <p class="addi-legal">
+          * Asignadas en función del perfil de riesgo del cliente. La opción de comprar a cuotas con 0% de interés está sujeta a criterios de elegibilidad de la transacción, de acuerdo con nuestros T&Cs. <a href="/pages/terminos-y-condiciones-de-financiacion-con-addi-en-cyclewear-com">Conócelos aquí</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="addi-how" id="como-funciona">
+      <h2 class="addi-heading">¿Cómo funciona la financiación con Addi en cyclewear.com?</h2>
+      <div class="addi-steps">
+        <div class="addi-step">
+          <div class="addi-step__num">1</div>
+          <h3 class="addi-step__title">Elige tus productos</h3>
+          <p>Añade tus artículos favoritos al carrito de compras.</p>
+        </div>
+        <div class="addi-step">
+          <div class="addi-step__num">2</div>
+          <h3 class="addi-step__title">Selecciona Addi</h3>
+          <p>Al pagar, elige <strong>“Addi”</strong> como método de pago.</p>
+        </div>
+        <div class="addi-step">
+          <div class="addi-step__num">3</div>
+          <h3 class="addi-step__title">Completa tu solicitud</h3>
+          <p>La plataforma te guía. La aprobación es casi instantánea.</p>
+        </div>
+        <div class="addi-step">
+          <div class="addi-step__num">4</div>
+          <h3 class="addi-step__title">¡Listo!</h3>
+          <p>Paga tu compra en cuotas y disfruta tu producto.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- In-store info anchor -->
+    <div id="en-tienda"></div>
+
+    <!-- Requirements & Eligibility -->
+    <div class="addi-reqs">
+      <div class="addi-grid">
+        <div class="addi-card">
+          <div class="addi-card__header">¿Qué requisitos necesito para aplicar?</div>
+          <ul class="addi-list">
+            <li>Documento de identidad vigente.</li>
+            <li>Ser mayor de edad.</li>
+            <li>Celular y correo electrónico activos.</li>
+            <li>Método de pago para las cuotas (según políticas de Addi).</li>
+          </ul>
+          <p class="addi-note">Los requisitos pueden variar según evaluación de Addi.</p>
+        </div>
+        <div class="addi-card">
+          <div class="addi-card__header">¿Puedo financiar cualquier producto?</div>
+          <p>La financiación aplica para la mayoría de productos disponibles en cyclewear.com. Pueden existir excepciones por categorías o promociones específicas. La aprobación del crédito está sujeta al estudio realizado por Addi.</p>
+          <p class="addi-note">*El 0% de interés aplica para compras hasta $600.000 y en comercios seleccionados hasta $1.300.000, diferidas a 3 cuotas. Lee aquí los <a href="/pages/terminos-y-condiciones-de-financiacion-con-addi-en-cyclewear-com">Términos y Condiciones</a>.</p>
+          <p class="addi-note">Para más información, visita <a href="https://co.addicom/preguntas-frecuentes" target="_blank" rel="nofollow noopener">co.addicom/preguntas-frecuentes</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Simple simulator -->
+    <div class="addi-sim">
+      <h2 class="addi-heading">Simula tus cuotas</h2>
+      <div class="addi-sim__grid">
+        <div class="addi-sim__form">
+          <label class="field">
+            <span>Monto de compra</span>
+            <input type="number" min="10000" step="1000" value="600000" id="addi-amount" />
+          </label>
+          <label class="field">
+            <span>Meses</span>
+            <select id="addi-months">
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+              <option value="24">24</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Tasa mensual</span>
+            <select id="addi-rate">
+              <option value="0">0% M.V. (promoción)</option>
+              <option value="0.024">2,4% M.V. (referencial)</option>
+            </select>
+          </label>
+          <button type="button" class="button" id="addi-calc">Calcular</button>
+          <p class="addi-note">Este simulador es referencial y no constituye oferta. La tasa definitiva y aprobación dependen del estudio de Addi.</p>
+        </div>
+        <div class="addi-sim__result" id="addi-result">
+          <div class="addi-kpi">
+            <div class="addi-kpi__label">Cuota estimada</div>
+            <div class="addi-kpi__value" id="addi-fee">$0</div>
+          </div>
+          <div class="addi-kpi">
+            <div class="addi-kpi__label">Total a pagar</div>
+            <div class="addi-kpi__value" id="addi-total">$0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ accordion -->
+    <div class="addi-faq">
+      <h2 class="addi-heading">Preguntas frecuentes</h2>
+      <div class="addi-accordion" data-accordion>
+        <details>
+          <summary>¿Cómo funciona la financiación con Addi en cyclewear.com?</summary>
+          <div class="addi-accordion__content">
+            <p>Al momento de pagar tu pedido en nuestro sitio web, selecciona <strong>“Addi”</strong> como método de pago. La plataforma te guiará para completar tu solicitud. La aprobación es casi instantánea y, una vez aprobada, podrás pagar tu compra en cuotas.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Qué requisitos necesito para aplicar a un crédito con Addi?</summary>
+          <div class="addi-accordion__content">
+            <ul>
+              <li>Documento de identidad vigente.</li>
+              <li>Ser mayor de edad.</li>
+              <li>Celular y correo electrónico activos.</li>
+              <li>Adicionales pueden aplicar según políticas de Addi.</li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary>¿Puedo financiar cualquier producto de cyclewear.com con Addi?</summary>
+          <div class="addi-accordion__content">
+            <p>La aprobación del crédito está sujeta al estudio realizado por Addi. El 0% de interés aplica para compras hasta $600.000 y en comercios seleccionados hasta $1.300.000, diferidas a 3 cuotas. Lee los <a href="/pages/terminos-y-condiciones-de-financiacion-con-addi-en-cyclewear-com">Términos y Condiciones</a>. Más info en <a href="https://co.addicom/preguntas-frecuentes" target="_blank" rel="nofollow noopener">co.addicom/preguntas-frecuentes</a>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- Legal -->
+    <div class="addi-legal-block">
+      <p>Ad<strong>di</strong> mostrará la información de tu compra de forma clara y transparente. La aprobación del crédito está sujeta al estudio realizado por Addi. *El 0% de interés aplica para compras hasta $600.000 y en comercios seleccionados hasta $1.300.000, diferidas a 3 (tres) cuotas. Lee aquí los <a href="/pages/terminos-y-condiciones-de-financiacion-con-addi-en-cyclewear-com">Términos y Condiciones</a>. Para más información, ingresa a <a href="https://co.addicom/preguntas-frecuentes" target="_blank" rel="nofollow noopener">co.addicom/preguntas-frecuentes</a>.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  function formatCOP(n){
+    try { return n.toLocaleString('es-CO', { style:'currency', currency:'COP', maximumFractionDigits:0 }); } catch(e){ return '$' + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+  }
+  function calc(){
+    var amount = parseFloat(document.getElementById('addi-amount').value || '0');
+    var months = parseInt(document.getElementById('addi-months').value || '3', 10);
+    var rate = parseFloat(document.getElementById('addi-rate').value || '0'); // monthly decimal
+    if(!amount || !months || rate < 0){ return; }
+    var fee = 0, total = 0;
+    if(rate === 0){
+      fee = amount / months;
+      total = amount;
+    } else {
+      var r = rate;
+      fee = amount * r / (1 - Math.pow(1 + r, -months));
+      total = fee * months;
+    }
+    document.getElementById('addi-fee').textContent = formatCOP(fee);
+    document.getElementById('addi-total').textContent = formatCOP(total);
+  }
+  var btn = document.getElementById('addi-calc');
+  if(btn){ btn.addEventListener('click', calc); calc(); }
+
+  // Progressive enhancement for <details>
+  document.querySelectorAll('[data-accordion] details summary').forEach(function(s){
+    s.addEventListener('click', function(){
+      var d = this.parentElement;
+      document.querySelectorAll('[data-accordion] details').forEach(function(x){ if(x !== d) x.removeAttribute('open'); });
+    });
+  });
+})();
+</script>
