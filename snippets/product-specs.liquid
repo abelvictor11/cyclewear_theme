@@ -13,44 +13,10 @@
 {%- assign uid = section.id | default: product.id -%}
 {%- assign clamp_lines = clamp_lines | default: 6 -%}
 
-  comment
-    Comma-separated mapping: namespace.key|Label|type
-    type: text | list (list will iterate metafield.value)
-  endcomment
-  capture specs_map_default
-    global.materialshopi|Material|text,
-    global.tipodeplato|Tipo de plato|text,
-    global.tubelessshopi|Tubeless|text,
-    global.anchodelproductoshopi|Ancho del producto|text,
-    global.cantidad_de_huecos|Cantidad de huecos|text,
-    custom.marco|Marco|text,
-    global.tipo_de_frenoshopi|Tipo de Freno|text,
-    global.velocidades|Velocidades|text,
-    global.guantesldedo|Longitud Dedo|text,
-    global.generoshopi|Género|text,
-    global.espigo|Espigo|list,
-    global.desbloqueo|Desbloqueo|list,
-    global.consistenciashopi|Consistencia|text,
-    global.compatible_monitor_de_ritmo_cardiaco|Compatible Monitor Cardiaco|text,
-    global.color_del_lente|Color del Lente|text,
-    global.caracteristicas_del_material|Características del Material|text,
-    global.capacidadshopi|Capacidad|text,
-    custom.manillar|Manillar|text,
-    custom.tenedor|Tenedor|text,
-    custom.bater_a|Batería|text,
-    custom.cassette|Cassette|text,
-    custom.llantas|Llantas|text,
-    custom.suspensi_n|Suspensión|text,
-    global.tamano_de_rinshopi|Tamaño de Rin|text,
-    custom.motor|Motor|text,
-    custom.sensor|Sensor|text,
-    global.bluetooth|Bluetooth|text,
-    global.tensor|Tensor|text,
-    global.funciones_adicionalesshopi|Funciones adicionales|text,
-    global.cadencia|Cadencia|text
-  endcapture
-
-  assign specs_map = specs_override | default: specs_map_default | strip
+{%- comment -%}
+  Comma-separated mapping: namespace.key|Label|type
+  type: text | list (list will iterate metafield.value)
+{%- endcomment -%}
 
 {%- capture specs_map_default -%}
   global.materialshopi|Material|text,
