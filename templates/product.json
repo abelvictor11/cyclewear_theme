@@ -15,7 +15,7 @@
         "media_custom_liquid_EhppyC": {
           "type": "media_custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'product-specs-v2' %}",
+            "custom_liquid": "hola",
             "spacing_top": 50,
             "spacing_bottom": 50
           }
