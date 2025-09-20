@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "addi_financing_main": {
+      "type": "addi-financing",
+      "settings": {}
+    }
+  },
+  "order": [
+    "addi_financing_main"
+  ]
+}
