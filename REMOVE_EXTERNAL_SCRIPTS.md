@@ -1,8 +1,12 @@
-# 🚨 Eliminar Scripts Externos - Acción Requerida
+# 🚨 Reemplazar Scripts Externos por Módulo Unificado
+
+## 🎯 Objetivo
+
+Reemplazar los widgets externos de **Addi** y **Mercado Pago** por un **módulo unificado personalizado** que integra ambos métodos de forma visual, moderna y sin scripts bloqueantes.
 
 ## ⚠️ IMPORTANTE: Scripts que NO están en el repositorio
 
-Los siguientes scripts externos están agregados **SOLO en Shopify Admin** y deben eliminarse **MANUALMENTE** después de hacer "Update from GitHub":
+Los siguientes scripts externos están agregados **SOLO en Shopify Admin** y deben eliminarse **MANUALMENTE** después de hacer "Update from GitHub" para evitar duplicación:
 
 ---
 
@@ -80,22 +84,25 @@ Una vez localizado:
 
 ## ✅ Verificación final
 
-Después de eliminar el script:
+Después de eliminar los scripts externos:
 
-### Verificar que el módulo de financiación funciona:
+### Verificar que el módulo unificado funciona:
 1. Ir a un producto en tu tienda
 2. Scroll al módulo "💳 Financiación disponible"
-3. Cambiar de variante
-4. Verificar que el monto se actualiza correctamente
-5. Cambiar el selector de cuotas
-6. Confirmar que la calculadora funciona
+3. **Confirmar que se ven 3 métodos**: Addi, Mercado Pago, Sistecrédito
+4. Cambiar de variante
+5. Verificar que el monto se actualiza correctamente
+6. Cambiar el selector de cuotas (3, 6, 12, 24)
+7. Confirmar que la calculadora funciona
 
-### Confirmar que NO hay errores:
+### Confirmar que NO hay errores ni duplicación:
 ```
 ✓ No hay errores en Console
 ✓ No se carga mercado-pago-widget.min.js
-✓ El módulo personalizado funciona correctamente
-✓ Los logos de Addi/Sistecrédito se ven bien
+✓ No se carga addi widget
+✓ El módulo personalizado muestra Addi + Mercado Pago + Sistecrédito
+✓ Los 3 logos se ven correctamente con badge "0% interés"
+✓ NO hay widgets duplicados de financiación
 ```
 
 ---

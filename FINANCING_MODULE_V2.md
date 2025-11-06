@@ -26,10 +26,11 @@ Se ha implementado un módulo de financiación unificado, moderno y optimizado q
 - ✨ **Agregado**: Iconos de check en notas
 - ✨ **Mejorado**: Animación smooth al cambiar de variante
 - ✨ **Agregado**: Nuevos parámetros: `subtitle` y `show_badges`
+- ✨ **Agregado**: 3 métodos integrados: Addi, Mercado Pago y Sistecrédito
 
 ### 3. `/assets/product-financing.css`
 - 🎨 **Rediseñado completamente** con:
-  - Gradientes modernos (header y cuotas)
+  - Gradientes con colores de marca (#232323)
   - Animaciones de entrada (fadeInUp)
   - Tarjetas de método con hover effects
   - Badges con estilo moderno
