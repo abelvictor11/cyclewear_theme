@@ -88,6 +88,7 @@ div#especificaciones .col-md-6 {
     padding: 10px;
     border: 1px solid #ededed;
     background: #f7f7f7;
+    border-radius: 12px;
 }
 .pickup-availability-button {
     margin-top: 0 !important;
@@ -102,7 +103,10 @@ span.count {
 .short-description {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Número de líneas visibles */
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 button#toggle-description {
     background: transparent;
@@ -525,4 +529,11 @@ ul.menu-destacados a:hover {
 }
 .productView-groupTop {
     padding-bottom: 8px !important;
+}
+.productView-moreItem .price__current, .productView-moreItem .price__compare, .productView-moreItem .price__discount {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+.productView-image .productView-img-container .media, .productView-image .productView-img-container, .cursor-wrapper+.productView-images-wrapper .productView-image {
+    max-height: 550px;
 }
