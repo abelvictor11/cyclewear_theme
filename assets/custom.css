@@ -529,6 +529,9 @@ ul.menu-destacados a:hover {
 .productView-groupTop {
     padding-bottom: 8px !important;
 }
-.productView-moreItem .price__current {
+.productView-moreItem .price__current, .productView-moreItem .price__compare {
     font-size: 2.5rem !important;
+}
+.productView-image .productView-img-container .media, .productView-image .productView-img-container, .cursor-wrapper+.productView-images-wrapper .productView-image {
+    max-height: 550px;
 }
