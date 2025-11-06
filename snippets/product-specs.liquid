@@ -57,7 +57,11 @@
 {%- assign specs_array = specs_map | split: "," -%}
 {%- assign any_attr = false -%}
 
-{%- assign has_description = product.description != blank -%}
+{%- if product.description != blank -%}
+  {%- assign has_description = true -%}
+{%- else -%}
+  {%- assign has_description = false -%}
+{%- endif -%}
 {%- capture right_column -%}
   <ul class="product-specs__list">
   {%- for spec_str in specs_array -%}

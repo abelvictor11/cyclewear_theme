@@ -79,7 +79,8 @@
           </header>
           <ul class="gf-options" role="list">
             {%- for opt in options -%}
-              {%- if opt.settings.step_handle | handle == step_handle -%}
+              {%- assign opt_step_handle = opt.settings.step_handle | handle -%}
+              {%- if opt_step_handle == step_handle -%}
                 <li class="gf-option">
                   {%- liquid
                     assign final_param_name = opt.settings.param_name
@@ -175,9 +176,9 @@
     {"type":"range","id":"mg_top_desktop","label":"Margen superior (desktop)","min":0,"max":100,"step":1,"default":20},
     {"type":"range","id":"mg_top_tablet","label":"Margen superior (tablet)","min":0,"max":100,"step":1,"default":20},
     {"type":"range","id":"mg_top_mobile","label":"Margen superior (mobile)","min":0,"max":100,"step":1,"default":15},
-    {"type":"range","id":"mg_bottom_desktop","label":"Margen inferior (desktop)","min":0,"max":200,"step":1,"default":45},
-    {"type":"range","id":"mg_bottom_tablet","label":"Margen inferior (tablet)","min":0,"max":200,"step":1,"default":45},
-    {"type":"range","id":"mg_bottom_mobile","label":"Margen inferior (mobile)","min":0,"max":200,"step":1,"default":40}
+    {"type":"range","id":"mg_bottom_desktop","label":"Margen inferior (desktop)","min":0,"max":200,"step":2,"default":46},
+    {"type":"range","id":"mg_bottom_tablet","label":"Margen inferior (tablet)","min":0,"max":200,"step":2,"default":46},
+    {"type":"range","id":"mg_bottom_mobile","label":"Margen inferior (mobile)","min":0,"max":200,"step":2,"default":40}
   ],
   "blocks": [
     {
@@ -207,7 +208,7 @@
           {"value":"filter.p.product_type","label":"Tipo de producto (filter.p.product_type)"},
           {"value":"variant_option","label":"Opción de variante (filter.v.option.{handle})"}
         ]},
-        {"type":"text","id":"option_handle","label":"Nombre de la opción de variante (ej: Color, Talla). Solo si elegiste 'Opción de variante'","default":""},
+        {"type":"text","id":"option_handle","label":"Opción variante (ej: Color). Solo si aplica","default":"color"},
         {"type":"text","id":"param_value","label":"Valor de parámetro (ej: Black)"},
         {"type":"text","id":"q_fragment","label":"Fragmento de búsqueda (añade a q)"},
         {"type":"text","id":"next_step_handle","label":"Siguiente paso (handle). En blanco = finalizar"}
