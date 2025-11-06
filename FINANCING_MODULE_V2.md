@@ -129,6 +129,31 @@ Background: linear-gradient(135deg, #232323 0%, #3a3a3a 100%)
 
 ---
 
+## 📝 Notas importantes
+
+⚠️ **ACCIÓN REQUERIDA - Scripts externos en Shopify:**
+
+El script de **Mercado Pago** NO está en el repositorio (solo en Shopify Admin) y debe eliminarse manualmente:
+
+```html
+<script data-name="shopifyMercadoPagoWidget" src="https://cdn.shopify.com/..."></script>
+```
+
+**📖 Ver guía completa:** `REMOVE_EXTERNAL_SCRIPTS.md`
+
+**Ubicaciones comunes:**
+- `layout/theme.liquid` (antes de `</body>`)
+- Snippets globales
+- Assets JS
+
+**Cómo encontrarlo:**
+1. Shopify Admin > Temas > Editar código
+2. Buscar: `shopifyMercadoPagoWidget` o `mercado-pago-widget`
+3. Eliminar el script completo
+4. Guardar cambios
+
+---
+
 ## 🎯 Próximos pasos (recomendado)
 
 ### En Shopify Admin:
