@@ -88,6 +88,7 @@ div#especificaciones .col-md-6 {
     padding: 10px;
     border: 1px solid #ededed;
     background: #f7f7f7;
+    border-radius: 12px;
 }
 .pickup-availability-button {
     margin-top: 0 !important;
