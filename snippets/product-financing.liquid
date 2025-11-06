@@ -61,12 +61,7 @@
 
   <div id="{{ dom_id }}" class="product-financing" data-money-format="{{ shop.money_format | escape }}" data-currency="{{ shop.currency }}" data-locale="{{ request.locale.iso_code }}" data-fallback-price="{{ fallback_price_cents }}">
     <div class="financing__box">
-      <div class="financing__header">
-        <div class="financing__header-text">
-          <h3 class="financing__title">💳 {{ heading }}</h3>
-          <p class="financing__subtitle">{{ subheading }}</p>
-        </div>
-      </div>
+
       <div class="financing__content">
         <div class="financing__installment">
           <div class="financing__amount-wrapper">
@@ -87,7 +82,7 @@
         {% if methods_str != '' %}
           <div class="financing__methods">
             <div class="financing__methods-header">
-              <span class="financing__methods-title">Métodos disponibles</span>
+              <span class="financing__methods-title">Métodos de crédito disponibles</span>
             </div>
             <ul class="financing__logos" role="list">
               {% for method in methods_arr %}
