@@ -102,7 +102,10 @@ span.count {
 .short-description {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Número de líneas visibles */
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 button#toggle-description {
     background: transparent;

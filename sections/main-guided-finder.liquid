@@ -79,7 +79,8 @@
           </header>
           <ul class="gf-options" role="list">
             {%- for opt in options -%}
-              {%- if opt.settings.step_handle | handle == step_handle -%}
+              {%- assign opt_step_handle = opt.settings.step_handle | handle -%}
+              {%- if opt_step_handle == step_handle -%}
                 <li class="gf-option">
                   {%- liquid
                     assign final_param_name = opt.settings.param_name

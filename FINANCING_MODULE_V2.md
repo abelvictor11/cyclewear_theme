@@ -47,15 +47,16 @@ Se ha implementado un módulo de financiación unificado, moderno y optimizado q
 
 ### Header con gradiente
 ```
-Background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+Background: linear-gradient(135deg, #232323 0%, #3a3a3a 100%)
 - Título con emoji 💳
 - Subtítulo descriptivo
 - Texto blanco con alta legibilidad
+- Colores de marca CycleWear (#232323)
 ```
 
 ### Sección de cuotas
 ```
-- Fondo con gradiente morado
+- Fondo con gradiente negro elegante
 - Cantidad mensual destacada (fuente grande y bold)
 - Selector de meses con estilo custom
 - Animación al actualizar valores
@@ -151,20 +152,29 @@ Background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
 
 ## 🛠 Personalización
 
+### Colores actuales (marca CycleWear):
+- **Color principal**: #232323 (negro)
+- **Color secundario**: #3a3a3a (gris oscuro)
+
 ### Cambiar colores del gradiente:
 En `/assets/product-financing.css`:
 ```css
 /* Header */
-background: linear-gradient(135deg, #TU_COLOR_1 0%, #TU_COLOR_2 100%);
+background: linear-gradient(135deg, #232323 0%, #3a3a3a 100%);
 
 /* Cuotas */
-background: linear-gradient(135deg, #TU_COLOR_1 0%, #TU_COLOR_2 100%);
+background: linear-gradient(135deg, #232323 0%, #3a3a3a 100%);
+
+/* Hover de tarjetas */
+border-color: #232323;
+box-shadow: 0 12px 28px rgba(35, 35, 35, 0.2);
 ```
 
 ### Cambiar badge color:
 ```css
 .financing__badge {
-  background: linear-gradient(135deg, #TU_COLOR_1 0%, #TU_COLOR_2 100%);
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  /* Verde por defecto - cambiar si es necesario */
 }
 ```
 
