@@ -1,26 +1,24 @@
 {% comment %}
-  Snippet: product-financing
-  Uso sugerido desde un bloque "Liquid personalizado" en la PDP:
-
+  Snippet: product-financing v2.0
+  Módulo unificado de financiación con diseño moderno y animaciones.
+  
+  Uso desde bloque "Liquid personalizado" en PDP:
   {% render 'product-financing',
     enabled: true,
-    title: 'Llévalo hoy con 0% de interés',
+    title: 'Financiación disponible',
+    subtitle: 'Paga en cuotas sin interés',
     months: '3,6,12,24',
-    methods: 'Davivienda|davivienda.svg|https://tudominio.com/financia,BBVA|bbva.svg|https://wa.me/XXXXXXXXXXX',
-    notes: 'Hasta 24 meses con Davivienda, Banco de Occidente, Banco Popular, BBVA y RappiPay.||Con Bancolombia: hasta 24 meses en iPhone y Mac, y hasta 12 meses en los demás productos desde $800.000.'
+    methods: 'Addi|addi.svg|https://addi.com,Mercado Pago|mercadopago.svg|#,Sistecrédito|sistecredito.svg|#',
+    notes: 'Paga hasta en 24 meses con Sistecrédito y Addi.||Plan retoma disponible para tu bicicleta usada.',
+    show_badges: true
   %}
 
-  Parámetros:
-  - enabled: true/false para mostrar u ocultar el módulo.
-  - title: título del acordeón.
-  - months: string separado por comas con los plazos (por ej. '3,6,12,24').
-  - methods: lista separada por comas, cada método como "Nombre|archivo_logo.svg|URL". El logo debe existir en assets/.
-  - notes: lista de notas separadas por "||" para mostrar viñetas.
-
-  Notas:
-  - El módulo sólo es visual. No afecta el checkout.
-  - Calcula la cuota dividiendo el precio de la variante por el número de meses (0% interés).
-  - Se actualiza al cambiar de variante.
+  Características:
+  ✓ Diseño moderno con gradientes y animaciones
+  ✓ Badges por método de pago
+  ✓ Actualización automática al cambiar variante
+  ✓ Sin scripts externos bloqueantes
+  ✓ Totalmente responsive
 {% endcomment %}
 
 {% liquid
@@ -42,7 +40,9 @@
     assign notes_str = notes | default: ''
     assign notes_arr = notes_str | split: '||'
 
-    assign heading = title | default: 'Llévalo hoy con 0% de interés'
+    assign heading = title | default: 'Financiación disponible'
+    assign subheading = subtitle | default: 'Paga en cuotas sin interés'
+    assign show_badges_bool = show_badges | default: true
 
     assign dom_id = 'financing-' | append: product.id | default: 'financing-generic'
 
@@ -60,19 +60,25 @@
   %}
 
   <div id="{{ dom_id }}" class="product-financing" data-money-format="{{ shop.money_format | escape }}" data-currency="{{ shop.currency }}" data-locale="{{ request.locale.iso_code }}" data-fallback-price="{{ fallback_price_cents }}">
-    <details class="financing__box" open>
-      <summary class="financing__summary">
-        <span class="financing__summary-title">{{ heading }}</span>
-      </summary>
+    <div class="financing__box">
+      <div class="financing__header">
+        <div class="financing__header-text">
+          <h3 class="financing__title">💳 {{ heading }}</h3>
+          <p class="financing__subtitle">{{ subheading }}</p>
+        </div>
+      </div>
       <div class="financing__content">
         <div class="financing__installment">
-          <div class="financing__amount" data-financing-amount>—</div>
+          <div class="financing__amount-wrapper">
+            <span class="financing__amount-label">Cuota mensual</span>
+            <div class="financing__amount" data-financing-amount>—</div>
+          </div>
           <div class="financing__per">
-            <span class="financing__per-text">al mes por</span>
+            <span class="financing__per-text">Pagar en</span>
             <select class="financing__months" data-financing-months aria-label="Selecciona meses">
               {% for m in months_arr %}
                 {% assign m_trim = m | strip %}
-                <option value="{{ m_trim }}" {% if forloop.last %}selected{% endif %}>{{ m_trim }} meses</option>
+                <option value="{{ m_trim }}" {% if forloop.last %}selected{% endif %}>{{ m_trim }} cuotas</option>
               {% endfor %}
             </select>
           </div>
@@ -80,7 +86,9 @@
 
         {% if methods_str != '' %}
           <div class="financing__methods">
-            <div class="financing__methods-title">Aprovecha con tu tarjeta favorita:</div>
+            <div class="financing__methods-header">
+              <span class="financing__methods-title">Métodos disponibles</span>
+            </div>
             <ul class="financing__logos" role="list">
               {% for method in methods_arr %}
                 {% assign item = method | strip %}
@@ -89,19 +97,24 @@
                 {% assign method_logo = parts[1] | default: '' | strip %}
                 {% assign method_url  = parts[2] | default: '' | strip %}
                 <li class="financing__logo-item">
-                  {% if method_url != '' %}<a href="{{ method_url }}" class="financing__logo-link" target="_blank" rel="noopener noreferrer">{% endif %}
-                    <div class="financing__logo">
-                      {% if method_logo != '' %}
-                        {% if method_logo contains 'http' or method_logo contains '//' %}
-                          <img src="{{ method_logo }}" alt="{{ method_name }}" loading="lazy" />
+                  {% if method_url != '' and method_url != '#' %}<a href="{{ method_url }}" class="financing__logo-link" target="_blank" rel="noopener noreferrer">{% endif %}
+                    <div class="financing__logo-card">
+                      <div class="financing__logo">
+                        {% if method_logo != '' %}
+                          {% if method_logo contains 'http' or method_logo contains '//' %}
+                            <img src="{{ method_logo }}" alt="{{ method_name }}" loading="lazy" />
+                          {% else %}
+                            <img src="{{ method_logo | asset_url }}" alt="{{ method_name }}" loading="lazy" onerror="this.onerror=null;this.src='{{ method_logo | file_url }}';"/>
+                          {% endif %}
                         {% else %}
-                          <img src="{{ method_logo | asset_url }}" alt="{{ method_name }}" loading="lazy" onerror="this.onerror=null;this.src='{{ method_logo | file_url }}';" />
+                          <span class="financing__logo-fallback">{{ method_name }}</span>
                         {% endif %}
-                      {% else %}
-                        <span class="financing__logo-fallback">{{ method_name }}</span>
+                      </div>
+                      {% if show_badges_bool %}
+                        <span class="financing__badge">0% interés</span>
                       {% endif %}
                     </div>
-                  {% if method_url != '' %}</a>{% endif %}
+                  {% if method_url != '' and method_url != '#' %}</a>{% endif %}
                 </li>
               {% endfor %}
             </ul>
@@ -110,16 +123,23 @@
 
         {% if notes_str != '' %}
           <div class="financing__notes">
-            <ul>
+            <ul class="financing__notes-list">
               {% for note in notes_arr %}
                 {% assign note_text = note | strip %}
-                {% if note_text != '' %}<li>{{ note_text }}</li>{% endif %}
+                {% if note_text != '' %}
+                  <li class="financing__note-item">
+                    <svg class="financing__check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M13.5 4L6 11.5L2.5 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>{{ note_text }}</span>
+                  </li>
+                {% endif %}
               {% endfor %}
             </ul>
           </div>
         {% endif %}
       </div>
-    </details>
+    </div>
 
     <script type="application/json" data-financing-variants>
       [
@@ -186,7 +206,12 @@
         var price = currentPriceCents();
         if (!price || price <= 0) { amountEl.textContent = '—'; return; }
         var perMonth = Math.round(price / m);
-        amountEl.textContent = formatMoney(perMonth);
+        // Añadir animación de cambio
+        amountEl.style.opacity = '0.5';
+        setTimeout(function(){
+          amountEl.textContent = formatMoney(perMonth);
+          amountEl.style.opacity = '1';
+        }, 150);
       }
 
       // React to month selection changes
