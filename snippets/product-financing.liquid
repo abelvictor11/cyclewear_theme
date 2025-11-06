@@ -96,8 +96,15 @@
                 {% assign method_name = parts[0] | strip %}
                 {% assign method_logo = parts[1] | default: '' | strip %}
                 {% assign method_url  = parts[2] | default: '' | strip %}
+                {% assign modal_id = parts[3] | default: '' | strip %}
                 <li class="financing__logo-item">
-                  {% if method_url != '' and method_url != '#' %}<a href="{{ method_url }}" class="financing__logo-link" target="_blank" rel="noopener noreferrer">{% endif %}
+                  {% if modal_id != '' %}
+                    <button type="button" class="financing__logo-link financing__logo-btn" data-modal="{{ modal_id }}" aria-label="Más información sobre {{ method_name }}">
+                  {% elsif method_url != '' and method_url != '#' %}
+                    <a href="{{ method_url }}" class="financing__logo-link" target="_blank" rel="noopener noreferrer">
+                  {% else %}
+                    <div class="financing__logo-link">
+                  {% endif %}
                     <div class="financing__logo-card">
                       <div class="financing__logo">
                         {% if method_logo != '' %}
@@ -114,7 +121,13 @@
                         <span class="financing__badge">0% interés</span>
                       {% endif %}
                     </div>
-                  {% if method_url != '' and method_url != '#' %}</a>{% endif %}
+                  {% if modal_id != '' %}
+                    </button>
+                  {% elsif method_url != '' and method_url != '#' %}
+                    </a>
+                  {% else %}
+                    </div>
+                  {% endif %}
                 </li>
               {% endfor %}
             </ul>
@@ -238,6 +251,106 @@
 
       // Initial calculation
       updateAmount();
+    })();
+    </script>
+
+    <!-- Modales informativos -->
+    <div id="modal-addi" class="financing-modal" style="display:none;">
+      <div class="financing-modal__overlay"></div>
+      <div class="financing-modal__content">
+        <button class="financing-modal__close" aria-label="Cerrar">×</button>
+        <div class="financing-modal__header">
+          <img src="https://www.cyclewear.com.co/cdn/shop/t/67/assets/addi.svg" alt="Addi" style="max-height: 40px;">
+        </div>
+        <div class="financing-modal__body">
+          <h3>Cómo hacer esta compra con Addi</h3>
+          <ol class="financing-modal__steps">
+            <li><strong>1.</strong> Escoge Addi al momento de pagar esta compra.</li>
+            <li><strong>2.</strong> Sólo te pediremos tu cédula y WhatsApp para aplicar.</li>
+            <li><strong>3.</strong> En unos pocos minutos te diremos si podemos aprobar un crédito para tu compra.</li>
+            <li><strong>4.</strong> Te ofreceremos desde 6 hasta 24 cuotas, dependiendo del valor de tu compra y nuestros criterios de elegibilidad.</li>
+          </ol>
+          <button class="financing-modal__btn">Entendido</button>
+          <div class="financing-modal__extra">
+            <h4>También puedes pedir un crédito preaprobado</h4>
+            <p>Si quieres hacer una compra de menor valor y es la primera vez que compras con nosotros, pide un crédito preaprobado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-mercadopago" class="financing-modal" style="display:none;">
+      <div class="financing-modal__overlay"></div>
+      <div class="financing-modal__content">
+        <button class="financing-modal__close" aria-label="Cerrar">×</button>
+        <div class="financing-modal__header">
+          <img src="https://cdn.shopify.com/s/files/1/0905/8631/7101/files/mercadopago-logo-blue.png" alt="Mercado Pago" style="max-height: 40px;">
+        </div>
+        <div class="financing-modal__body">
+          <h3>Lleva tu compra a 3 cuotas con 0% de interés</h3>
+          <p style="margin-bottom: 20px;">Pagando con tu tarjeta de crédito de los siguientes bancos aliados:</p>
+          <div class="financing-modal__banks">
+            <div class="bank-logo">Davivienda</div>
+            <div class="bank-logo">Scotiabank</div>
+            <div class="bank-logo">Colpatria</div>
+            <div class="bank-logo">Banco de Bogotá</div>
+            <div class="bank-logo">AV Villas</div>
+            <div class="bank-logo">Banco Popular</div>
+            <div class="bank-logo">Banco de Occidente</div>
+            <div class="bank-logo">RappiCard</div>
+            <div class="bank-logo">Tarjeta Éxito</div>
+            <div class="bank-logo">Carulla</div>
+            <div class="bank-logo">Nu</div>
+            <div class="bank-logo">BBVA</div>
+            <div class="bank-logo">Itaú</div>
+            <div class="bank-logo">Codensa</div>
+          </div>
+          <p style="margin-top: 20px; font-size: 12px; color: #666;">Aplican términos y condiciones</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function(){
+      // Modal functionality
+      var modals = document.querySelectorAll('.financing-modal');
+      var modalBtns = document.querySelectorAll('[data-modal]');
+      
+      modalBtns.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var modalId = this.getAttribute('data-modal');
+          var modal = document.getElementById(modalId);
+          if (modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      modals.forEach(function(modal){
+        var overlay = modal.querySelector('.financing-modal__overlay');
+        var closeBtn = modal.querySelector('.financing-modal__close');
+        var actionBtn = modal.querySelector('.financing-modal__btn');
+
+        function closeModal(){
+          modal.style.display = 'none';
+          document.body.style.overflow = '';
+        }
+
+        if (overlay) overlay.addEventListener('click', closeModal);
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (actionBtn) actionBtn.addEventListener('click', closeModal);
+      });
+
+      // Cerrar con tecla ESC
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') {
+          modals.forEach(function(modal){
+            modal.style.display = 'none';
+          });
+          document.body.style.overflow = '';
+        }
+      });
     })();
     </script>
   </div>
