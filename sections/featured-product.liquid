@@ -46,6 +46,17 @@
     if product.featured_media.aspect_ratio == nil
         assign featured_media_aspect_ratio = 1
     endif
+    
+    # Calcular índice inicial del slider basado en la variante disponible
+    assign initial_slide_index = 0
+    if current_variant.featured_media
+        for media in product.media
+            if media.id == current_variant.featured_media.id
+                assign initial_slide_index = forloop.index0
+                break
+            endif
+        endfor
+    endif
     assign media_size = section.settings.product_image_ratio
     assign portrait_aspect_ratio = section.settings.portrait_aspect_ratio | append: '%'
     assign media_fit = section.settings.media_fit
@@ -263,6 +274,7 @@
                                     data-arrows-desk="{{ main_image_arrows_desktop }}"
                                     data-counter-mobi="{{ main_image_counter_mobile }}"
                                     data-media-count="{{ product.media.size }}"
+                                    data-initial-slide="{{ initial_slide_index }}"
                                 >
                                     {%- for media in product.media -%}
                                         {%- case media.media_type -%}
