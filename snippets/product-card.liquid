@@ -16,6 +16,21 @@
     assign product_swatch_option = settings.swatch | downcase
     assign isColor = false
     assign variant_img = ''
+    
+    # Buscar primera variante CON STOCK que tenga imagen
+    assign first_available_variant_img = ''
+    for variant in product_card_product.variants
+        if variant.available and variant.image != null and first_available_variant_img == blank
+            assign first_available_variant_img = variant.image
+            break
+        endif
+    endfor
+    
+    # Asignar imagen de variante con stock (independiente de show_quick_shop)
+    if first_available_variant_img != blank
+        assign variant_img = first_available_variant_img
+    endif
+    
     for option in product_card_product.options_with_values
         assign option_name = option.name | downcase
         if product_swatch_option contains option_name
@@ -24,11 +39,14 @@
             assign position = forloop.index | minus: 1
             assign variant_selected = option.selected_value
             if settings.show_quick_shop
-                for variant in product_card_product.variants limit: 1
-                    if variant.image != null  
-                        assign variant_img = variant.image
-                    endif
-                endfor
+                # Si no hay variante con stock con imagen, usar primera variante con imagen
+                if variant_img == blank
+                    for variant in product_card_product.variants limit: 1
+                        if variant.image != null  
+                            assign variant_img = variant.image
+                        endif
+                    endfor
+                endif
             endif
           break
         else 
