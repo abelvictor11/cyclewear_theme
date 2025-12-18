@@ -4670,6 +4670,7 @@
                     navArrowsMobi = sliderNav.data('arrows-mobi'),
                     navCounterMobi = sliderNav.data('counter-mobi'),
                     navMediaCount = sliderNav.data('media-count'),
+                    navInitialSlide = parseInt(sliderNav.data('initial-slide')) || 0,
                     thumbnailToShow = parseInt(sliderFor.data('max-thumbnail-to-show'));
                 
                 let checkNav, checkFor, navSlideCount;
@@ -4756,6 +4757,7 @@
                         nextArrow: window.arrows.icon_next,
                         prevArrow: window.arrows.icon_prev,
                         rtl: window.rtl_slick,
+                        initialSlide: navInitialSlide,
                         responsive: [
                             {
                                 breakpoint: 767,
@@ -4783,6 +4785,7 @@
                         nextArrow: window.arrows.icon_next,
                         prevArrow: window.arrows.icon_prev,
                         rtl: window.rtl_slick,
+                        initialSlide: navInitialSlide,
                         responsive: [
                             {
                                 breakpoint: 767,
@@ -4813,6 +4816,7 @@
                             nextArrow: window.arrows.icon_next,
                             prevArrow: window.arrows.icon_prev,
                             rtl: window.rtl_slick,
+                            initialSlide: navInitialSlide,
                             responsive: [
                                 {
                                     breakpoint: 768,
@@ -4848,6 +4852,7 @@
                         infinite: true,
                         nextArrow: window.arrows.icon_next,
                         prevArrow: window.arrows.icon_prev,
+                        initialSlide: navInitialSlide,
                         responsive: [
                             {
                                 breakpoint: 1600,
@@ -4892,6 +4897,7 @@
                         nextArrow: window.arrows.icon_next,
                         prevArrow: window.arrows.icon_prev,
                         rtl: window.rtl_slick,
+                        initialSlide: navInitialSlide,
                         responsive: [
                             {
                                 breakpoint: 1600,
@@ -4930,6 +4936,7 @@
                     nextArrow: window.arrows.icon_next,
                     prevArrow: window.arrows.icon_prev,
                     rtl: window.rtl_slick,
+                    initialSlide: navInitialSlide,
                     responsive: [
                         {
                             breakpoint: 1600,
