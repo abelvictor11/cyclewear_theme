@@ -18,13 +18,29 @@
     assign variant_img = ''
     
     # Buscar primera variante CON STOCK que tenga imagen
+    assign first_available_variant = product_card_product.selected_or_first_available_variant
     assign first_available_variant_img = ''
-    for variant in product_card_product.variants
-        if variant.available and variant.image != null and first_available_variant_img == blank
-            assign first_available_variant_img = variant.image
-            break
-        endif
-    endfor
+    
+    # Primero intentar con variant.image (imagen asignada directamente)
+    if first_available_variant.image != null
+        assign first_available_variant_img = first_available_variant.image
+    # Si no, buscar en variant.featured_image
+    elsif first_available_variant.featured_image != null
+        assign first_available_variant_img = first_available_variant.featured_image
+    # Si no, buscar cualquier variante disponible con imagen
+    else
+        for variant in product_card_product.variants
+            if variant.available
+                if variant.image != null
+                    assign first_available_variant_img = variant.image
+                    break
+                elsif variant.featured_image != null
+                    assign first_available_variant_img = variant.featured_image
+                    break
+                endif
+            endif
+        endfor
+    endif
     
     # Asignar imagen de variante con stock (independiente de show_quick_shop)
     if first_available_variant_img != blank
