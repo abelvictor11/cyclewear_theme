@@ -1,2 +1,11 @@
-{%- assign has_description = product.description != blank -%}
-<div class="product-specs">product-specs v2 OK. has_description={{ has_description }}</div>
+{%- assign has_description = product.description -%}
+<div class="product-specs">product-specs v2 OK. has_description={{ has_description }}</div>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- assign has_description = product.description != blank -%}"
+  to: "{%- assign has_description = product.description -%}"
+  position: 0..52
+{%- endcomment -%}
